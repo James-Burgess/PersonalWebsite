@@ -44,12 +44,18 @@ p a:hover {
 	padding: 44px 0 50px;
 	text-align: center;
 	width: 960px;
+	height: 150px;
+	display: flex;
 }
 #header a.logo {
 	display: block;
 	margin: 0 auto;
 	padding: 0;
-	width: 340px;
+	max-width: 100px;
+	max-height: 100px;
+	float: left;
+	margin-left:50px;
+
 }
 #header a.logo img {
 	border: 0;
@@ -62,7 +68,7 @@ p a:hover {
 	padding: 56px 0 0;
 }
 #header ul li {
-	display: inline;
+	
 	list-style: none;
 	margin: 0;
 	padding: 0 19px;
