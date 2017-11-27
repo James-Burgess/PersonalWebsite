@@ -5,6 +5,7 @@ import whois from '@/components/whois'
 import work from '@/components/work'
 import resume from '@/components/resume'
 import contact from '@/components/contact'
+import easterEgg from '@/components/easterEgg'
 
 Vue.use(Router)
 
@@ -34,6 +35,11 @@ export default new Router({
     	path:'/contact',
     	name: 'contact',
     	component: contact
+    },
+    {
+    	path:'/dont-do-it',
+    	name: 'easterEgg',
+    	component: easterEgg
     }
   ]
 })
