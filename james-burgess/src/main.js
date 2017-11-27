@@ -8,8 +8,17 @@ Vue.config.productionTip = false
 
 /* eslint-disable no-new */
 new Vue({
-  el: '#app',
+  el: '#i_write_javaScript',
   router,
   template: '<App/>',
   components: { App }
-})
+});
+
+var nav = document.getElementsByTagName('nav');
+for  (var i = 0 ; i < nav.length; i++) {
+	nav[i].addEventListener("click", function(e){
+	  console.log("awe");
+	  document.getElementById("check").checked = false;
+	}, 
+	false)
+};
