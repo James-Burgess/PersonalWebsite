@@ -1,5 +1,5 @@
 <template>
-<h1>work</h1>
+<header><h1>$james-burgess | grep -wo work</h1></header>
 </template>
 
 <script>

@@ -1,5 +1,8 @@
 <template>
-<h1>contact</h1>
+<main>
+<header><h1>$ping -T james-burgess</h1></header>
+
+</main>
 </template>
 
 <script>

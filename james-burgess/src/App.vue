@@ -11,7 +11,7 @@
       </nav>
     </div>
   <router-view></router-view>
-  <img src="./assets/logo.png">
+
   </div>
 </template>
 
@@ -76,7 +76,7 @@ nav a{
   
 }
 nav a:hover{
-  opacity: 0.5;
+  box-shadow: 1px 1px rgba(0,0,0,.2);
 }
 .router-link-exact-active{
   background: black;
@@ -88,10 +88,10 @@ nav a:hover{
 {
   display: block;
   position: absolute;
-  top: 50px;
-  right: 50px;
-  
+  top: 35px;
+  right: 35px;
   z-index: 1;
+
   
   -webkit-user-select: none;
   user-select: none;
@@ -115,6 +115,7 @@ nav a:hover{
 }
 
 #menuToggle span{
+
   display: block;
   width: 33px;
   height: 4px;
@@ -159,5 +160,19 @@ nav a:hover{
 }
 nav a:active {
   transform: translate(0, 9vh);
+}
+
+header{
+  width: 100vw;
+  height: 100px;
+  background: black;
+}
+header h1{
+  color: white;
+  font-size: 1.5em;
+  position: absolute;
+  top: 50px;
+  transform: translate(10%, -50%);
+  font-family: monospace;
 }
 </style>
