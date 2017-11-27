@@ -1,7 +1,7 @@
 <template>
   <div class="hello">
     <div class="black">
-        <h1>{{ msg }}</h1>
+        <h1>Hello</h1>
         <h2>My name is James</h2>
     </div>
     <div class="white">
@@ -14,15 +14,9 @@
 <script>
 export default {
   name: 'Hello',
-  data () {
-    return {
-      msg: 'Hello'
-    }
-  }
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .hello{
   height: 100vh;

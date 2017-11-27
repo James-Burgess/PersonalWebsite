@@ -3,11 +3,11 @@
     <div id="menuToggle">
       <input id="check" type="checkbox"><span></span><span></span><span></span>
       <nav>
-        <router-link to="/">Hello</router-link>
-        <router-link to="/about">About</router-link>
-        <router-link to="/projects">Projects</router-link>
-        <router-link to="/resume">Resume</router-link>
-        <router-link to="/contact">Contact</router-link>
+        <router-link to="/">hello</router-link>
+        <router-link to="/whois">whois?</router-link>
+        <router-link to="/work">work</router-link>
+        <router-link to="/resume">resume</router-link>
+        <router-link to="/contact">contact</router-link>
       </nav>
     </div>
   <router-view></router-view>
@@ -60,16 +60,17 @@ nav{
   top: -105vh;
   right: 0;
   left: 0;
-
-    transition-duration: 1s;
+  transition-duration: 1s;
+  opacity: 0;
 }
 nav a{
   text-decoration: none;
-  color: white;
+  color: #0f0f0f;
   padding: 5px 20px;
-  border-radius: 50VW;
   
-  background: darkgrey;
+  box-shadow: 10px 10px rgba(0,0,10,.9);
+
+  background: lightgrey;
   transition-duration: 1s;
   font-size: 2em;
   
@@ -79,6 +80,8 @@ nav a:hover{
 }
 .router-link-exact-active{
   background: black;
+  box-shadow: 10px 10px rgba(0,0,0,.2);
+  color: white;
 }
 
 #menuToggle
@@ -151,6 +154,8 @@ nav a:hover{
 
 #menuToggle input:checked ~ nav{
   transform: translate(0,95vh);
+    opacity: 1;
+
 }
 nav a:active {
   transform: translate(0, 9vh);
