@@ -76,7 +76,7 @@ nav a{
   
 }
 nav a:hover{
-  box-shadow: 1px 1px rgba(0,0,0,.2);
+  box-shadow: 10px 10px rgba(0,0,0,.2);
 }
 .router-link-exact-active{
   background: black;
@@ -166,6 +166,7 @@ header{
   width: 100vw;
   height: 100px;
   background: black;
+  box-shadow: 10px 0px 20px 5px rgba(0,0,0,.4)
 }
 header h1{
   color: white;
