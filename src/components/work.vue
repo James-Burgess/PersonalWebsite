@@ -14,7 +14,7 @@
 	<h2>LoopHole Studio</h2>
 	<img src="../../build/logo.png" height="100" width="100" alt="">
 	<p>Front-end Development for a graphic design agencey in Cape Town. JS, HTML, CSS.</p>
-	<a href="http://www.1solution.co.za">View the page</a>
+	<a href="http://loophole.studio">View the page</a>
 </div>
 
 <div class="container">
@@ -28,7 +28,7 @@
 	<h2>1Solution</h2>
 	<img src="../../build/logo.png" height="100" width="100" alt="">
 	<p>Front-end Development of a website for a local handyman - in Progress. Jquery HTML CSS.</p>
-	<a href="http://loophole.studio">Visit the site</a>
+	<a href="http://www.1solution.co.za">Visit the site</a>
 </div>
 
 <div class="container">
