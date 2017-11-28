@@ -1,7 +1,8 @@
 <template>
   <div id="app">
     <div id="menuToggle">
-      <input id="check" type="checkbox"><span></span><span></span><span></span>
+      <input id="check" type="checkbox">
+      <span></span><span></span><span></span>
       <nav>
         <router-link to="/">hello</router-link>
         <router-link to="/whois">whois?</router-link>
@@ -115,7 +116,6 @@ nav a:hover{
 }
 
 #menuToggle span{
-
   display: block;
   width: 33px;
   height: 4px;
@@ -176,4 +176,5 @@ header h1{
   transform: translate(10%, -50%);
   font-family: monospace;
 }
+
 </style>

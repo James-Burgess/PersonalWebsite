@@ -105,14 +105,15 @@ p{
 }
 a{
 	text-decoration: none;
-	color: black;
+	color: #101010;
 	font-weight: bold;
 	margin-top: 10px;
-	display: block;
+	display: inline-block;
 	transition-duration: 1.5s;
 }
 a:hover{
-	color:white;
+	border-bottom: 2px solid white;
+	transition-duration: .5s;
 }
 .normal_anchor{
 	margin-top: 0;
