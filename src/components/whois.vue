@@ -1,7 +1,7 @@
 <template>
 <main>
 <header>
-  <h1>$whois -v james-burgess</h1>
+  <h1>$ whois -v james-burgess</h1>
 </header>
 <div class="body">
 	<div class="head">
@@ -17,10 +17,10 @@
   		<img src="http://forthebadge.com/images/badges/powered-by-jeffs-keyboard.svg" alt="">
 		
 		<h3 class="underline">Introduction</h3>
-		<p>Self taught software developer with a passion for the web. </p>
+		<p>james-burgess is a self taught software developer with a passion for the web and all things Open Source.</p>
 
 		<h3 class="underline">Getting Started</h3>
-		<p>Having left school halfway through highschool due to medical reasons, James compleated his education alone and achieved his As Levels by himself.<br> After realising his ability to self-study he ommited the need for university and took up the challenge of teaching himself how both computers and humans work. <br>Years of study later, He took up the art of teaching and has just compleated a two year tenure as the Head of Computer Scicence for <a href="https://www.theacademyhoutbay.co.za">The Academy Hout Bay</a>. He also created online Computer Science and Physics courses for <a href="https://www.mycolls.com/meet-the-team/">Cambridge Online Learning Systems</a> <br> james-burgess is currently looking to build beautiful websites with things like <a href="http://html9responsiveboilerstrapjs.com/"><del>H9RB.js</del></a> <a href="https://vuejs.org/">Vue.js</a></p>
+		<p>Having left school halfway through high school due to medical reasons, James completed his education alone and achieved his As Levels by himself.<br>After realising his ability to self-study he omitted the need for university and took up the challenge of teaching himself how both computers and humans work. <br>Years of study later, He took up the art of teaching and has just completed a two year tenure as the Head of Computer Science for <a href="https://www.theacademyhoutbay.co.za">The Academy Hout Bay</a> during that time, He also created online Computer Science and Physics courses for <a href="https://www.mycolls.com/meet-the-team/">Cambridge Online Learning Systems</a>. james-burgess is currently looking to build beautiful websites with things like <a href="http://html9responsiveboilerstrapjs.com/"><del>H9RB.js</del></a> <a href="https://vuejs.org/">Vue.js</a> and <a href="https://www.djangoproject.com/">Django</a></p>
 
 		<h3>Versioning</h3>
 		<p>james-burgess is currently stable at version 22.9.8</p>
@@ -31,22 +31,22 @@
 
 		<h3 class="underline">Built With</h3>
 		<ul>
-			<li><a href="#">Python</a> - Fluent</li>
-			<li><a href="#">Javascript</a> - Conversive</li>
-			<li><a href="#">Bash</a> - Apprentice</li>
-			<li><a href="#">Julia-Lang</a> - Conversive</li>
-			<li><a href="#">HTML</a> - Fluent</li>
-			<li><a href="#">CSS</a> - Expert</li>
-			<li><a href="#">JQuery</a> - Conversive</li>
-			<li><a href="#">Django</a> - Novice</li>
-			<li><a href="#">Vue</a> - Apprentice</li>
+			<li><a href="https://www.python.org/">Python</a> - Fluent</li>
+			<li><a href="https://www.javascript.com/">Javascript</a> - Conversive</li>
+			<li><a href="https://www.gnu.org/software/bash/">Bash</a> - Apprentice</li>
+			<li><a href="https://julialang.org/">Julia-Lang</a> - Conversive</li>
+			<li><a href="https://www.w3.org/TR/html52/">HTML5</a> - Fluent</li>
+			<li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS3">CSS3</a> - Expert</li>
+			<li><a href="https://jquery.com/">JQuery</a> - Conversive</li>
+			<li><a href="https://www.djangoproject.com/">Django</a> - Novice</li>
+			<li><a href="https://vuejs.org/">Vue.js</a> - Apprentice</li>
 		</ul>
 
 		<h3 class="underline">Deployment</h3>
 		<h3>Installation</h3>
 
 		<p>Installation is trivial, after hiring, just run the following commands</p><code># pacman -S james-burgess</code>
-		<p>If you currently do not have a james-burgess in your employment, Please <router-link to="/contact">contact</router-link> James to place a job offer.</p>
+		<p>If you currently do not have a james-burgess in your employment, Please <router-link to="/contact">contact</router-link> james-burgess to place a job offer.</p>
 
 		<h3>Usage</h3>
 		<p><b>To see a full list of commands run:</b></p>
@@ -57,6 +57,8 @@
 		<code>$ james-burgess fix (thing to fix) </code>
 		<p>To learn something</p>
 		<code>$ james-burgess teach (subject)</code>
+		<p>To generate docs</p>
+		<code>$ james-burgess docify (codebase)</code>
 
 
 		<h3 class="underline">License</h3>
@@ -99,7 +101,7 @@ export default {
 .body{
 	position: absolute;
 
-	top: 150px;
+	top: 50px;
 	left: 10vw;
 	border: 1px solid #F6F8FA;
 	width: 80vw;
@@ -133,21 +135,23 @@ img{
 	height: 30px;
 	width: auto;
 }
+
 h3, h2, p, ul{
 	padding: 15px 0;
 }
 code{
-	padding: 10px;
+	display: block;
+	padding: 15px;
 	margin-top: 10px;
 	margin-left: 10px;
 	background: #F6F8FA;
 	border-radius: 2px 2px;
+	max-width: 100%;
+	font-size: 1.1em;
 }
-
 h2{
 	font-size: 2em;
-	border-bottom: 1px solid #eaecef;
-	
+	border-bottom: 1px solid #eaecef;	
 }
 .underline{
 	border-bottom: 1px solid #eaecef;

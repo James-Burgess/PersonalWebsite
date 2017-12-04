@@ -1,7 +1,7 @@
 <template>
 <main>
-<header><h1>$cd ~/james-burgess/resume && ls -al</h1></header>
-<div>
+<header><h1>$ cd ~/james-burgess/resume && ls -al</h1></header>
+<div class="body">
 <p>Due to privacy concerns, this information has been omitted.
 <br><br>
 Please <router-link to="/contact">contact</router-link> James to recieve a complete copy of his resume.</p>
@@ -16,7 +16,8 @@ export default {
 </script>
 
 <style scoped>
-div{
+.body{
+	margin-top: 0;
 	background: #464646;
 	width: 80vw;
 	max-width: 550px;

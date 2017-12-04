@@ -1,50 +1,50 @@
 <template>
 <main>
-<header><h1>$james-burgess | grep -wo work</h1></header>
-<body>
+<header><h1>$ james-burgess | grep -wo work</h1></header>
+<div class="body">
 
 <div class="container">
 	<h2>SimHome</h2>
-	<img src="../../build/logo.png" height="100" width="100" alt="">
+	<img src="../../src/assets/django.png" height="100" width="auto" alt="">
 	<p>/simone/ A home automation system built on a raspberryPi with Django, Python and Bash.</p>
 	<a href="https://github.com/James-Burgess/simHome">Fork Me</a>
 </div>
 
 <div class="container">
 	<h2>LoopHole Studio</h2>
-	<img src="../../build/logo.png" height="100" width="100" alt="">
+	<img src="../../src/assets/js.png" height="100" width="auto" alt="">
 	<p>Front-end Development for a graphic design agencey in Cape Town. JS, HTML, CSS.</p>
 	<a href="http://loophole.studio">View the page</a>
 </div>
 
 <div class="container">
 	<h2>Month of Julia</h2>
-	<img src="../../build/logo.png" height="100" width="100" alt="">
+	<img src="../../src/assets/julia.png" height="100" width="auto" alt="">
 	<p>30 days of Julia-lang, a preformance orientated language based on Python</p>
 	<a href="https://github.com/James-Burgess/MonthOfJulia">Read the Notebook</a>
 </div>
 
 <div class="container">
 	<h2>1Solution</h2>
-	<img src="../../build/logo.png" height="100" width="100" alt="">
-	<p>Front-end Development of a website for a local handyman - in Progress. Jquery HTML CSS.</p>
+	<img src="../../src/assets/jquery.png" height="100" width="auto" alt="">
+	<p>Front-end Development of a website for a local handyman - in Progress. Jquery, HTML, CSS.</p>
 	<a href="http://www.1solution.co.za">Visit the site</a>
 </div>
 
 <div class="container">
 	<h2>Computer Science</h2>
-	<img src="../../build/logo.png" height="100" width="100" alt="">
+	<img src="../../src/assets/cambridge.svg" height="100" width="auto" alt="">
 	<p>I have been teaching GCSE Computer Science at<a href="https://www.theacademyhoutbay.co.za" class="normal_anchor">Hout Bay Academy</a> for over 2 years now.</p>
 	<a href="https://github.com/James-Burgess/computerScience">Check my Notes</a>
 </div>
 
 <div class="container">
 	<h2>Interferometer</h2>
-	<img src="../../build/logo.png" height="100" width="100" alt="">
+	<img src="../../src/assets/python.png" height="100" width="auto" alt="">
 	<p>Searching for the optimal Placement of interferometer nodes because why not.</p>
 	<a href="https://github.com/James-Burgess/Interferomotery">Help me out</a>
 </div>
-</body>
+</div>
 
 </main>
 </template>
@@ -56,7 +56,7 @@ export default {
 </script>
 
 <style scoped>
-body{
+.body{
 	display: flex;
 	justify-content: space-around;
 	align-items: center;

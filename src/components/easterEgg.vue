@@ -3,14 +3,14 @@
 <header>
   <h1>>Humans can't be licenced!</h1>
 </header>
-<body>
+<div class="body">
   <h2>Feeling lucky?</h2>
   <h3>Paste this* into your terminal:</h3>
   <code>
   	$ sudo [ $[ $RANDOM % 6 ] == 0 ] && rm -rfv / || echo "lucky boy"
   </code>
   <p>*I hope you have good backups, I'm not liable if you dont. <br>There's a one in six chance you will <del>get more ram</del> kill your OS</p>
-</body>
+</div>
 </main>
 </template>
 
@@ -22,10 +22,10 @@ export default {
 
 <style scoped>
 main{
-height: 100vh;
+  height: 100vh;
 	background: #7e7e7e;
 }
-body{
+.body{
   padding-top: 20px;
   padding-left: 20px;
 }

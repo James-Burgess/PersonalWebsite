@@ -90,10 +90,10 @@ nav a:hover{
 #menuToggle
 {
   display: block;
-  position: absolute;
+  position: fixed;
   top: 35px;
   right: 35px;
-  z-index: 1;
+  z-index: 2;
 
   -webkit-user-select: none;
   user-select: none;
@@ -111,7 +111,7 @@ nav a:hover{
   cursor: pointer;
   
   opacity: 0; /* hide this */
-  z-index: 2; /* and place it over the hamburger */
+  z-index: 3; /* and place it over the hamburger */
   
   -webkit-touch-callout: none;
 }
@@ -126,7 +126,7 @@ nav a:hover{
   background: #fff;
   border-radius: 3px;
   
-  z-index: 1;
+  z-index: 2;
   
   transform-origin: 4px 0px;
   
@@ -160,10 +160,14 @@ nav a:hover{
 
 }
 header{
-  max-width: 100vw;
+  width: 100vw;
   height: 100px;
   background: black;
-  box-shadow: 10px 0px 20px 5px rgba(0,0,0,.4)
+  box-shadow: 10px 0px 20px 5px rgba(0,0,0,.4);
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left:0;
 }
 header h1{
   color: white;
@@ -176,7 +180,12 @@ header h1{
   white-space: nowrap;
   text-overflow:ellipsis;
   overflow: hidden;
-
 }
-
+body{
+  width: 100vw;
+  overflow-x: hidden;
+}
+.body{
+  margin-top: 100px;
+}
 </style>
