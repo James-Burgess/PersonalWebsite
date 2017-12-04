@@ -55,7 +55,7 @@ h1{
   left: 500px;
   position: absolute;
   font-size: 2em;
-  animation-delay: 1.7s;
+  animation-delay: 1s;
   z-index: -1;
 }
 h3{
@@ -63,7 +63,7 @@ h3{
   left: 3px;
   position: absolute;
   font-size: 15px;
-  animation-delay: 3s;
+  animation-delay: 2s;
 }
 
 .animated {
