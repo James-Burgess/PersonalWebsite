@@ -173,6 +173,10 @@ header h1{
   transform: translate(10%, -50%);
   font-family: monospace;
   max-width: 60vw;
+  white-space: nowrap;
+  text-overflow:ellipsis;
+  overflow: hidden;
+
 }
 
 </style>

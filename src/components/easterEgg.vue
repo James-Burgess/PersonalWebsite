@@ -1,7 +1,7 @@
 <template>
 <main>
 <header>
-  <h1>You found me!</h1>
+  <h1>>Humans can't be licenced!</h1>
 </header>
 <body>
   <h2>Feeling lucky?</h2>
@@ -9,7 +9,7 @@
   <code>
   	$ sudo [ $[ $RANDOM % 6 ] == 0 ] && rm -rfv / || echo "lucky boy"
   </code>
-  <p>*I hope you have good backups, I'm not liable if you dont</p>
+  <p>*I hope you have good backups, I'm not liable if you dont. <br>There's a one in six chance you will <del>get more ram</del> kill your OS</p>
 </body>
 </main>
 </template>

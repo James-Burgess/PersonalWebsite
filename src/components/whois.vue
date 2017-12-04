@@ -20,20 +20,14 @@
 		<p>Self taught software developer with a passion for the web. </p>
 
 		<h3 class="underline">Getting Started</h3>
-		<p>Having left school halfway through highschool due to medical reasons, James compleated his education alone and achieved his As Levels by himself.<br> After realising his ability to self-study he ommited university and took up the challenge of teaching himself how both computers and humans work. <br>Years of study later, He took up the art of teaching and has just compleated a two year tenure as the Head of Computer Scicence for <a href="www.theacademyhoutbay.co.za">The Academy Hout Bay</a></p>
+		<p>Having left school halfway through highschool due to medical reasons, James compleated his education alone and achieved his As Levels by himself.<br> After realising his ability to self-study he ommited the need for university and took up the challenge of teaching himself how both computers and humans work. <br>Years of study later, He took up the art of teaching and has just compleated a two year tenure as the Head of Computer Scicence for <a href="https://www.theacademyhoutbay.co.za">The Academy Hout Bay</a>. He also created online Computer Science and Physics courses for <a href="https://www.mycolls.com/meet-the-team/">Cambridge Online Learning Systems</a> <br> james-burgess is currently looking to build beautiful websites with things like <a href="http://html9responsiveboilerstrapjs.com/"><del>H9RB.js</del></a> <a href="https://vuejs.org/">Vue.js</a></p>
+
+		<h3>Versioning</h3>
+		<p>james-burgess is currently stable at version 22.9.8</p>
 
 		<h3>Prerequisites</h3>
-		<p>james-burgess is known to run best on 
+		<p>james-burgess is known to run best on <br>
 		<br><code>Gnu/Linux - Manjaro - i3wm - <a href="https://github.com/James-Burgess/dotfiles">dotfiles</a></code></p>
-
-		<h3>Installing</h3>
-		<p>Please <router-link to="/contact">contact</router-link> James to place a job offer</p>
-
-		<h3 class="underline">Versioning</h3>
-		<p>james-burgess is currentley stable at version 22.9.8</p>
-
-		<h3 class="underline">Deployment</h3>
-		<p>optio doloribus odit eveniet vel consequuntur fuga vero pariatur laborum voluptatum aliquam consequatur. Quaerat praesentium earum, iusto repudiandae!</p>
 
 		<h3 class="underline">Built With</h3>
 		<ul>
@@ -47,6 +41,23 @@
 			<li><a href="#">Django</a> - Novice</li>
 			<li><a href="#">Vue</a> - Apprentice</li>
 		</ul>
+
+		<h3 class="underline">Deployment</h3>
+		<h3>Installation</h3>
+
+		<p>Installation is trivial, after hiring, just run the following commands</p><code># pacman -S james-burgess</code>
+		<p>If you currently do not have a james-burgess in your employment, Please <router-link to="/contact">contact</router-link> James to place a job offer.</p>
+
+		<h3>Usage</h3>
+		<p><b>To see a full list of commands run:</b></p>
+		<code>$ james-burgess --help</code>
+		<p style="padding-top:25px"><b>Common commands are as follows:</b><br>To make a website</p>
+		<code>$ james-burgess make-website -p (file/path/to/mockup)</code> 
+		<p>To fix something</p>
+		<code>$ james-burgess fix (thing to fix) </code>
+		<p>To learn something</p>
+		<code>$ james-burgess teach (subject)</code>
+
 
 		<h3 class="underline">License</h3>
 		<p>
@@ -71,7 +82,7 @@
 			</g>
 			</g>
 		  </svg> 
-		 <br>This Human is licensed under the HIGC License - see the LICENSE.md file for details
+		 <br>This Human is licensed under the HIGC License - see the <router-link to="/dont-do-it">LICENSE.md</router-link> file for details
 		</p>
 	  </div>
   	</div>
@@ -122,13 +133,15 @@ img{
 	height: 30px;
 	width: auto;
 }
-h3, h2, p{
+h3, h2, p, ul{
 	padding: 15px 0;
 }
 code{
 	padding: 10px;
 	margin-top: 10px;
+	margin-left: 10px;
 	background: #F6F8FA;
+	border-radius: 2px 2px;
 }
 
 h2{

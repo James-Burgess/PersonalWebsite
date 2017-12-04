@@ -1,6 +1,6 @@
 <template>
 <main>
-<header><h1>$cd james-burgess/resume && ls -al</h1></header>
+<header><h1>$cd ~/james-burgess/resume && ls -al</h1></header>
 <div>
 <p>Due to privacy concerns, this information has been omitted.
 <br><br>
