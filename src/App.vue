@@ -10,6 +10,7 @@
         <router-link to="/resume">resume</router-link>
         <router-link to="/contact">contact</router-link>
       </nav>
+
     </div>
   <router-view></router-view>
 
@@ -52,6 +53,7 @@ time, mark, audio, video {
 nav{
   padding-top: 15vh;
   height: 90vh;
+  width: 100vw;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -93,7 +95,6 @@ nav a:hover{
   right: 35px;
   z-index: 1;
 
-  
   -webkit-user-select: none;
   user-select: none;
 }
@@ -158,12 +159,8 @@ nav a:hover{
     opacity: 1;
 
 }
-nav a:active {
-  transform: translate(0, 9vh);
-}
-
 header{
-  width: 100vw;
+  max-width: 100vw;
   height: 100px;
   background: black;
   box-shadow: 10px 0px 20px 5px rgba(0,0,0,.4)
@@ -175,6 +172,7 @@ header h1{
   top: 50px;
   transform: translate(10%, -50%);
   font-family: monospace;
+  max-width: 60vw;
 }
 
 </style>
