@@ -1,14 +1,16 @@
 <template>
   <div id="app">
     <div id="menuToggle">
-      <input id="check" type="checkbox"><span></span><span></span><span></span>
+      <input id="check" type="checkbox">
+      <span></span><span></span><span></span>
       <nav>
         <router-link to="/">hello</router-link>
         <router-link to="/whois">whois?</router-link>
         <router-link to="/work">work</router-link>
         <router-link to="/resume">resume</router-link>
-        <router-link to="/contact">contact</router-link>
+        <router-link to="/contact">contact</router-link>  
       </nav>
+
     </div>
   <router-view></router-view>
 
@@ -51,6 +53,7 @@ time, mark, audio, video {
 nav{
   padding-top: 15vh;
   height: 90vh;
+  width: 100vw;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -76,7 +79,7 @@ nav a{
   
 }
 nav a:hover{
-  box-shadow: 1px 1px rgba(0,0,0,.2);
+  box-shadow: 10px 10px rgba(0,0,0,.2);
 }
 .router-link-exact-active{
   background: black;
@@ -87,12 +90,11 @@ nav a:hover{
 #menuToggle
 {
   display: block;
-  position: absolute;
+  position: fixed;
   top: 35px;
   right: 35px;
-  z-index: 1;
+  z-index: 2;
 
-  
   -webkit-user-select: none;
   user-select: none;
 }
@@ -109,13 +111,12 @@ nav a:hover{
   cursor: pointer;
   
   opacity: 0; /* hide this */
-  z-index: 2; /* and place it over the hamburger */
+  z-index: 3; /* and place it over the hamburger */
   
   -webkit-touch-callout: none;
 }
 
 #menuToggle span{
-
   display: block;
   width: 33px;
   height: 4px;
@@ -125,7 +126,7 @@ nav a:hover{
   background: #fff;
   border-radius: 3px;
   
-  z-index: 1;
+  z-index: 2;
   
   transform-origin: 4px 0px;
   
@@ -158,14 +159,15 @@ nav a:hover{
     opacity: 1;
 
 }
-nav a:active {
-  transform: translate(0, 9vh);
-}
-
 header{
   width: 100vw;
   height: 100px;
   background: black;
+  box-shadow: 10px 0px 20px 5px rgba(0,0,0,.4);
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left:0;
 }
 header h1{
   color: white;
@@ -174,5 +176,17 @@ header h1{
   top: 50px;
   transform: translate(10%, -50%);
   font-family: monospace;
+  max-width: 60vw;
+  white-space: nowrap;
+  text-overflow:ellipsis;
+  overflow: hidden;
 }
+body{
+  width: 100vw;
+  overflow-x: hidden;
+}
+.body{
+  margin-top: 100px;
+}
+
 </style>
