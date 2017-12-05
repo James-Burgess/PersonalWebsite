@@ -1,6 +1,6 @@
 <template>
 <main>
-<header><h1>$ping -T james-burgess</h1></header>
+<header><h1>$ ping -T james-burgess</h1></header>
 <div class="body">
 	<div class="card">
 		<h2>Mail Me</h2>
@@ -65,7 +65,7 @@ export default {
 	margin-top: 20vh;
 }
 .card{
-	border: 3px solid #2e2e2e;
+	border: 5px solid #1e1e1e;
 	width: 80vw;
 	max-width: 400px;
 	height: 150px;
@@ -109,8 +109,8 @@ img{
 .card:nth-child(even){
 	background: linear-gradient(
     to right, 
-    #2e2e2e 0%, 
-    #2e2e2e 40%, 
+    #1e1e1e 0%, 
+    #1e1e1e 40%, 
     white 35%, 
     white 100%
   );
@@ -124,8 +124,8 @@ img{
     to right,  
     white 0%, 
     white 60%,
-    #2e2e2e 60%, 
-    #2e2e2e 100%
+    #1e1e1e 60%, 
+    #1e1e1e 100%
   );
 
 }
@@ -137,35 +137,4 @@ img{
 	padding-top: 100px;
 	padding-right: 10px;
 }
-@keyframes jackInTheBox {
-  from {
-    opacity: 0;
-    transform: scale(0.1) rotate(30deg);
-    transform-origin: center bottom;
-  }
-
-  50% {
-    transform: rotate(-10deg);
-  }
-
-  70% {
-    transform: rotate(3deg);
-  }
-
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
-@media screen and (min-width: 892px){
-	.body{
-	transform: translate(-50%);
-	margin-left: 50%;
-}
-}
-@media screen and (max-width: 892px) {
-		.body{
-			margin-top: 15vh;
-		}
-	}
 </style>
