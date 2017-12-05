@@ -8,7 +8,7 @@
         <router-link to="/whois">whois?</router-link>
         <router-link to="/work">work</router-link>
         <router-link to="/resume">resume</router-link>
-        <router-link to="/contact">contact</router-link>
+        <router-link to="/contact">contact</router-link>  
       </nav>
 
     </div>
@@ -188,4 +188,5 @@ body{
 .body{
   margin-top: 100px;
 }
+
 </style>

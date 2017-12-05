@@ -9,7 +9,9 @@
 		<h4><svg aria-hidden="true" class="octicon octicon-book" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M3 5h4v1H3V5zm0 3h4V7H3v1zm0 2h4V9H3v1zm11-5h-4v1h4V5zm0 2h-4v1h4V7zm0 2h-4v1h4V9zm2-6v9c0 .55-.45 1-1 1H9.5l-1 1-1-1H2c-.55 0-1-.45-1-1V3c0-.55.45-1 1-1h5.5l1 1 1-1H15c.55 0 1 .45 1 1zm-8 .5L7.5 3H2v9h6V3.5zm7-.5H9.5l-.5.5V12h6V3z"></path></svg> README.md</h4>
 	</div>
   	<div class="content">
-  		<h2>James Burgess</h2>
+  		<h2>James Burgess
+  		 <img class="jimmy" src="../assets/jimmy.jpg" alt=""></h2>
+
   		<br>
   		<img src="http://forthebadge.com/images/badges/uses-h9rbs.svg" alt="">
   		<img src="http://forthebadge.com/images/badges/built-with-grav.svg" alt="">
@@ -135,6 +137,14 @@ img{
 	height: 30px;
 	width: auto;
 }
+.jimmy{
+  border-radius: 50%;
+  height: 80px;
+  width: auto;
+  float: right;
+  margin-right: -30px;
+  margin-top: -30px;
+}
 
 h3, h2, p, ul{
 	padding: 15px 0;
@@ -164,8 +174,11 @@ h3{
 
 ul{
 	padding-left: 40px;
-
-
 }
+@media screen and (max-width: 484px) {
+		img{
+			display: none;
+		}
+	}
 
 </style>

@@ -5,7 +5,9 @@
 	<div class="card">
 		<h2>Mail Me</h2>
 		<p>via <a class="link" href="mailto:james.burgess@protonmail.com">email</a></p>
-		<a href="mailto:james.burgess@protonmail.com"><img src="../assets/email.png" alt=""></a>
+		<a href="mailto:james.burgess@protonmail.com">
+			<img src="../assets/email.png" alt=""></a>
+		
 	</div>
 
 	<div class="card">
@@ -37,7 +39,7 @@
 	</div>
 
 	<div class="card">
-		<h2>Tweet Me</h2>
+		<h2>@ Me</h2>
 		<p>on <a class="link" href="https://twitter.com/Its_me_JimmyB">Twitter</a></p>
 		<a href="https://twitter.com/Its_me_JimmyB"><img src="../assets/Twitter-logo.jpg" alt=""></a>
 
@@ -59,9 +61,11 @@ export default {
 	align-items: center;
 	flex-wrap: wrap;
 	width: 100vw;
+	max-width: 947px;
+	margin-top: 20vh;
 }
 .card{
-	border: 3px solid black;
+	border: 3px solid #2e2e2e;
 	width: 80vw;
 	max-width: 400px;
 	height: 150px;
@@ -81,7 +85,7 @@ p{
 	font-size: 1.2em;
 	color: white;
 	padding-top: 40px;
-	padding-left: 20px;
+	padding-left: 15px;
 }
 a{
 	color: white;
@@ -93,7 +97,7 @@ a{
 img{
 	max-width: 50%;
 	height: auto;
-	max-height: 100px;
+	max-height: 120px;
 	width: auto;
 	transform: translate(-50%, -50%);
 	top: -50px;
@@ -101,11 +105,12 @@ img{
 	border-radius: 50vw;
 	margin: 0 30%;
 }
+
 .card:nth-child(even){
 	background: linear-gradient(
     to right, 
-    black 0%, 
-    black 40%, 
+    #2e2e2e 0%, 
+    #2e2e2e 40%, 
     white 35%, 
     white 100%
   );
@@ -119,8 +124,8 @@ img{
     to right,  
     white 0%, 
     white 60%,
-    black 60%, 
-    black 100%
+    #2e2e2e 60%, 
+    #2e2e2e 100%
   );
 
 }
@@ -132,5 +137,35 @@ img{
 	padding-top: 100px;
 	padding-right: 10px;
 }
+@keyframes jackInTheBox {
+  from {
+    opacity: 0;
+    transform: scale(0.1) rotate(30deg);
+    transform-origin: center bottom;
+  }
 
+  50% {
+    transform: rotate(-10deg);
+  }
+
+  70% {
+    transform: rotate(3deg);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+@media screen and (min-width: 892px){
+	.body{
+	transform: translate(-50%);
+	margin-left: 50%;
+}
+}
+@media screen and (max-width: 892px) {
+		.body{
+			margin-top: 15vh;
+		}
+	}
 </style>

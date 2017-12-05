@@ -8,6 +8,7 @@
     <div class="white">
         <h2 class="animated slideInDownHidden">I built the internet*</h2>
         <h3 class="animated slideInLeft" >*some of it</h3>
+        
   </div>
   </div>
 </template>
@@ -132,6 +133,7 @@ h3{
   }
 }
 
+
 .bounceInRight {
   animation-name: bounceInRight;
 }
@@ -145,4 +147,27 @@ h3{
   animation-name: slideInLeft;
 }
 
+@media screen and (max-width: 637px) {
+    h1{
+        font-size: 8em;
+        bottom: 45vh;
+    }
+    .black h2{
+      left: 330px;
+    }
+    .white h2{
+      left: 5px;
+    }
+}
+@media screen and (max-width: 405px) {
+    h1{
+        font-size: 6em;
+        bottom: 45vh;
+    }
+    .black h2{
+      left: 240px;
+      font-size: 1.25em;
+      bottom: 3vh;
+    }
+}
 </style>
