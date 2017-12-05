@@ -1,6 +1,6 @@
 <template>
 <main>
-<header><h1>$ping -T james-burgess</h1></header>
+<header><h1>$ ping -T james-burgess</h1></header>
 <div class="body">
 	<div class="card">
 		<h2>Mail Me</h2>

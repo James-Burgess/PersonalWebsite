@@ -171,12 +171,12 @@ header{
 }
 header h1{
   color: white;
-  font-size: 1.5em;
+  font-size: 1.75em;
   position: absolute;
   top: 50px;
   transform: translate(10%, -50%);
   font-family: monospace;
-  max-width: 60vw;
+  max-width: 70vw;
   white-space: nowrap;
   text-overflow:ellipsis;
   overflow: hidden;
@@ -188,5 +188,18 @@ body{
 .body{
   margin-top: 100px;
 }
+@media screen and (max-width: 760px) {
+    header h1{
+        font-size: 1.2em;
+    }
+}
 
+@media screen and (max-width: 498px) {
+    header h1{
+        font-size: 1em;
+        white-space: normal;
+        text-overflow: initial;
+        overflow: inital;
+    }
+}
 </style>
