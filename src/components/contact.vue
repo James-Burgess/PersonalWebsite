@@ -5,9 +5,8 @@
 	<div class="card">
 		<h2>Mail Me</h2>
 		<p>via <a class="link" href="mailto:james.burgess@protonmail.com">email</a></p>
-		<a href="mailto:james.burgess@protonmail.com">
+		<a href="mailto:jamesburgess@protonmail.com">
 			<img src="../assets/email.png" alt=""></a>
-		
 	</div>
 
 	<div class="card">

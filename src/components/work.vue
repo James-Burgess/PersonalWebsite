@@ -14,7 +14,7 @@
 	<h2>LoopHole Studio</h2>
 	<img src="../../src/assets/js.png" height="100" width="auto" alt="">
 	<p>Front-end Development for a graphic design agencey in Cape Town. JS, HTML, CSS.</p>
-	<a href="http://loophole.studio">View the page</a>
+	<a href="https://james-burgess.github.io/loophole/">View the page</a>
 </div>
 
 <div class="container">
