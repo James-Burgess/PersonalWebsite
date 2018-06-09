@@ -1,173 +1,144 @@
 <template>
   <div class="hello">
-    <h1 class=" slideInLeft">Hello</h1>
-    <div class="black animated slideInDown">
-        
-        <h2 class="animated bounceInRight">My name is James</h2>
-    </div>
-    <div class="white">
-        <h2 class="animated slideInDownHidden">I built the internet*</h2>
-        <h3 class="animated slideInLeft" >*some of it</h3>
-        
-  </div>
+    <section id="intro">
+      <h1>James Burgess, <br> Full Stack Developer.</h1>
+      <h2>
+          I can build anything on the web, but mostly, 
+          <br>
+          I Build robust webapps with Django and Vue.js
+      </h2>
+    </section>
+    <section id="projects">
+      <h3>Learn More</h3>
+      <div class="project-block">
+        <button>Webapps</button>
+        <button>Static Sites</button>
+        <button>Mobile Apps</button>
+        <button>Dataprocessing</button>
+        <button>GCP</button>
+        <button id="mentoring">Mentoring</button>
+        <button>Offline</button>
+      </div>
+    </section>
+    <section id="contact">
+      <h3>Contact</h3>
+      <p>contact@jimmyb.co.za</p>
+    </section>
   </div>
 </template>
 
 <script>
+var toggled = false;
 
 export default {
   name: 'Hello',
+  mounted() {
+    let showMore = document.querySelector('#projects h3');
+    showMore.addEventListener('click', () => this.toggleShowMore())
+
+    const buttons = document.querySelectorAll('#projects button');
+    [].map.call(buttons, (elem) => {
+      elem.addEventListener('click', () => this.showProject())
+    });
+
+  },
+  methods: {
+    toggleShowMore: function() {
+      let projects = document.getElementById('projects');
+      let hello = document.querySelector('.hello');
+
+      if (!toggled){
+        toggled = true
+        projects.style = "transform: translateY(-100%)"
+        
+      }else{
+        toggled = false
+        projects.style = "transform: translateY(0%)"
+        hello.style = "overflowY: hidden; "        
+      }
+    },
+    showProject: function(){
+      let sectionTitle = event.target.innerText.replace(' ', '-');
+      let hello = document.querySelector('.hello');
+      const buttons = document.querySelectorAll('#projects button');
+
+      // make page scrollable
+      hello.style = "overflowY: scroll; height: 180vh";
+
+      //scroll to new view
+      window.window.scroll({
+  top: 800, 
+  left: 0, 
+  behavior: 'smooth' 
+});
+
+      // remove styles and add bg to target
+      [].map.call(buttons, (elem) => {elem.style = ""});
+      event.target.style = "background: purple"
+
+    }
+  }
 }
 </script>
 
 <style scoped>
 .hello{
+  overflow: hidden;
   height: 100vh;
-  width: 100vw;
-  position: fixed;
+  max-width: 100vw;
 }
-.black{
-    background: #000000;
-    height: 55vh;
-    color: white;
+#intro{
+  background: #606470;
+  height: 100vh;
+  z-index: 0;
 }
-h1{
-  font-size: 12em;
-  bottom: 43vh;
-  position: fixed;
-  color: white;
-  z-index: 3;
+#intro h1{
+  font-size: 10em;
 }
-.black h2{
-  bottom: 1vh;
-  left: 500px;
-  position: fixed;
-  font-size: 1.5em;
-  animation-delay: .5s;
+#intro h2{
+  font-size: 3em;
 }
-.wrapper{
-  max-width: 900px;
-  height: 100%;
-  border: 5px solid pink;
+#intro h2, #intro h1{
+  text-align: center;
+  padding-top: 5vh;
 }
-
-.white h2{
-  padding-top: 5px;
-  left: 500px;
-  position: absolute;
+#projects{
+  height: 20vh;
+  background: #323643;
+  z-index: 30;
+  transition-duration: 1s;
+}
+#projects h3{
+  text-align: center;
+  background: #323643;
+  padding: 20px;
+  margin-left: 70%;
+  width: 20%;
+  border-radius: 30px 30px 0px 0px;
+  transform: translateY(-98%);
   font-size: 2em;
-  animation-delay: 1s;
-  z-index: -1;
+  z-index: 30;
 }
-h3{
-  bottom: 3px;
-  left: 3px;
-  position: absolute;
-  font-size: 15px;
-  animation-delay: 2s;
+.project-block{
+  display: flex;
+  flex-directoion: row;
+  justify-content: center;
+  align-items: center;
 }
-
-.animated {
-  animation-duration: 1s;
-  animation-fill-mode: both;
-}
-
-@keyframes slideInLeft {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
-  }
+#projects button{
+  padding: 20px;
+  width: 200px;
+  margin-top: -20px;
+  margin-left: 10px;
+  margin-right: 10px;
+  background: #3DC2FC ;
+  border: none;
+  highlight: none;
+  font-size: 2em;
 }
 
-@keyframes slideInDownHidden {
-  from {
-    transform: translate3d(0, -100%, 0);
-    visibility: visible;
-    opacity: 0;
-  }
-
-  to {
-    transform: translate3d(0, 0, 0);
-    opacity: 1;
-  }
-}
-@keyframes slideInDown {
-  from {
-    transform: translate3d(0, -100%, 0);
-    visibility: visible;
-  }
-
-  to {
-    transform: translate3d(0, 0, 0);
-  }
-}
-
-@keyframes bounceInRight {
-  from, 60%, 75%, 90%, to {
-    animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
-  }
-
-  from {
-    opacity: 0;
-    transform: translate3d(3000px, 0, 0);
-  }
-
-  60% {
-    opacity: 1;
-    transform: translate3d(-25px, 0, 0);
-  }
-
-  75% {
-    transform: translate3d(10px, 0, 0);
-  }
-
-  90% {
-    transform: translate3d(-5px, 0, 0);
-  }
-
-  to {
-    transform: none;
-  }
-}
-
-
-.bounceInRight {
-  animation-name: bounceInRight;
-}
-.slideInDownHidden {
-  animation-name: slideInDownHidden;
-}
-.slideInDown {
-  animation-name: slideInDown;
-}
-.slideInLeft {
-  animation-name: slideInLeft;
-}
-
-@media screen and (max-width: 637px) {
-    h1{
-        font-size: 8em;
-        bottom: 45vh;
-    }
-    .black h2{
-      left: 330px;
-    }
-    .white h2{
-      left: 5px;
-    }
-}
-@media screen and (max-width: 405px) {
-    h1{
-        font-size: 6em;
-        bottom: 45vh;
-    }
-    .black h2{
-      left: 240px;
-      font-size: 1.25em;
-      bottom: 3vh;
-    }
+#contact{
+  position: fixed;
+  display: none;
 }
 </style>
