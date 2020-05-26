@@ -3,24 +3,195 @@
 <head>
     <meta charset="UTF-8">
     <title>JimmyB - Work</title>
+    <style>
+        @import url("https://fonts.googleapis.com/css?family=Merriweather:400,400i,700");
+        @import url('https://fonts.googleapis.com/css2?family=Chelsea+Market&family=Rubik:wght@400;900&display=swap');
+
+        html, body, div, span, applet, object, iframe,
+        h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+        a, abbr, acronym, address, big, cite, code,
+        del, dfn, em, img, ins, kbd, q, s, samp,
+        small, strike, strong, sub, sup, tt, var,
+        b, u, i, center,
+        dl, dt, dd, ol, ul, li,
+        fieldset, form, label, legend,
+        table, caption, tbody, tfoot, thead, tr, th, td,
+        article, aside, canvas, details, embed,
+        figure, figcaption, footer, header, hgroup,
+        menu, nav, section, button  {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            font-size: 100%;
+            font: inherit;
+            vertical-align: baseline;
+            font-family: 'Rubik', sans-serif;
+        }
+        body{
+            background: #eaecef;
+        }
+        #app-view {
+            position: relative;
+        }
+        .top-navigation{
+            width: 99vw;
+            display: flex;
+            justify-content: flex-end;
+            opacity: 1;
+            position: fixed;
+            z-index: 3;
+        }
+        .top-navigation button{
+            margin-top: 30px;
+            margin-left: 10px;
+            color: white;
+            background: #0e0e0e;
+            outline: none;
+            font-size: 2em;
+            padding: 10px 20px;
+            border: 0;
+            font-weight: 900;
+            /*box-shadow: 4px 4px rgba(0,200,200,05);*/
+        }
+        button:hover{
+            cursor: pointer;
+            background: #464646;
+            box-shadow: 4px 4px rgba(0,200,200,05);
+        }
+
+        #home-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            opacity: 0;
+            display: flex;
+            justify-content: center;
+        }
+        #home-container.active {
+            z-index: 2;
+            -webkit-transition: opacity .6s, -webkit-transform .6s;
+            transition: opacity .6s, -webkit-transform .6s;
+            transition: transform .6s, opacity .6s .5s;
+            transition: transform .6s, opacity .6s .5s, -webkit-transform .6s;
+            opacity: 1;
+        }
+        svg {
+            display: block;
+            width: 100%;
+            height: 100vh;
+        }
+        svg .polymorph {
+            fill: #e3e3e3;
+        }
+
+        .left-column {
+            height: 100vh;
+            width: 5vw;
+        }
+        .right-column {
+            width: 95vw;
+            height: 100vh;
+        }
+
+        .left-column p{
+            font-size: 3.5em;
+            writing-mode: vertical-rl;
+            text-orientation: upright;
+        }
+
+        .main-body {
+            height: 95%;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .intro-box{
+            display: flex;
+            justify-content: center;
+        }
+        .intro-box p{
+            writing-mode: vertical-rl;
+            text-orientation: upright;
+            font-size: .65em;
+            font-weight: 400;
+        }
+        .intro-text{
+            border: 7px solid black;
+            width: 50vw;
+            height: 30vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .intro-text h1{
+            font-weight: 900;
+            font-size: 2.5em;
+            font-family: 'Chelsea Market', cursive;
+        }
+        .intro-text a{
+            text-decoration: none;
+            text-underline: none;
+            color: black
+        }
+
+        .about-container {
+            position: absolute;
+            margin-top: -100vh;
+            text-align: center;
+            height: 100vh;
+            width: 100vw;
+        }
+        .about-container #content {
+            height: 100%;
+            width: 100%;
+            -webkit-transform: translate(-100%,-100%);
+            transform: translate(-100%,-100%);
+            opacity: 0;
+            left: -150%;
+            -webkit-transition: opacity .6s .2s, -webkit-transform .6s;
+            transition: opacity .6s .2s, -webkit-transform .6s .2s;
+            transition: transform .6s, opacity .6s .2s;
+            transition: transform .6s, opacity .6s .2s, -webkit-transform .6s;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .about-container #content.active {
+            z-index: 4;
+            left: 0;
+            -webkit-transform: translate(0,0);
+            transform: translate(0,0);
+            opacity: 1;
+        }
+        #close {
+            position: fixed;
+            left: 5px;
+            bottom: 5px;
+            font-weight: 900;
+            z-index: 15;
+            transition: opacity .6s 2s;
+        }
+
+    </style>
 </head>
 <body>
-<section id="my-section">
-    <div class="active" id="wrap-cta">
-
-        <section class="left-column">
+<section id="app-view">
+    <section class="top-navigation">
+        <nav>
+            <button id="about-button">About</button>
+            <button>Work</button>
+            <button>Contact</button>
+        </nav>
+    </section>
+    <div class="active" id="home-container">
+        <div class="left-column">
             <p>Jimmy</p>
-        </section>
-
+        </div>
         <div class="right-column">
-            <section class="top-navigation">
-                <nav>
-                    <button id="cta">About</button>
-                    <button>Work</button>
-                    <button>Contact</button>
-                </nav>
-            </section>
-            <section class="main-body">
+            <div class="main-body">
                 <div class="intro-box">
                     <p>Hi my name is Jimmy</p>
                     <div class="intro-text">
@@ -32,17 +203,19 @@
                     </div>
                     <p>Hi my name is Jimmy</p>
                 </div>
-            </section>
+            </div>
         </div>
     </div>
     <svg viewBox="0 0 215 110" preserveAspectRatio="none">
         <polygon class="polymorph" points="215,110 0,110 0,0 215,0"></polygon>
     </svg>
-    <div class="container">
+    <div class="about-container">
         <div id="content">
+            <div id="close">
+                <p>X</p>
+            </div>
             <h1>Lorem ipsum dolor sit amet</h1>
             <p>Dolor sit amet et consectquo lorem ipsum dolor sit amet</p>
-            <button id="close">Ok, close me</button>
         </div>
     </div>
 </section>
@@ -52,11 +225,10 @@
     /** Inspired by coursetro.com **/
 
 // Refs
-    const wrapCta = document.querySelector('#wrap-cta'),
-        btnCta = document.querySelector('#cta'),
+    const wrapCta = document.querySelector('#home-container'),
+        aboutBtn = document.querySelector('#about-button'),
         content = document.querySelector('#content'),
         btnClose = document.querySelector('#close');
-
 
     // Anime.js Commons Values for SVG Morph
     const common = {
@@ -65,26 +237,20 @@
         duration: 600,
         loop: false };
 
-
-
-    // Show content
-    btnCta.addEventListener('click', () => {
-        // Elements apparence
+    var showAbout = function () {
         wrapCta.classList.remove('active');
         content.classList.add('active');
 
         // Morph SVG
         anime({
             ...common,
+            fill: ['#e3e3e3', 'rgba(0,200,200,0.5)'],
+            // duration: 1000,
             points: [
-                { value: '215,110 0,110 186,86 215,0' }] });
+                { value: '215,110 0,110 200,100 215,0' }] });
+    }
 
-
-    });
-
-
-    // Hide content
-    btnClose.addEventListener('click', () => {
+    var hideAbout = function() {
         // Elements apparence
         content.classList.remove('active');
         wrapCta.classList.add('active');
@@ -92,11 +258,27 @@
         // Morph SVG
         anime({
             ...common,
+            fill: '#e3e3e3',
             points: [
-                { value: '215,110 0,110 0,0 215,0' }] });
-
-
+                {value: '215,110 0,110 0,0 215,0'}
+            ]
+        })
+    }
+    // Show content
+    var showingAbout = false
+    aboutBtn.addEventListener('click', () => {
+        // Elements apparence
+        console.log("sowing")
+        console.log(showingAbout)
+        showingAbout ? hideAbout() : showAbout()
+        showingAbout = !showingAbout
     });
+
+    btnClose.addEventListener('click', () => {
+        hideAbout()
+        showingAbout = false
+    });
+
 
     var TxtType = function(el, toRotate, period) {
         this.toRotate = toRotate;
@@ -161,182 +343,6 @@
     };
 </script>
 
-<style>
-    @import url("https://fonts.googleapis.com/css?family=Merriweather:400,400i,700");
-    @import url('https://fonts.googleapis.com/css2?family=Chelsea+Market&family=Rubik:wght@400;900&display=swap');
 
-    html, body, div, span, applet, object, iframe,
-    h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-    a, abbr, acronym, address, big, cite, code,
-    del, dfn, em, img, ins, kbd, q, s, samp,
-    small, strike, strong, sub, sup, tt, var,
-    b, u, i, center,
-    dl, dt, dd, ol, ul, li,
-    fieldset, form, label, legend,
-    table, caption, tbody, tfoot, thead, tr, th, td,
-    article, aside, canvas, details, embed,
-    figure, figcaption, footer, header, hgroup,
-    menu, nav, section, button  {
-        margin: 0;
-        padding: 0;
-        border: 0;
-        font-size: 100%;
-        font: inherit;
-        vertical-align: baseline;
-        font-family: 'Rubik', sans-serif;
-    }
-    body{
-        background: #eaecef;
-    }
-
-
-    #my-section {
-        position: relative;
-    }
-
-    #wrap-cta {
-        position: absolute;
-        top: 0;
-        left: 0;
-        -webkit-transform: translate(0, -50%);
-        transform: translate(0, -50%);
-        opacity: 0;
-    }
-    #wrap-cta.active {
-        z-index: 2;
-        -webkit-transform: translate(0%, -50%);
-        transform: translate(0%, -50%);
-        -webkit-transition: opacity .6s, -webkit-transform .6s;
-        transition: opacity .6s, -webkit-transform .6s;
-        transition: transform .6s, opacity .6s;
-        transition: transform .6s, opacity .6s, -webkit-transform .6s;
-        opacity: 1;
-    }
-    svg {
-        display: block;
-        width: 100%;
-        height: 100vh;
-    }
-    svg .polymorph {
-        fill: #d4f3ef;
-    }
-
-
-    .left-column {
-        height: 100vh;
-        width: 5vw;
-    }
-    .right-column {
-        width: 95vw;
-        height: 100vh;
-    }
-    .top-navigation{
-        width: 100%;
-        display: flex;
-        justify-content: flex-end;
-    }
-    .left-column p{
-        font-size: 3.5em;
-        writing-mode: vertical-rl;
-        text-orientation: upright;
-    }
-    .top-navigation button{
-        margin-top: 30px;
-        margin-left: 10px;
-        color: white;
-        background: #0e0e0e;
-        outline: none;
-        font-size: 2em;
-        padding: 10px 20px;
-        border: 0;
-        font-weight: 900;
-        /*box-shadow: 4px 4px rgba(0,200,200,05);*/
-    }
-    button:hover{
-        cursor: pointer;
-        background: #464646;
-        box-shadow: 4px 4px rgba(0,200,200,05);
-    }
-    .main-body {
-        height: 65%;
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    .intro-box{
-        display: flex;
-        justify-content: center;
-    }
-    .intro-box p{
-        writing-mode: vertical-rl;
-        text-orientation: upright;
-        font-size: .65em;
-        font-weight: 400;
-    }
-    .intro-text{
-        border: 7px solid black;
-        width: 600px;
-        height: 250px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    .intro-text h1{
-        font-weight: 900;
-        font-size: 2em;
-        font-family: 'Chelsea Market', cursive;
-    }
-    .intro-text a{
-        text-decoration: none;
-        text-underline: none;
-        color: black
-    }
-
-    .container {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        -webkit-transform: translate(-50%, -50%);
-        transform: translate(-50%, -50%);
-        text-align: center;
-    }
-    .container #content {
-        -webkit-transform: translateY(-50px);
-        transform: translateY(-50px);
-        opacity: 0;
-        color: #B66C8D;
-        -webkit-transition: opacity .6s .2s, -webkit-transform .6s .2s;
-        transition: opacity .6s .2s, -webkit-transform .6s .2s;
-        transition: transform .6s .2s, opacity .6s .2s;
-        transition: transform .6s .2s, opacity .6s .2s, -webkit-transform .6s .2s;
-    }
-    .container #content #close {
-        display: inline-block;
-        margin-top: 2rem;
-        padding: .5rem 1rem;
-        text-transform: uppercase;
-        font-size: .9em;
-        color: #B66C8D;
-        background: transparent;
-        border: 2px solid;
-        border-radius: 5px;
-        cursor: pointer;
-        outline: none;
-        -webkit-tap-highlight-color: transparent;
-        -webkit-transition: background .4s;
-        transition: background .4s;
-    }
-    .container #content #close:hover {
-        background: rgba(182, 108, 141, 0.3);
-    }
-    .container #content.active {
-        z-index: 4;
-        -webkit-transform: translateY(0);
-        transform: translateY(0);
-        opacity: 1;
-    }
-
-</style>
 </body>
 </html>
