@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JimmyB - Work</title>
+</head>
+<body>
+<section id="my-section">
+    <div class="active" id="wrap-cta">
+
+        <section class="left-column">
+            <p>Jimmy</p>
+        </section>
+
+        <div class="right-column">
+            <section class="top-navigation">
+                <nav>
+                    <button id="cta">About</button>
+                    <button>Work</button>
+                    <button>Contact</button>
+                </nav>
+            </section>
+            <section class="main-body">
+                <div class="intro-box">
+                    <p>Hi my name is Jimmy</p>
+                    <div class="intro-text">
+                        <h1>
+                            <a href="" class="typewrite" data-period="2000" data-type='[ "Hi, Im Jimmy 👋", "I am an Engineer.", "I turn Ideas into Products", "Welcome to Jimmy B" ]'>
+                                <span class="wrap"></span>
+                            </a>
+                        </h1>
+                    </div>
+                    <p>Hi my name is Jimmy</p>
+                </div>
+            </section>
+        </div>
+    </div>
+    <svg viewBox="0 0 215 110" preserveAspectRatio="none">
+        <polygon class="polymorph" points="215,110 0,110 0,0 215,0"></polygon>
+    </svg>
+    <div class="container">
+        <div id="content">
+            <h1>Lorem ipsum dolor sit amet</h1>
+            <p>Dolor sit amet et consectquo lorem ipsum dolor sit amet</p>
+            <button id="close">Ok, close me</button>
+        </div>
+    </div>
+</section>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.0/anime.js"></script>
+<script>
+    /** Inspired by coursetro.com **/
+
+// Refs
+    const wrapCta = document.querySelector('#wrap-cta'),
+        btnCta = document.querySelector('#cta'),
+        content = document.querySelector('#content'),
+        btnClose = document.querySelector('#close');
+
+
+    // Anime.js Commons Values for SVG Morph
+    const common = {
+        targets: '.polymorph',
+        easing: 'easeOutQuad',
+        duration: 600,
+        loop: false };
+
+
+
+    // Show content
+    btnCta.addEventListener('click', () => {
+        // Elements apparence
+        wrapCta.classList.remove('active');
+        content.classList.add('active');
+
+        // Morph SVG
+        anime({
+            ...common,
+            points: [
+                { value: '215,110 0,110 186,86 215,0' }] });
+
+
+    });
+
+
+    // Hide content
+    btnClose.addEventListener('click', () => {
+        // Elements apparence
+        content.classList.remove('active');
+        wrapCta.classList.add('active');
+
+        // Morph SVG
+        anime({
+            ...common,
+            points: [
+                { value: '215,110 0,110 0,0 215,0' }] });
+
+
+    });
+
+    var TxtType = function(el, toRotate, period) {
+        this.toRotate = toRotate;
+        this.el = el;
+        this.loopNum = 0;
+        this.period = parseInt(period, 10) || 2000;
+        this.txt = '';
+        this.tick();
+        this.isDeleting = false;
+    };
+
+    TxtType.prototype.tick = function() {
+        var i = this.loopNum % this.toRotate.length;
+        var fullTxt = this.toRotate[i];
+
+        if (this.isDeleting) {
+            this.txt = fullTxt.substring(0, this.txt.length - 1);
+        } else {
+            this.txt = fullTxt.substring(0, this.txt.length + 1);
+        }
+
+        this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
+
+        var that = this;
+        var delta = 150 - Math.random() * 100;
+
+        if (this.isDeleting) { delta /= 2; }
+
+        if (!this.isDeleting && this.txt === fullTxt) {
+            delta = this.period;
+            if (this.loopNum === 3){
+                return
+            }
+            this.isDeleting = true;
+        } else if (this.isDeleting && this.txt === '') {
+            this.isDeleting = false;
+            this.loopNum++;
+            delta = 500;
+        }
+
+        setTimeout(function() {
+            that.tick();
+        }, delta);
+
+
+    };
+
+    window.onload = function() {
+        var elements = document.getElementsByClassName('typewrite');
+        for (var i=0; i<elements.length; i++) {
+            var toRotate = elements[i].getAttribute('data-type');
+            var period = elements[i].getAttribute('data-period');
+            if (toRotate) {
+                new TxtType(elements[i], JSON.parse(toRotate), period);
+            }
+        }
+        // INJECT CSS
+        var css = document.createElement("style");
+        css.type = "text/css";
+        css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid rgba(0,200,200,1)}";
+        document.body.appendChild(css);
+    };
+</script>
+
+<style>
+    @import url("https://fonts.googleapis.com/css?family=Merriweather:400,400i,700");
+    @import url('https://fonts.googleapis.com/css2?family=Chelsea+Market&family=Rubik:wght@400;900&display=swap');
+
+    html, body, div, span, applet, object, iframe,
+    h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+    a, abbr, acronym, address, big, cite, code,
+    del, dfn, em, img, ins, kbd, q, s, samp,
+    small, strike, strong, sub, sup, tt, var,
+    b, u, i, center,
+    dl, dt, dd, ol, ul, li,
+    fieldset, form, label, legend,
+    table, caption, tbody, tfoot, thead, tr, th, td,
+    article, aside, canvas, details, embed,
+    figure, figcaption, footer, header, hgroup,
+    menu, nav, section, button  {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        font-size: 100%;
+        font: inherit;
+        vertical-align: baseline;
+        font-family: 'Rubik', sans-serif;
+    }
+    body{
+        background: #eaecef;
+    }
+
+
+    #my-section {
+        position: relative;
+    }
+
+    #wrap-cta {
+        position: absolute;
+        top: 0;
+        left: 0;
+        -webkit-transform: translate(0, -50%);
+        transform: translate(0, -50%);
+        opacity: 0;
+    }
+    #wrap-cta.active {
+        z-index: 2;
+        -webkit-transform: translate(0%, -50%);
+        transform: translate(0%, -50%);
+        -webkit-transition: opacity .6s, -webkit-transform .6s;
+        transition: opacity .6s, -webkit-transform .6s;
+        transition: transform .6s, opacity .6s;
+        transition: transform .6s, opacity .6s, -webkit-transform .6s;
+        opacity: 1;
+    }
+    svg {
+        display: block;
+        width: 100%;
+        height: 100vh;
+    }
+    svg .polymorph {
+        fill: #d4f3ef;
+    }
+
+
+    .left-column {
+        height: 100vh;
+        width: 5vw;
+    }
+    .right-column {
+        width: 95vw;
+        height: 100vh;
+    }
+    .top-navigation{
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+    }
+    .left-column p{
+        font-size: 3.5em;
+        writing-mode: vertical-rl;
+        text-orientation: upright;
+    }
+    .top-navigation button{
+        margin-top: 30px;
+        margin-left: 10px;
+        color: white;
+        background: #0e0e0e;
+        outline: none;
+        font-size: 2em;
+        padding: 10px 20px;
+        border: 0;
+        font-weight: 900;
+        /*box-shadow: 4px 4px rgba(0,200,200,05);*/
+    }
+    button:hover{
+        cursor: pointer;
+        background: #464646;
+        box-shadow: 4px 4px rgba(0,200,200,05);
+    }
+    .main-body {
+        height: 65%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .intro-box{
+        display: flex;
+        justify-content: center;
+    }
+    .intro-box p{
+        writing-mode: vertical-rl;
+        text-orientation: upright;
+        font-size: .65em;
+        font-weight: 400;
+    }
+    .intro-text{
+        border: 7px solid black;
+        width: 600px;
+        height: 250px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .intro-text h1{
+        font-weight: 900;
+        font-size: 2em;
+        font-family: 'Chelsea Market', cursive;
+    }
+    .intro-text a{
+        text-decoration: none;
+        text-underline: none;
+        color: black
+    }
+
+    .container {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+    .container #content {
+        -webkit-transform: translateY(-50px);
+        transform: translateY(-50px);
+        opacity: 0;
+        color: #B66C8D;
+        -webkit-transition: opacity .6s .2s, -webkit-transform .6s .2s;
+        transition: opacity .6s .2s, -webkit-transform .6s .2s;
+        transition: transform .6s .2s, opacity .6s .2s;
+        transition: transform .6s .2s, opacity .6s .2s, -webkit-transform .6s .2s;
+    }
+    .container #content #close {
+        display: inline-block;
+        margin-top: 2rem;
+        padding: .5rem 1rem;
+        text-transform: uppercase;
+        font-size: .9em;
+        color: #B66C8D;
+        background: transparent;
+        border: 2px solid;
+        border-radius: 5px;
+        cursor: pointer;
+        outline: none;
+        -webkit-tap-highlight-color: transparent;
+        -webkit-transition: background .4s;
+        transition: background .4s;
+    }
+    .container #content #close:hover {
+        background: rgba(182, 108, 141, 0.3);
+    }
+    .container #content.active {
+        z-index: 4;
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+</style>
+</body>
+</html>
