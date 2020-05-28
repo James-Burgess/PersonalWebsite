@@ -23,6 +23,9 @@ menu, nav, section, button  {
 }
 body{
     background: #eaecef;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
 }
 #app-view {
     position: relative;
@@ -38,8 +41,8 @@ body{
 .top-navigation button{
     margin-top: 30px;
     margin-left: 10px;
-    color: white;
-    background: #0e0e0e;
+    color: #eaecef;
+    background: #464646;
     outline: none;
     font-size: 2em;
     padding: 10px 20px;
@@ -47,9 +50,9 @@ body{
     font-weight: 900;
     /*box-shadow: 4px 4px rgba(0,200,200,05);*/
 }
-button:hover{
+button:hover, button:active{
     cursor: pointer;
-    background: #464646;
+    color: white;
     box-shadow: 4px 4px rgba(0,200,200,05);
 }
 
