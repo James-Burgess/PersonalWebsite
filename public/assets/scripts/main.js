@@ -50,7 +50,7 @@ var showWork = function() {
         easing: 'easeOutQuad',
         duration: 600,
         loop: false,
-        fill: ['#e3e3e3', 'rgba(10,100,200,0.5)'],
+        fill: ['#e3e3e3', 'rgba(0,200,200,0.5)'],
         points: [
             { value: '215,110 0,110 0,0 10,100' }] });
 }
