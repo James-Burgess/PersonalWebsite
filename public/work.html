@@ -3,186 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <title>JimmyB - Work</title>
-    <style>
-        @import url("https://fonts.googleapis.com/css?family=Merriweather:400,400i,700");
-        @import url('https://fonts.googleapis.com/css2?family=Chelsea+Market&family=Rubik:wght@400;900&display=swap');
-
-        html, body, div, span, applet, object, iframe,
-        h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-        a, abbr, acronym, address, big, cite, code,
-        del, dfn, em, img, ins, kbd, q, s, samp,
-        small, strike, strong, sub, sup, tt, var,
-        b, u, i, center,
-        dl, dt, dd, ol, ul, li,
-        fieldset, form, label, legend,
-        table, caption, tbody, tfoot, thead, tr, th, td,
-        article, aside, canvas, details, embed,
-        figure, figcaption, footer, header, hgroup,
-        menu, nav, section, button  {
-            margin: 0;
-            padding: 0;
-            border: 0;
-            font-size: 100%;
-            font: inherit;
-            vertical-align: baseline;
-            font-family: 'Rubik', sans-serif;
-        }
-        body{
-            background: #eaecef;
-        }
-        #app-view {
-            position: relative;
-        }
-        .top-navigation{
-            width: 99vw;
-            display: flex;
-            justify-content: flex-end;
-            opacity: 1;
-            position: fixed;
-            z-index: 3;
-        }
-        .top-navigation button{
-            margin-top: 30px;
-            margin-left: 10px;
-            color: white;
-            background: #0e0e0e;
-            outline: none;
-            font-size: 2em;
-            padding: 10px 20px;
-            border: 0;
-            font-weight: 900;
-            /*box-shadow: 4px 4px rgba(0,200,200,05);*/
-        }
-        button:hover{
-            cursor: pointer;
-            background: #464646;
-            box-shadow: 4px 4px rgba(0,200,200,05);
-        }
-
-        #home-container {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100vw;
-            opacity: 0;
-            display: flex;
-            justify-content: center;
-        }
-        #home-container.active {
-            z-index: 2;
-            -webkit-transition: opacity .6s, -webkit-transform .6s;
-            transition: opacity .6s, -webkit-transform .6s;
-            transition: transform .6s, opacity .6s .5s;
-            transition: transform .6s, opacity .6s .5s, -webkit-transform .6s;
-            opacity: 1;
-        }
-        svg {
-            display: block;
-            width: 100%;
-            height: 100vh;
-        }
-        svg .polymorph {
-            fill: #e3e3e3;
-        }
-
-        .left-column {
-            height: 100vh;
-            width: 5vw;
-        }
-        .right-column {
-            width: 95vw;
-            height: 100vh;
-        }
-
-        .left-column p{
-            font-size: 3.5em;
-            writing-mode: vertical-rl;
-            text-orientation: upright;
-        }
-
-        .main-body {
-            height: 95%;
-            width: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        .intro-box{
-            display: flex;
-            justify-content: center;
-        }
-        .intro-box p{
-            writing-mode: vertical-rl;
-            text-orientation: upright;
-            font-size: .65em;
-            font-weight: 400;
-        }
-        .intro-text{
-            border: 7px solid black;
-            width: 50vw;
-            height: 30vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        .intro-text h1{
-            font-weight: 900;
-            font-size: 2.5em;
-            font-family: 'Chelsea Market', cursive;
-        }
-        .intro-text a{
-            text-decoration: none;
-            text-underline: none;
-            color: black
-        }
-
-        .about-container {
-            position: absolute;
-            margin-top: -100vh;
-            text-align: center;
-            height: 100vh;
-            width: 100vw;
-        }
-        .about-container #content {
-            height: 100%;
-            width: 100%;
-            -webkit-transform: translate(-100%,-100%);
-            transform: translate(-100%,-100%);
-            opacity: 0;
-            left: -150%;
-            -webkit-transition: opacity .6s .2s, -webkit-transform .6s;
-            transition: opacity .6s .2s, -webkit-transform .6s .2s;
-            transition: transform .6s, opacity .6s .2s;
-            transition: transform .6s, opacity .6s .2s, -webkit-transform .6s;
-
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        .about-container #content.active {
-            z-index: 4;
-            left: 0;
-            -webkit-transform: translate(0,0);
-            transform: translate(0,0);
-            opacity: 1;
-        }
-        #close {
-            position: fixed;
-            left: 5px;
-            bottom: 5px;
-            font-weight: 900;
-            z-index: 15;
-            transition: opacity .6s 2s;
-        }
-
-    </style>
+    <link rel="stylesheet" href="/assets/styles/main.css">
+    <link rel="stylesheet" href="/assets/styles/about.css">
 </head>
 <body>
 <section id="app-view">
     <section class="top-navigation">
         <nav>
             <button id="about-button">About</button>
-            <button>Work</button>
+            <button id="work-button">Work</button>
             <button>Contact</button>
         </nav>
     </section>
@@ -206,7 +35,7 @@
             </div>
         </div>
     </div>
-    <svg viewBox="0 0 215 110" preserveAspectRatio="none">
+    <svg viewBox="0 0 215 110" id="about-svg" preserveAspectRatio="none">
         <polygon class="polymorph" points="215,110 0,110 0,0 215,0"></polygon>
     </svg>
     <div class="about-container">
@@ -214,135 +43,27 @@
             <div id="close">
                 <p>X</p>
             </div>
+            <h1>ABOUT PAGE</h1><br>
             <h1>Lorem ipsum dolor sit amet</h1>
             <p>Dolor sit amet et consectquo lorem ipsum dolor sit amet</p>
         </div>
     </div>
+
+    <svg viewBox="0 0 215 110" id="work-svg" preserveAspectRatio="none">
+        <polygon fill="#e3e3e3" class="work-polymorph" points="215,110 0,110 0,0 215,0"></polygon>
+    </svg>
+    <div class="work-container">
+        <div id="work-content">
+            <h1>WORK PAGE</h1><br>
+            <h1>Lorem ipsum dolor sit amet</h1>
+            <p>Dolor sit amet et consectquo lorem ipsum dolor sit amet</p>
+        </div>
+    </div>
+
 </section>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.0/anime.js"></script>
-<script>
-    /** Inspired by coursetro.com **/
-
-// Refs
-    const wrapCta = document.querySelector('#home-container'),
-        aboutBtn = document.querySelector('#about-button'),
-        content = document.querySelector('#content'),
-        btnClose = document.querySelector('#close');
-
-    // Anime.js Commons Values for SVG Morph
-    const common = {
-        targets: '.polymorph',
-        easing: 'easeOutQuad',
-        duration: 600,
-        loop: false };
-
-    var showAbout = function () {
-        wrapCta.classList.remove('active');
-        content.classList.add('active');
-
-        // Morph SVG
-        anime({
-            ...common,
-            fill: ['#e3e3e3', 'rgba(0,200,200,0.5)'],
-            // duration: 1000,
-            points: [
-                { value: '215,110 0,110 200,100 215,0' }] });
-    }
-
-    var hideAbout = function() {
-        // Elements apparence
-        content.classList.remove('active');
-        wrapCta.classList.add('active');
-
-        // Morph SVG
-        anime({
-            ...common,
-            fill: '#e3e3e3',
-            points: [
-                {value: '215,110 0,110 0,0 215,0'}
-            ]
-        })
-    }
-    // Show content
-    var showingAbout = false
-    aboutBtn.addEventListener('click', () => {
-        // Elements apparence
-        console.log("sowing")
-        console.log(showingAbout)
-        showingAbout ? hideAbout() : showAbout()
-        showingAbout = !showingAbout
-    });
-
-    btnClose.addEventListener('click', () => {
-        hideAbout()
-        showingAbout = false
-    });
-
-
-    var TxtType = function(el, toRotate, period) {
-        this.toRotate = toRotate;
-        this.el = el;
-        this.loopNum = 0;
-        this.period = parseInt(period, 10) || 2000;
-        this.txt = '';
-        this.tick();
-        this.isDeleting = false;
-    };
-
-    TxtType.prototype.tick = function() {
-        var i = this.loopNum % this.toRotate.length;
-        var fullTxt = this.toRotate[i];
-
-        if (this.isDeleting) {
-            this.txt = fullTxt.substring(0, this.txt.length - 1);
-        } else {
-            this.txt = fullTxt.substring(0, this.txt.length + 1);
-        }
-
-        this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
-
-        var that = this;
-        var delta = 150 - Math.random() * 100;
-
-        if (this.isDeleting) { delta /= 2; }
-
-        if (!this.isDeleting && this.txt === fullTxt) {
-            delta = this.period;
-            if (this.loopNum === 3){
-                return
-            }
-            this.isDeleting = true;
-        } else if (this.isDeleting && this.txt === '') {
-            this.isDeleting = false;
-            this.loopNum++;
-            delta = 500;
-        }
-
-        setTimeout(function() {
-            that.tick();
-        }, delta);
-
-
-    };
-
-    window.onload = function() {
-        var elements = document.getElementsByClassName('typewrite');
-        for (var i=0; i<elements.length; i++) {
-            var toRotate = elements[i].getAttribute('data-type');
-            var period = elements[i].getAttribute('data-period');
-            if (toRotate) {
-                new TxtType(elements[i], JSON.parse(toRotate), period);
-            }
-        }
-        // INJECT CSS
-        var css = document.createElement("style");
-        css.type = "text/css";
-        css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid rgba(0,200,200,1)}";
-        document.body.appendChild(css);
-    };
-</script>
-
-
+<script src="/assets/scripts/main.js"></script>
+<script src="/assets/scripts/typewriter.js"></script>
 </body>
 </html>
