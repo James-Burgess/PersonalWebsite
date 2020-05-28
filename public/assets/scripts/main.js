@@ -16,7 +16,6 @@ var showingAbout = false
 // Anime.js Commons Values for SVG Morph
 const common = {
     targets: '.polymorph',
-    easing: 'easeOutQuad',
     duration: 600,
     loop: false };
 
@@ -31,6 +30,7 @@ var showAbout = function () {
 
     anime({
         ...common,
+        easing: 'easeOutQuad',
         fill: ['#e3e3e3', 'rgba(0,200,200,0.5)'],
         points: [
             { value: '215,110 0,110 200,100 215,0' }] });
@@ -52,7 +52,7 @@ var showWork = function() {
         loop: false,
         fill: ['#e3e3e3', 'rgba(10,100,200,0.5)'],
         points: [
-            { value: '215,110 0,110 200,100 215,0' }] });
+            { value: '215,110 0,110 0,0 10,100' }] });
 }
 
 var hideAbout = function() {
@@ -61,6 +61,7 @@ var hideAbout = function() {
 
     anime({
         ...common,
+        easing: 'easeInOutCirc',
         fill: '#e3e3e3',
         points: [
             {value: '215,110 0,110 0,0 215,0'}
@@ -72,13 +73,15 @@ var hideAbout = function() {
 }
 
 var hideWork = function() {
+    workSvg.classList.remove('active');
+
     homeContainer.classList.add('active');
     workContent.classList.remove('active');
 
 
     anime({
         targets: '.work-polymorph',
-        easing: 'easeOutQuad',
+        easing: 'easeInOutCirc',
         duration: 600,
         loop: false,
         fill: '#e3e3e3',

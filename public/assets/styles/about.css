@@ -6,12 +6,18 @@
     width: 100vw;
     z-index: 6;
 }
+.about-container #content{
+    -webkit-transform: translate(-100%,-100%);
+    transform: translate(-100%,-100%);
+}
 
+.work-container #work-content{
+    -webkit-transform: translate(100%,-100%);
+    transform: translate(100%,-100%);
+}
 .about-container #content, .work-container #work-content {
     height: 100%;
     width: 100%;
-    -webkit-transform: translate(-100%,-100%);
-    transform: translate(-100%,-100%);
     opacity: 0;
     -webkit-transition: opacity .6s .2s, -webkit-transform .6s;
     transition: opacity .6s .2s, -webkit-transform .6s .2s;
