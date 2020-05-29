@@ -118,10 +118,18 @@ var card = document.querySelector(".card");
 var playing = false;
 var homeDisabled = false;
 
-document.querySelector("#contact-button").addEventListener('click', () => {toggleContact()});
-document.querySelector("#home-button").addEventListener('click', () => {toggleContact()});
+document.querySelector("#contact-button").addEventListener('click', (e) => {toggleContact(e)});
+document.querySelector("#home-button").addEventListener('click', (e) => {toggleContact(e)});
+document.querySelector(".contact-container").addEventListener('click', (e) => {toggleContact(e)});
+let arr = [
+    document.querySelector(".contact-container"),
+    document.querySelector("#home-button"),
+    document.querySelector("#contact-button")
+];
+var toggleContact = function(e) {
+    if (!arr.includes(e.target))
+        return;
 
-var toggleContact = function() {
     if (playing)
         return;
 
@@ -133,7 +141,7 @@ var toggleContact = function() {
         scale: [{value: 1}, {value: 1.4}, {value: 1, delay: 250}],
         rotateY: {value: '+=180', delay: 200},
         easing: 'easeInOutSine',
-        duration: 400,
+        duration: 800,
         complete: function (anim) {
             if(!homeDisabled){ appView.classList.add('disabled') }
             playing = false;

@@ -27,16 +27,16 @@
                     <div class="right-column">
                         <div class="main-body">
                             <div class="intro-box">
-                                <p>Hi my name is Jimmy</p>
+<!--                                <p>Hi my name is Jimmy</p>-->
                                 <svg id="intro-text-box"></svg>
                                 <div class="intro-text">
                                     <h1>
-                                        <a href="" class="typewrite" data-period="2000" data-type='[ "Hi, Im Jimmy 👋", "I am an Engineer.", "I turn Ideas into Products", "Welcome to Jimmy B 🙂 " ]'>
+                                        <a href="" class="typewrite" data-period="2000" data-type='[ "Hi, Im Jimmy 👋", "I am an Engineer 👷", "I turn Ideas into Products ✨", "Welcome to Jimmy B 🙂 " ]'>
                                             <span class="wrap"></span>
                                         </a>
                                     </h1>
                                 </div>
-                                <p>Hi my name is Jimmy</p>
+<!--                                <p>Hi my name is Jimmy</p>-->
                             </div>
                         </div>
                     </div>
@@ -65,19 +65,30 @@
             </section>
         </div>
         <div class="back">
+            <iframe name="dummyframe" id="dummyframe" style="display: none;"></iframe>
+
             <div class="contact-container">
                 <div class="contact-us">
-                    <form>
-                        <input placeholder="Name" required="" type="text" />
-                        <input name="customerEmail" placeholder="Email" type="email" />
-                        <input name="customerPhone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="Phone" type="tel" />
+                    <div class="esc-btn">
+                        <button id="home-button">x</button>
+                    </div>
+
+                    <h1>Contact Me</h1>
+<!--                    <form action="https://submit-form.com/5-kPqXLuS-aletYM4Yo0P" target="dummyframe">-->
+                    <form target="dummyframe">
+                        <div class="contact-input-block">
+                            <input name="customerName" placeholder="Name" type="text" />
+                            <input name="customerEmail" placeholder="Email" type="email" />
+                        </div>
+
+                        <input name="customerSubject"  placeholder="Subject" type="text" />
+                        <textarea rows = "5" cols = "50" name="customerMessage"  placeholder="Message"></textarea>
+
                         <div class="contact-button-block">
-                            <button id="home-button">Cancel</button>
-                            <button type="button">Send</button>
+                            <button type="submit">Send</button>
                         </div>
                     </form>
                 </div>
-
             </div>
         </div>
     </div>
