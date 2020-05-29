@@ -7,6 +7,7 @@ const homeContainer = document.querySelector('#home-container'),
     btnClose = document.querySelector('#close'),
     workBtn = document.querySelector('#work-button'),
     aboutSvg = document.querySelector('#about-svg'),
+    appView = document.querySelector('#app-view'),
     workSvg = document.querySelector('#work-svg');
 
 
@@ -115,6 +116,7 @@ btnClose.addEventListener('click', () => {
 
 var card = document.querySelector(".card");
 var playing = false;
+var homeDisabled = false;
 
 document.querySelector("#contact-button").addEventListener('click', () => {toggleContact()});
 document.querySelector("#home-button").addEventListener('click', () => {toggleContact()});
@@ -123,7 +125,7 @@ var toggleContact = function() {
     console.log('clo')
     if (playing)
         return;
-
+    if(homeDisabled){ appView.classList.remove('disabled') }
     playing = true;
     anime({
         targets: card,
@@ -132,7 +134,11 @@ var toggleContact = function() {
         easing: 'easeInOutSine',
         duration: 400,
         complete: function (anim) {
+            if(!homeDisabled){ appView.classList.add('disabled') }
             playing = false;
+            hideAbout();
+            hideWork();
+            homeDisabled = !homeDisabled
         }
     });
 }

@@ -33,6 +33,7 @@ body{
 .front,
 .back {
     backface-visibility: hidden;
+    z-index:0;
 }
 .card {
     transform-style: preserve-3d;
@@ -50,9 +51,16 @@ body{
     width: 100vw;
     z-index: 16;
 }
+.contact-container{
+    z-index: 16;
+}
 
 #app-view {
     position: relative;
+}
+#app-view.disabled{
+    z-index: -1;
+    display: none;
 }
 .top-navigation{
     width: 99vw;
