@@ -27,6 +27,7 @@
                         <div class="main-body">
                             <div class="intro-box">
                                 <p>Hi my name is Jimmy</p>
+                                <svg id="intro-text-box"></svg>
                                 <div class="intro-text">
                                     <h1>
                                         <a href="" class="typewrite" data-period="2000" data-type='[ "Hi, Im Jimmy 👋", "I am an Engineer.", "I turn Ideas into Products", "Welcome to Jimmy B 🙂 " ]'>
@@ -74,5 +75,14 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.0/anime.js"></script>
 <script src="/assets/scripts/main.js"></script>
 <script src="/assets/scripts/typewriter.js"></script>
+<script src="/assets/scripts/vendors/rough.js"></script>
+<script>
+    // var introTx = document.querySelector('#intro-text-box')
+    const annotate = RoughNotation.annotate;
+
+    const e = document.querySelector('.intro-text');
+    const annotation = annotate(e, { type: 'box', animationDuration: 2000, strokeWidth: 4, padding: 0});
+    annotation.show();
+</script>
 </body>
 </html>

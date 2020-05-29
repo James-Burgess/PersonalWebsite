@@ -151,9 +151,9 @@ svg.active {
     text-orientation: upright;
     font-size: .65em;
     font-weight: 400;
+    padding: 10px;
 }
 .intro-text{
-    border: 7px solid black;
     width: 50vw;
     height: 30vh;
     display: flex;
