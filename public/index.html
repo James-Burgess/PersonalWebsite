@@ -4,200 +4,153 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>JimmyB</title>
+    <title>Document</title>
+    <style>
+        @import 'https://fonts.googleapis.com/css?family=Roboto+Mono:100';
+        html,
+        body {
+            font-family: 'Roboto Mono', monospace;
+            background: #212121;
+            height: 100%;
+        }
+        .container {
+            height: 100%;
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+        }
+        .text {
+            font-weight: 100;
+            font-size: 28px;
+            color: #fafafa;
+        }
+        .dud {
+            color: #757575;
+        }
+    </style>
 </head>
 <body>
 
-<section class="left-column">
-    <p>Jimmy</p>
-</section>
-
-<div class="right-column">
-    <section class="top-navigation">
-        <nav>
-            <button>About</button>
-            <button>Work</button>
-            <button>Contact</button>
-        </nav>
-    </section>
-    <section class="main-body">
-        <div class="intro-box">
-            <p>Hi my name is Jimmy</p>
-            <div class="intro-text">
-                <h1>
-                    <a href="" class="typewrite" data-period="2000" data-type='[ "Hi, Im Jimmy 👋", "I am an Engineer.", "I turn Ideas into Products", "Welcome to Jimmy B" ]'>
-                        <span class="wrap"></span>
-                    </a>
-                </h1>
-            </div>
-            <p>Hi my name is Jimmy</p>
-        </div>
-    </section>
+<div class="container">
+    <div class="text"></div>
 </div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.0/anime.js"></script>
+
 <script>
-    var TxtType = function(el, toRotate, period) {
-        this.toRotate = toRotate;
-        this.el = el;
-        this.loopNum = 0;
-        this.period = parseInt(period, 10) || 2000;
-        this.txt = '';
-        this.tick();
-        this.isDeleting = false;
-    };
-
-    TxtType.prototype.tick = function() {
-        var i = this.loopNum % this.toRotate.length;
-        var fullTxt = this.toRotate[i];
-
-        if (this.isDeleting) {
-            this.txt = fullTxt.substring(0, this.txt.length - 1);
-        } else {
-            this.txt = fullTxt.substring(0, this.txt.length + 1);
+    class TextScramble {
+        constructor(el) {
+            this.el = el
+            this.chars = '!<>-_\\/[]{}—=+*^?#________'
+            this.update = this.update.bind(this)
         }
-
-        this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
-
-        var that = this;
-        var delta = 150 - Math.random() * 100;
-
-        if (this.isDeleting) { delta /= 2; }
-
-        if (!this.isDeleting && this.txt === fullTxt) {
-            delta = this.period;
-            if (this.loopNum === 3){
-                return
+        setText(newText) {
+            const oldText = this.el.innerText
+            const length = Math.max(oldText.length, newText.length)
+            const promise = new Promise((resolve) => this.resolve = resolve)
+            this.queue = []
+            for (let i = 0; i < length; i++) {
+                const from = oldText[i] || ''
+                const to = newText[i] || ''
+                const start = Math.floor(Math.random() * 40)
+                const end = start + Math.floor(Math.random() * 40)
+                this.queue.push({ from, to, start, end })
             }
-            this.isDeleting = true;
-        } else if (this.isDeleting && this.txt === '') {
-            this.isDeleting = false;
-            this.loopNum++;
-            delta = 500;
+            cancelAnimationFrame(this.frameRequest)
+            this.frame = 0
+            this.update()
+            return promise
         }
-
-        setTimeout(function() {
-            that.tick();
-        }, delta);
-
-
-    };
-
-    window.onload = function() {
-        var elements = document.getElementsByClassName('typewrite');
-        for (var i=0; i<elements.length; i++) {
-            var toRotate = elements[i].getAttribute('data-type');
-            var period = elements[i].getAttribute('data-period');
-            if (toRotate) {
-                new TxtType(elements[i], JSON.parse(toRotate), period);
+        update() {
+            let output = ''
+            let complete = 0
+            for (let i = 0, n = this.queue.length; i < n; i++) {
+                let { from, to, start, end, char } = this.queue[i]
+                if (this.frame >= end) {
+                    complete++
+                    output += to
+                } else if (this.frame >= start) {
+                    if (!char || Math.random() < 0.28) {
+                        char = this.randomChar()
+                        this.queue[i].char = char
+                    }
+                    output += `<span class="dud">${char}</span>`
+                } else {
+                    output += from
+                }
+            }
+            this.el.innerHTML = output
+            if (complete === this.queue.length) {
+                this.resolve()
+            } else {
+                this.frameRequest = requestAnimationFrame(this.update)
+                this.frame++
             }
         }
-        // INJECT CSS
-        var css = document.createElement("style");
-        css.type = "text/css";
-        css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid rgba(0,200,200,1)}";
-        document.body.appendChild(css);
-    };
+        randomChar() {
+            return this.chars[Math.floor(Math.random() * this.chars.length)]
+        }
+    }
+
+
+    const phrases = [
+        'Hey,',
+        'My Name is James',
+        'but my friends call me Jimmy',
+        'We can be friends?',
+        'You can call me jimmy 🥰',
+        'Anyway, I\'m an engineer',
+        'I build websites',
+        'Just like this one',
+        'I\'m also an backend engineer, I love Python and Go',
+        'Ruby is okay too, oh and I wrote this site in Javascript',
+        'I guess that makes me full stack.',
+        'So if you like this website',
+        'Hit me up, I can build one for you too!',
+        'hey@jimmyb.co.za',
+        'hey@jimmyb.co.za',
+        'hey@jimmyb.co.za',
+        'hey@jimmyb.co.za',
+        'hey@jimmyb.co.za',
+        'hey@jimmyb.co.za',
+        'hey@jimmyb.co.za',
+        'hey@jimmyb.co.za',
+        'hey@jimmyb.co.za',
+        'hey@jimmyb.co.za',
+        'hey@jimmyb.co.za',
+        'hey@jimmyb.co.za',
+        'hey@jimmyb.co.za',
+        'hey@jimmyb.co.za',
+        'hey@jimmyb.co.za',
+        'hey@jimmyb.co.za',
+        'hey@jimmyb.co.za',
+        'hey@jimmyb.co.za',
+        'hey@jimmyb.co.za',
+        'hey@jimmyb.co.za',
+        'hey@jimmyb.co.za',
+        'hey@jimmyb.co.za',
+        'hey@jimmyb.co.za',
+        'hey@jimmyb.co.za',
+        'hey@jimmyb.co.za',
+        'hey@jimmyb.co.za',
+        'hey@jimmyb.co.za',
+        'hey@jimmyb.co.za'
+    ]
+
+    const el = document.querySelector('.text')
+    const fx = new TextScramble(el)
+
+    let counter = 0
+    const next = () => {
+        fx.setText(phrases[counter]).then(() => {
+            setTimeout(next, 800)
+        })
+        counter = (counter + 1) % phrases.length
+    }
+
+    next()
+
 </script>
 </body>
-<style>
-    @import url('https://fonts.googleapis.com/css2?family=Chelsea+Market&family=Rubik:wght@400;900&display=swap');
-
-    html, body, div, span, applet, object, iframe,
-    h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-    a, abbr, acronym, address, big, cite, code,
-    del, dfn, em, img, ins, kbd, q, s, samp,
-    small, strike, strong, sub, sup, tt, var,
-    b, u, i, center,
-    dl, dt, dd, ol, ul, li,
-    fieldset, form, label, legend,
-    table, caption, tbody, tfoot, thead, tr, th, td,
-    article, aside, canvas, details, embed,
-    figure, figcaption, footer, header, hgroup,
-    menu, nav, section, button  {
-        margin: 0;
-        padding: 0;
-        border: 0;
-        font-size: 100%;
-        font: inherit;
-        vertical-align: baseline;
-        font-family: 'Rubik', sans-serif;
-    }
-
-    body{
-        background: #eaecef;
-        display: flex;
-    }
-    .left-column {
-        height: 100vh;
-        width: 5vw;
-    }
-    .right-column {
-        width: 95vw;
-        height: 100vh;
-    }
-    .top-navigation{
-        width: 98%;
-        display: flex;
-        justify-content: flex-end;
-    }
-
-
-    .left-column p{
-        font-size: 3.5em;
-        writing-mode: vertical-rl;
-        text-orientation: upright;
-    }
-    .top-navigation button{
-        margin-top: 30px;
-        margin-left: 10px;
-        color: white;
-        background: #0e0e0e;
-        outline: none;
-        font-size: 2em;
-        padding: 10px 20px;
-        border: 0;
-        font-weight: 900;
-        /*box-shadow: 4px 4px rgba(0,200,200,05);*/
-    }
-    button:hover{
-        cursor: pointer;
-        background: #464646;
-        box-shadow: 4px 4px rgba(0,200,200,05);
-    }
-    .main-body {
-        height: 65%;
-        width: 95%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    .intro-box{
-        display: flex;
-        justify-content: center;
-    }
-    .intro-box p{
-        writing-mode: vertical-rl;
-        text-orientation: upright;
-        font-size: .65em;
-        font-weight: 400;
-    }
-    .intro-text{
-        border: 7px solid black;
-        width: 600px;
-        height: 250px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    .intro-text h1{
-        font-weight: 900;
-        font-size: 2em;
-        font-family: 'Chelsea Market', cursive;
-    }
-    .intro-text a{
-        text-decoration: none;
-        text-underline: none;
-        color: black
-    }
-
-</style>
 </html>
