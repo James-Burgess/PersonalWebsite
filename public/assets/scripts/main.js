@@ -122,11 +122,12 @@ document.querySelector("#contact-button").addEventListener('click', () => {toggl
 document.querySelector("#home-button").addEventListener('click', () => {toggleContact()});
 
 var toggleContact = function() {
-    console.log('clo')
     if (playing)
         return;
-    if(homeDisabled){ appView.classList.remove('disabled') }
+
+    if(homeDisabled){ appView.classList.remove('disabled');  }
     playing = true;
+
     anime({
         targets: card,
         scale: [{value: 1}, {value: 1.4}, {value: 1, delay: 250}],
@@ -139,6 +140,7 @@ var toggleContact = function() {
             hideAbout();
             hideWork();
             homeDisabled = !homeDisabled
+            annotation.show()
         }
     });
 }
