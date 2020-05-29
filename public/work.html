@@ -7,56 +7,70 @@
     <link rel="stylesheet" href="/assets/styles/about.css">
 </head>
 <body>
-<section id="app-view">
-    <section class="top-navigation">
-        <nav>
-            <button id="about-button">About</button>
-            <button id="work-button">Work</button>
-            <button>Contact</button>
-        </nav>
-    </section>
-    <div class="active" id="home-container">
-        <div class="left-column">
-            <p>Jimmy</p>
-        </div>
-        <div class="right-column">
-            <div class="main-body">
-                <div class="intro-box">
-                    <p>Hi my name is Jimmy</p>
-                    <div class="intro-text">
-                        <h1>
-                            <a href="" class="typewrite" data-period="2000" data-type='[ "Hi, Im Jimmy 👋", "I am an Engineer.", "I turn Ideas into Products", "Welcome to Jimmy B" ]'>
-                                <span class="wrap"></span>
-                            </a>
-                        </h1>
+<div class="card-container">
+    <div class="card">
+        <div class="front">
+            <section id="app-view">
+                <section class="top-navigation">
+                    <nav>
+                        <button id="about-button">About</button>
+                        <button id="work-button">Work</button>
+                        <button id="contact-button">Contact</button>
+                    </nav>
+                </section>
+                <div class="active" id="home-container">
+                    <div class="left-column">
+                        <p>Jimmy</p>
                     </div>
-                    <p>Hi my name is Jimmy</p>
+                    <div class="right-column">
+                        <div class="main-body">
+                            <div class="intro-box">
+                                <p>Hi my name is Jimmy</p>
+                                <div class="intro-text">
+                                    <h1>
+                                        <a href="" class="typewrite" data-period="2000" data-type='[ "Hi, Im Jimmy 👋", "I am an Engineer.", "I turn Ideas into Products", "Welcome to Jimmy B 🙂 " ]'>
+                                            <span class="wrap"></span>
+                                        </a>
+                                    </h1>
+                                </div>
+                                <p>Hi my name is Jimmy</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </div>
-    </div>
-    <svg viewBox="0 0 215 110" id="about-svg" preserveAspectRatio="none">
-        <polygon class="polymorph" points="215,110 0,110 0,0 215,0"></polygon>
-    </svg>
-    <div class="about-container">
-        <div id="content">
-            <div id="close">
-                <p>X</p>
-            </div>
-            <h1>ABOUT PAGE</h1><br>
-        </div>
-    </div>
+                <svg viewBox="0 0 215 110" id="about-svg" preserveAspectRatio="none">
+                    <polygon class="polymorph" points="215,110 0,110 0,0 215,0"></polygon>
+                </svg>
+                <div class="about-container">
+                    <div id="content">
+                        <div id="close">
+                            <p>X</p>
+                        </div>
+                        <h1>ABOUT PAGE</h1><br>
+                    </div>
+                </div>
 
-    <svg viewBox="0 0 215 110" id="work-svg" preserveAspectRatio="none">
-        <polygon fill="#e3e3e3" class="work-polymorph" points="215,110 0,110 0,0 215,0"></polygon>
-    </svg>
-    <div class="work-container">
-        <div id="work-content">
-            <h1>WORK PAGE</h1><br>
+                <svg viewBox="0 0 215 110" id="work-svg" preserveAspectRatio="none">
+                    <polygon fill="#e3e3e3" class="work-polymorph" points="215,110 0,110 0,0 215,0"></polygon>
+                </svg>
+                <div class="work-container">
+                    <div id="work-content">
+                        <h1>WORK PAGE</h1><br>
+                    </div>
+                </div>
+
+            </section>
+        </div>
+        <div class="back">
+            <section class="top-navigation">
+                <nav>
+                    <button id="home-button">✗</button>
+                </nav>
+            </section>
+
         </div>
     </div>
-
-</section>
+</div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.0/anime.js"></script>
 <script src="/assets/scripts/main.js"></script>
