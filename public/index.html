@@ -4,75 +4,200 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link id='theme' rel='stylesheet' href='https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/dark.css'>
-    <title>jimmyb</title>
+    <title>JimmyB</title>
 </head>
 <body>
-<div>
-    <h1>Jimmy Burgess</h1>
-    <blockquote>
-        Software Engineer - Outdoor Enthusiast
-    </blockquote>
 
-    <h3>Whoami?</h3>
-    <p>
-        I am a <b>software craftsman</b> living in <b>South Africa</b>, I take complex ideas and build them into simple solutions.
-    </p>
+<section class="left-column">
+    <p>Jimmy</p>
+</section>
 
-    <h3>What do I do?</h3>
-    <p>
-        I take <b>ideas</b> and build a <b>products</b> using all the tools of a modern <b>web developer</b>, and if I don't have the correct tool for the job, Ill make one.
-    </p>
-    <p>
-        Currently, I'm writing Ruby on Rails for <a href="www.prodigyfinance.com">Prodigy Finance</a>. (but don't tell my pythonistas) and I am at my happiest when exploring and prototyping ideas into products.
-    </p>
-
-    <h3>How do I do it?</h3>
-    <p>Here are a few of the most recent tools I've used:</p>
-    <ul>
-        <li>
-            <b>Languages:</b>  Python, Javascript, Ruby, Bash, Go, HTML&css.
-        </li>
-        <li>
-            <b>Frameworks:</b>  Django, Vue, Rails, Airflow, Flask, Bottle, Dataproc, Kedro.
-        </li>
-        <li>
-            <b>Devops:</b>  AWS, GCP, Hadoop, K8's, Docker, Linux, Heroku, Jenkins, GitLab CI.
-        </li>
-        <li>
-            <b>Tools:</b>  REST, graphQL, gRPC, Redis, Celery, RabbitMq, Pandas, BigQuery, MongoDb, Postgres.
-        </li>
-    </ul>
-
-    <h3>How do I get a hold of you?</h3>
-    <p>
-        Feel free to tell me about your exciting idea, ask for my CV or just chat some tech.<br />
-        <br>
-        <a href='mailto:info@jimmyb.co.za'>info@jimmyb.co.za</a>
-    </p>
+<div class="right-column">
+    <section class="top-navigation">
+        <nav>
+            <button>About</button>
+            <button>Work</button>
+            <button>Contact</button>
+        </nav>
+    </section>
+    <section class="main-body">
+        <div class="intro-box">
+            <p>Hi my name is Jimmy</p>
+            <div class="intro-text">
+                <h1>
+                    <a href="" class="typewrite" data-period="2000" data-type='[ "Hi, Im Jimmy 👋", "I am an Engineer.", "I turn Ideas into Products", "Welcome to Jimmy B" ]'>
+                        <span class="wrap"></span>
+                    </a>
+                </h1>
+            </div>
+            <p>Hi my name is Jimmy</p>
+        </div>
+    </section>
 </div>
-<br><br><br>
-<button onclick="toggleTheme()">Toggle Theme</button>
-
 <script>
-  let count = 0
-  let toggled = false
-  let toggleTheme = () => {
-      let theme = toggled ? 'https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/dark.css' : 'https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/light.css'
-      document.getElementById('theme').href = theme
-      toggled = !toggled
-  }
+    var TxtType = function(el, toRotate, period) {
+        this.toRotate = toRotate;
+        this.el = el;
+        this.loopNum = 0;
+        this.period = parseInt(period, 10) || 2000;
+        this.txt = '';
+        this.tick();
+        this.isDeleting = false;
+    };
+
+    TxtType.prototype.tick = function() {
+        var i = this.loopNum % this.toRotate.length;
+        var fullTxt = this.toRotate[i];
+
+        if (this.isDeleting) {
+            this.txt = fullTxt.substring(0, this.txt.length - 1);
+        } else {
+            this.txt = fullTxt.substring(0, this.txt.length + 1);
+        }
+
+        this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
+
+        var that = this;
+        var delta = 150 - Math.random() * 100;
+
+        if (this.isDeleting) { delta /= 2; }
+
+        if (!this.isDeleting && this.txt === fullTxt) {
+            delta = this.period;
+            if (this.loopNum === 3){
+                return
+            }
+            this.isDeleting = true;
+        } else if (this.isDeleting && this.txt === '') {
+            this.isDeleting = false;
+            this.loopNum++;
+            delta = 500;
+        }
+
+        setTimeout(function() {
+            that.tick();
+        }, delta);
+
+
+    };
+
+    window.onload = function() {
+        var elements = document.getElementsByClassName('typewrite');
+        for (var i=0; i<elements.length; i++) {
+            var toRotate = elements[i].getAttribute('data-type');
+            var period = elements[i].getAttribute('data-period');
+            if (toRotate) {
+                new TxtType(elements[i], JSON.parse(toRotate), period);
+            }
+        }
+        // INJECT CSS
+        var css = document.createElement("style");
+        css.type = "text/css";
+        css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid rgba(0,200,200,1)}";
+        document.body.appendChild(css);
+    };
 </script>
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-167533506-1"></script>
-<script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'UA-167533506-1');
-</script>
-
-
 </body>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Chelsea+Market&family=Rubik:wght@400;900&display=swap');
+
+    html, body, div, span, applet, object, iframe,
+    h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+    a, abbr, acronym, address, big, cite, code,
+    del, dfn, em, img, ins, kbd, q, s, samp,
+    small, strike, strong, sub, sup, tt, var,
+    b, u, i, center,
+    dl, dt, dd, ol, ul, li,
+    fieldset, form, label, legend,
+    table, caption, tbody, tfoot, thead, tr, th, td,
+    article, aside, canvas, details, embed,
+    figure, figcaption, footer, header, hgroup,
+    menu, nav, section, button  {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        font-size: 100%;
+        font: inherit;
+        vertical-align: baseline;
+        font-family: 'Rubik', sans-serif;
+    }
+
+    body{
+        background: #eaecef;
+        display: flex;
+    }
+    .left-column {
+        height: 100vh;
+        width: 5vw;
+    }
+    .right-column {
+        width: 95vw;
+        height: 100vh;
+    }
+    .top-navigation{
+        width: 98%;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+
+    .left-column p{
+        font-size: 3.5em;
+        writing-mode: vertical-rl;
+        text-orientation: upright;
+    }
+    .top-navigation button{
+        margin-top: 30px;
+        margin-left: 10px;
+        color: white;
+        background: #0e0e0e;
+        outline: none;
+        font-size: 2em;
+        padding: 10px 20px;
+        border: 0;
+        font-weight: 900;
+        /*box-shadow: 4px 4px rgba(0,200,200,05);*/
+    }
+    button:hover{
+        cursor: pointer;
+        background: #464646;
+        box-shadow: 4px 4px rgba(0,200,200,05);
+    }
+    .main-body {
+        height: 65%;
+        width: 95%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .intro-box{
+        display: flex;
+        justify-content: center;
+    }
+    .intro-box p{
+        writing-mode: vertical-rl;
+        text-orientation: upright;
+        font-size: .65em;
+        font-weight: 400;
+    }
+    .intro-text{
+        border: 7px solid black;
+        width: 600px;
+        height: 250px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .intro-text h1{
+        font-weight: 900;
+        font-size: 2em;
+        font-family: 'Chelsea Market', cursive;
+    }
+    .intro-text a{
+        text-decoration: none;
+        text-underline: none;
+        color: black
+    }
+
+</style>
 </html>

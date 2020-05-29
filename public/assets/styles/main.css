@@ -23,10 +23,33 @@ menu, nav, section, button  {
 }
 body{
     background: #eaecef;
+}
+.card-container {
     height: 100vh;
     width: 100vw;
     overflow: hidden;
 }
+
+.front,
+.back {
+    backface-visibility: hidden;
+}
+.card {
+    transform-style: preserve-3d;
+}
+.back
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    transform: rotateY(180deg);
+
+    background: rgba(0,200,200,05);
+    height: 100vh;
+    width: 100vw;
+}
+
 #app-view {
     position: relative;
 }
@@ -140,6 +163,7 @@ svg.active {
 }
 
 .work-container {
+    z-index: 5;
     position: absolute;
     top: 0;
     text-align: center;
@@ -150,25 +174,6 @@ svg.active {
 .work-container #work-content{
     opacity: 0;
 }
-.front,
-.back {
-    backface-visibility: hidden;
-}
-.card {
-    transform-style: preserve-3d;
-}
-.back
-{
-    position: absolute;
-    top: 0;
-    left: 0;
 
-    transform: rotateY(180deg);
 
-    color: #2196f3;
-    background: rgba(0,200,200,05);
-    height: 100vh;
-    width: 100vw;
-    border-radius: 10px;
-}
 
