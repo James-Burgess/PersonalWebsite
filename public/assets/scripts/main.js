@@ -109,10 +109,6 @@ workBtn.addEventListener('click', () => {
     showingWork = !showingWork
 });
 
-btnClose.addEventListener('click', () => {
-    hideAbout()
-    showingAbout = false
-});
 
 var card = document.querySelector(".card");
 var playing = false;
@@ -149,8 +145,8 @@ var toggleContact = function(e) {
             hideWork();
             homeDisabled = !homeDisabled
             annotation.show()
+            showingAbout = false;
+            showingWork = false;
         }
     });
 }
-
-
