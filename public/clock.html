@@ -54,7 +54,7 @@
 <div id="clock">
     <p class="date">{{ date }}</p>
     <p class="time">{{ time }}</p>
-    <p class="text">Bye Rudi, We will miss you! <3</p>
+    <p class="text">{{ message }}</p>
 </div>
 </body>
 <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/3.0.0-beta.15/vue.cjs.min.js"></script>-->
@@ -66,18 +66,31 @@
         el: '#clock',
         data: {
             time: '',
-            date: ''
+            date: '',
+            message: '',
         }
     });
 
     var week = ['SUN', 'MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT'];
     var timerID = setInterval(updateTime, 1000);
+    var messageID = setInterval(updateMessage, 1000 * 60 * 60);
+
+    updateMessage();
     updateTime();
     function updateTime() {
         var cd = new Date();
         clock.time = zeroPadding(cd.getHours(), 2) + ':' + zeroPadding(cd.getMinutes(), 2) + ':' + zeroPadding(cd.getSeconds(), 2);
         clock.date = zeroPadding(cd.getFullYear(), 4) + '-' + zeroPadding(cd.getMonth()+1, 2) + '-' + zeroPadding(cd.getDate(), 2) + ' ' + week[cd.getDay()];
     };
+
+    function updateMessage () {
+        fetch('https://raw.githubusercontent.com/James-Burgess/PersonalWebsite/master/msg.json').then(function(response) {
+            return response.json();
+        }).then(function(data) {
+            console.log(data.message); // this will be a string
+            clock.message = data.message
+        });
+    }
 
     function zeroPadding(num, digit) {
         var zero = '';
