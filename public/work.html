@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JimmyB - Work</title>
+    <noscript><meta http-equiv="refresh" content="0; url=/fallback.html" /></noscript>
+    <link rel="stylesheet" href="/assets/styles/main.css">
+    <link rel="stylesheet" href="/assets/styles/about.css">
+    <link rel="stylesheet" href="/assets/styles/contact.css">
+</head>
+<body>
+<div class="card-container">
+    <div class="card">
+        <div class="front">
+            <section id="app-view">
+                <section class="top-navigation">
+                    <nav>
+                        <button id="about-button">About</button>
+                        <button id="work-button">Work</button>
+                        <button id="contact-button">Contact</button>
+                    </nav>
+                </section>
+                <div class="active" id="home-container">
+                    <div class="left-column">
+                        <p>Jimmy</p>
+                    </div>
+                    <div class="right-column">
+                        <div class="main-body">
+                            <div class="intro-box">
+<!--                                <p>Hi my name is Jimmy</p>-->
+                                <svg id="intro-text-box"></svg>
+                                <div class="intro-text">
+                                    <h1>
+                                        <a href="" class="typewrite" data-period="2000" data-type='[ "Hi, Im Jimmy 👋", "I am an Engineer 👷", "I turn Ideas into Products ✨", "Welcome to Jimmy B 🙂 " ]'>
+                                            <span class="wrap"></span>
+                                        </a>
+                                    </h1>
+                                </div>
+<!--                                <p>Hi my name is Jimmy</p>-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <svg viewBox="0 0 215 110" id="about-svg" preserveAspectRatio="none">
+                    <polygon class="polymorph" points="215,110 0,110 0,0 215,0"></polygon>
+                </svg>
+                <div class="about-container">
+                    <div id="content">
+                        <div class="about-content">
+<!--                            <h1>About Me</h1>-->
+                            <p>Taiyaki meh iceland sustainable ugh yuccie. Intelligentsia kinfolk skateboard, mumblecore 3 wolf moon kitsch biodiesel narwhal migas chambray street art. Stumptown 8-bit tofu, normcore distillery tacos art party intelligentsia bushwick adaptogen dreamcatcher jianbing. Asymmetrical hella readymade, messenger bag pinterest cornhole hell of try-hard everyday carry tousled skateboard. Flannel poutine normcore succulents sriracha PBR&B farm-to-table YOLO. Mustache unicorn vice disrupt, master cleanse ugh salvia wolf waistcoat. Mixtape selvage sriracha, ramps biodiesel wayfarers drinking vinegar cold-pressed lyft etsy.</p>
+                        </div>
+                        <div class="about-languages">
+                            <p>python</p>
+                            <p>Ruby</p>
+                            <p>Bash</p>
+                            <p>Go</p>
+                            <p>Javascript</p>
+                            <p>Scala</p>
+                        </div>
+
+                    </div>
+                </div>
+
+                <svg viewBox="0 0 215 110" id="work-svg" preserveAspectRatio="none">
+                    <polygon fill="#e3e3e3" class="work-polymorph" points="215,110 0,110 0,0 215,0"></polygon>
+                </svg>
+                <div class="work-container">
+                    <div id="work-content">
+                        <h1>WORK PAGE</h1><br>
+                    </div>
+                </div>
+
+            </section>
+        </div>
+        <div class="back">
+            <iframe name="dummyframe" id="dummyframe" style="display: none;"></iframe>
+
+            <div class="contact-container">
+                <div class="contact-us">
+                    <div class="esc-btn">
+                        <button id="home-button">x</button>
+                    </div>
+
+                    <h1>Contact Me</h1>
+<!--                    <form action="https://submit-form.com/5-kPqXLuS-aletYM4Yo0P" target="dummyframe">-->
+                    <form target="dummyframe">
+                        <div class="contact-input-block">
+                            <input name="customerName" placeholder="Name" type="text" />
+                            <input name="customerEmail" placeholder="Email" type="email" />
+                        </div>
+
+                        <input name="customerSubject"  placeholder="Subject" type="text" />
+                        <textarea rows = "5" cols = "50" name="customerMessage"  placeholder="Message"></textarea>
+
+                        <div class="contact-button-block">
+                            <button type="submit">Send</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.0/anime.js"></script>
+<script src="/assets/scripts/main.js"></script>
+<script src="/assets/scripts/typewriter.js"></script>
+<script src="/assets/scripts/vendors/rough.js"></script>
+<script>
+    // var introTx = document.querySelector('#intro-text-box')
+    const annotate = RoughNotation.annotate;
+
+    const e = document.querySelector('.intro-text');
+    const annotation = annotate(e, { type: 'box', animationDuration: 2000, strokeWidth: 4, padding: 0});
+    annotation.show();
+</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-167533506-1"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-167533506-1');
+</script>
+</body>
+</html>
