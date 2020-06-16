@@ -3,27 +3,48 @@ import bottle
 import subprocess
 import os
 
-p1 = subprocess.Popen(['ip','addr','show','eth0'],stdout=subprocess.PIPE)
-p2 = subprocess.Popen(['sed','-rn',r's/\s*inet\s(([0-9]{1,3}\.){3}[0-9]{1,3}).*/\1/p'],stdin=p1.stdout,stdout=subprocess.PIPE)
-p1.stdout.close()
-ip_addr = p2.communicate()[0].strip()
-p1.wait()
-
 app = bottle.app()
 
+1
 @bottle.route('/')
 def root_index():
-    return bottle.template('index',ip_addr = ip_addr)
+    print('hiop')
+    return bottle.template('fallback')
+
+@bottle.route('/git')
+def git_redirect():
+    return bottle.redirect('https://github.com/James-burgess')
+
+@bottle.route('/stack_overflow')
+def so_redirect():
+    return bottle.redirect('https://stackoverflow.com/users/6372042/james-burgess')
+
+@bottle.route('/hacker_rank')
+def hr_redirect():
+    return bottle.redirect('https://github.com/James-burgess')
+
+@bottle.route('/colabs')
+def colab_redirect():
+    return bottle.redirect('https://colab.research.google.com/drive/1vQjkl32A4BCYFfGcPgijIh3OIMRa2lhs?usp=sharing')
+
+
+@bottle.route('/setup')
+def setup_redirect():
+    return bottle.redirect('https://raw.githubusercontent.com/James-Burgess/dotfiles/master/setup.sh')
+
 
 @bottle.route('/json')
 def json_reply():
     heads = bottle.request.headers
     bottle.response.content_type = 'application/json'
 
-    response = {'headers':dict(heads),
-            'response':dict(bottle.response.headers)}
+    response = {
+        'headers': dict(heads),
+        'response': dict(bottle.response.headers)
+    }
     return response
 
 if __name__=='__main__':
     bottle.debug(True)
-    bottle.run(app=app,host='localhost',port=80)
+    bottle.run(app=app,host='localhost',port=8000)
+
