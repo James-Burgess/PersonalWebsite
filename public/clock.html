@@ -36,7 +36,7 @@
         }
         #clock .time {
             letter-spacing: 0.05em;
-            font-size: 7em;
+            font-size: 4.8em;
             padding: 5px 0;
         }
         #clock .date {
@@ -72,14 +72,14 @@
     });
 
     var week = ['SUN', 'MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT'];
-    var timerID = setInterval(updateTime, 1000);
+    var timerID = setInterval(updateTime, 2);
     var messageID = setInterval(updateMessage, 1000 * 60 * 60);
 
     updateMessage();
     updateTime();
     function updateTime() {
         var cd = new Date();
-        clock.time = zeroPadding(cd.getHours(), 2) + ':' + zeroPadding(cd.getMinutes(), 2) + ':' + zeroPadding(cd.getSeconds(), 2);
+        clock.time = zeroPadding(cd.getHours(), 2) + ':' + zeroPadding(cd.getMinutes(), 2) + ':' + zeroPadding(cd.getSeconds(), 2) + zeroPadding(cd.getMilliseconds(), 3).substring(0,2);
         clock.date = zeroPadding(cd.getFullYear(), 4) + '-' + zeroPadding(cd.getMonth()+1, 2) + '-' + zeroPadding(cd.getDate(), 2) + ' ' + week[cd.getDay()];
     };
 
