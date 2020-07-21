@@ -108,9 +108,12 @@ button:hover, button.active{
     background-image:     url('/assets/images/j.png'),
     url('/assets/images/j.png'),
     url('/assets/images/j.png'),
+    url('/assets/images/j.png'),
+    url('/assets/images/j.png'),
     url('/assets/images/j.png');
+
     background-repeat: repeat-x, repeat-x,repeat-x,repeat-x;
-    background-position: 0px 0px, 400px 300px, 0px 600px, 400px 900px;
+    background-position: 0px 0px, 200px 150px, 0px 300px, 200px 450px, 0px 600px, 200px 750px;
 }
 
 #home-container.active {
@@ -185,7 +188,7 @@ svg.active {
 .intro-text a{
     text-decoration: none;
     text-underline: none;
-    color: black
+    color: black;
 }
 
 .work-container {
