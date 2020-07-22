@@ -106,14 +106,12 @@ button:hover, button.active{
     justify-content: center;
 
     background-image:     url('/assets/images/j.png'),
-    url('/assets/images/j.png'),
-    url('/assets/images/j.png'),
-    url('/assets/images/j.png'),
-    url('/assets/images/j.png'),
-    url('/assets/images/j.png');
+    url('/assets/images/j_grey.png');
 
-    background-repeat: repeat-x, repeat-x,repeat-x,repeat-x;
-    background-position: 0px 0px, 200px 150px, 0px 300px, 200px 450px, 0px 600px, 200px 750px;
+    background-repeat: no-repeat,
+    repeat;
+    background-position: 10px 0px,
+    160px 0px,
 }
 
 #home-container.active {
