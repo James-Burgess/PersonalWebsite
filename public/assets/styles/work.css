@@ -1,0 +1,26 @@
+.work-container {
+  height: 100vh;
+}
+
+.work-container #work-content{
+    opacity: 0;
+}
+
+.work-container .work-copy{
+  max-width: 69ch;
+  text-align: center;
+}
+
+
+.work-container .work-companies{
+  margin-top: 25vh;
+  margin-bottom: 10vh;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.work-companies p{
+  padding: 30px;
+}

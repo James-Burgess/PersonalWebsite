@@ -2,7 +2,6 @@
     z-index: 16;
 }
 .contact-container{
-    /*background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/38816/image-from-rawpixel-id-2210775-jpeg.jpg") center center no-repeat;*/
     background: #e3e3e3;
     width: 100vw;
     height: 100vh;
@@ -12,7 +11,6 @@
 }
 
 .contact-us {
-    /*background: white;*/
     padding: 50px;
     border: 5px solid black;
     box-shadow: 10px 10px  rgba(0,200,200,05);
