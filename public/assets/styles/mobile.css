@@ -1,0 +1,21 @@
+@media (max-width: 940px) {
+  .intro-text{
+    width: 90vw;
+  }
+
+  .intro-text h1{
+    font-size: 2em;
+  }
+
+  button {
+    font-size: 1.5em;
+    padding: 5px 10px;
+    margin-left: 2px;
+  }
+}
+
+@media (max-width: 500px){
+  .intro-text h1{
+    font-size: 1.5em;
+  }
+}
