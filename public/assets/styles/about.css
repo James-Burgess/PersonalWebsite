@@ -26,11 +26,27 @@
     width: auto;
 }
 
-#close {
+/* #close {
     position: fixed;
     left: 5px;
     bottom: 5px;
     font-weight: 900;
     z-index: 15;
     transition: opacity .6s 2s;
+} */
+
+@media (max-width: 710px){
+
+  .about-languages {
+      margin-top: 5vh;
+  }
+
+  .about-content p{
+      max-width: 30ch;
+  }
+
+  .about-languages img {
+    padding: 10px;
+    height: 40px;
+  }
 }

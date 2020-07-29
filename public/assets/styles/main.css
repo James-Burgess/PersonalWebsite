@@ -5,7 +5,6 @@
    - moblie styles
    - background
    - logo
-   - about page
    - work page
    - animations???
 */
@@ -79,14 +78,11 @@ button{
     margin-top: 30px;
     margin-left: 10px;
     color: black;
-    /*background: black;*/
     border: 5px solid black;
     outline: none;
     font-size: 1.9em;
     padding: 10px 20px;
-    /*border: 0;*/
     font-weight: 700;
-    /*box-shadow: 4px 4px rgba(0,200,200,05);*/
 }
 button:hover{
 }
