@@ -2,10 +2,6 @@
   height: 100vh;
 }
 
-.work-container #work-content{
-    opacity: 0;
-}
-
 .work-container .work-copy{
   max-width: 69ch;
   text-align: center;

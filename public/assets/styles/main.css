@@ -2,71 +2,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Chelsea+Market&family=Rubik:wght@400;700&display=swap');
 
 /*TODO:
-   - moblie styles
+   - loading page
    - background
-   - logo
-   - work page
+   - logo on about and work
+   - work page copy icons and mobile
    - action on form submit
    - animations???
 */
 
-
-
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, section, button  {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    font-size: 100%;
-    font: inherit;
-    vertical-align: baseline;
-    font-family: 'Rubik', sans-serif;
-}
 body{
     background: #eaecef;
 }
-.card-container {
-    height: 100vh;
-    width: 100vw;
-    overflow: hidden;
-}
 
-.front,
-.back {
-    backface-visibility: hidden;
-    z-index:0;
-}
-.card {
-    transform-style: preserve-3d;
-}
-.back
-{
-    position: absolute;
-    top: 0;
-    left: 0;
-    background: grey;
-    transform: rotateY(180deg);
-    height: 100vh;
-    width: 100vw;
-    z-index: 16;
-}
-#app-view {
-    position: relative;
-}
-#app-view.disabled{
-    z-index: -1;
-    display: none;
-}
 .top-navigation{
     width: 99vw;
     display: flex;
@@ -75,6 +22,7 @@ body{
     position: fixed;
     z-index: 15;
 }
+
 button{
     margin-top: 30px;
     margin-left: 10px;
@@ -84,8 +32,6 @@ button{
     font-size: 1.9em;
     padding: 10px 20px;
     font-weight: 700;
-}
-button:hover{
 }
 button:hover, button.active{
     cursor: pointer;
@@ -118,20 +64,6 @@ button:hover, button.active{
     transition: transform .6s, opacity .6s .5s;
     transition: transform .6s, opacity .6s .5s, -webkit-transform .6s;
     opacity: 1;
-}
-svg {
-    display: block;
-    width: 100%;
-    height: 100vh;
-    top: 0;
-    position: absolute;
-    z-index: 0;
-}
-svg .polymorph {
-    fill: #e3e3e3;
-}
-svg.active {
-    z-index: 2;
 }
 
 .left-column {
@@ -186,11 +118,17 @@ svg.active {
     color: black;
 }
 
-.work-container {
-    z-index: 5;
-    position: absolute;
-    top: 0;
-    text-align: center;
+svg {
+    display: block;
+    width: 100%;
     height: 100vh;
-    width: 100vw;
+    top: 0;
+    position: absolute;
+    z-index: 0;
+}
+svg .polymorph {
+    fill: #e3e3e3;
+}
+svg.active {
+    z-index: 2;
 }

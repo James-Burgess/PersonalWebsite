@@ -7,14 +7,14 @@
     <link rel="shortcut icon" href="assets/images/favicon.ico" type="image/x-icon">
     <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
     <noscript><meta http-equiv="refresh" content="0; url=/fallback.html" /></noscript>
-    <link rel="stylesheet" href="/assets/styles/main.css">
-    <link rel="stylesheet" href="/assets/styles/layout.css">
-    <link rel="stylesheet" href="/assets/styles/work.css">
-    <link rel="stylesheet" href="/assets/styles/about.css">
-    <link rel="stylesheet" href="/assets/styles/contact.css">
-    <link rel="stylesheet" href="/assets/styles/mobile.css">
+    <link rel="stylesheet" href="/assets/styles/load.css">
 </head>
 <body>
+
+  <div id="loading" class="loading-screen active">
+    <p>loading</p>
+  </div>
+
 <div class="card-container">
     <div class="card">
         <div class="front">
@@ -128,19 +128,17 @@
         </div>
     </div>
 </div>
-
+<link rel="stylesheet" href="/assets/styles/layout.css">
+<link rel="stylesheet" href="/assets/styles/work.css">
+<link rel="stylesheet" href="/assets/styles/about.css">
+<link rel="stylesheet" href="/assets/styles/main.css">
+<link rel="stylesheet" href="/assets/styles/contact.css">
+<link rel="stylesheet" href="/assets/styles/mobile.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.0/anime.js"></script>
-<script src="/assets/scripts/main.js"></script>
 <script src="/assets/scripts/typewriter.js"></script>
 <script src="/assets/scripts/vendors/rough.js"></script>
-<script>
-    // var introTx = document.querySelector('#intro-text-box')
-    const annotate = RoughNotation.annotate;
+<script src="/assets/scripts/main.js"></script>
 
-    const e = document.querySelector('.intro-text');
-    const annotation = annotate(e, { type: 'box', animationDuration: 2000, strokeWidth: 4, padding: 0});
-    annotation.show();
-</script>
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-167533506-1"></script>
 <script>
     window.dataLayer = window.dataLayer || [];
