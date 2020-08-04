@@ -12,11 +12,12 @@
 }
 .about-content p{
     margin-top: 50px;
+    font-size: 1.4em;
     text-align: center;
 }
 .about-languages {
     margin-bottom: 10vh;
-    margin-top: 20vh;
+    margin-top: 10vh;
     display: flex;
     justify-content: space-between;
 }
@@ -43,6 +44,7 @@
 
   .about-content p{
       max-width: 30ch;
+      font-size: 1em;
   }
 
   .about-languages img {

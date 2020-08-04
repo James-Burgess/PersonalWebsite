@@ -5,8 +5,8 @@
 .work-container .work-copy{
   max-width: 49ch;
   text-align: center;
+  font-size: 1.4em;
 }
-
 
 .work-container .work-companies{
   margin-top: 25vh;
@@ -21,4 +21,25 @@
   padding: 30px;
   max-height: 30px;
   width: auto;
+}
+
+@media (max-width: 710px){
+
+  .work-container .work-companies{
+    margin-top: 0;
+    margin-bottom: 5vh;
+    overflow: scroll;
+    width: 100vw;
+  }
+
+  .work-container .work-copy{
+    max-width: 60vw;
+    font-size: 1em;
+  }
+
+
+  .work-companies img{
+    padding: 30px;
+    max-height: 20px;
+  }
 }
