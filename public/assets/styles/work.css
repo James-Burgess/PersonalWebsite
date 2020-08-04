@@ -17,6 +17,8 @@
   justify-content: space-around;
 }
 
-.work-companies p{
+.work-companies img{
   padding: 30px;
+  max-height: 30px;
+  width: auto;
 }
