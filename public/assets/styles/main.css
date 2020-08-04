@@ -47,14 +47,24 @@ button:hover, button.active{
     opacity: 0;
     display: flex;
     justify-content: center;
+    background-image: url('/assets/images/jj.png');
+    background-repeat: repeat;
+}
 
-    background-image:     url('/assets/images/j.png'),
-    url('/assets/images/jj.png');
+.j-logo{
+  background: url('/assets/images/j.png') no-repeat;
+  background-size: cover;
+  height: 220px;
+  width: 220px;
+  position: fixed;
+  top: -20px;
+  left: -10px;
+  z-index: 111;
+}
 
-    background-repeat: no-repeat,
-    repeat;
-    background-position: 10px 0px,
-    160px 0px,
+.j-logo:hover{
+  height: 230px;
+  width: 230px;
 }
 
 #home-container.active {
