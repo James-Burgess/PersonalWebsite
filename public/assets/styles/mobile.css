@@ -16,6 +16,10 @@
   .top-navigation{
     justify-content: space-around;
   }
+
+  .j-logo{
+    display: none;
+  }
 }
 
 

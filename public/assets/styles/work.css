@@ -1,5 +1,6 @@
 .work-container {
   height: 100vh;
+  z-index: 7;
 }
 
 .work-container .work-copy{
@@ -30,6 +31,7 @@
     margin-bottom: 5vh;
     overflow: scroll;
     width: 100vw;
+    justify-content: flex-start;
   }
 
   .work-container .work-copy{
