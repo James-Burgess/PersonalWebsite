@@ -12,18 +12,24 @@
 .work-container .work-companies{
   margin-top: 25vh;
   margin-bottom: 10vh;
-
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  max-width: 80%;
 }
 
 .work-companies img{
-  padding: 30px;
+  padding: 20px;
   max-height: 50px;
   max-width: 150px;
   align-self: center;
+}
+@media (max-width: 1480px){
+  .work-container .work-companies{
+    justify-content: flex-start;
+    overflow: hidden;
+    width: 90vw;
+    
+  }
 }
 
 @media (max-width: 710px){
@@ -45,5 +51,6 @@
   .work-companies img{
     padding: 30px;
     max-height: 20px;
+    max-width: 80px;
   }
 }
