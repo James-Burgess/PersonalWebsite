@@ -160,5 +160,4 @@ document.addEventListener('DOMContentLoaded', function () {
   const annotation = annotate(e, { type: 'box', animationDuration: 2000, strokeWidth: 4, padding: 0});
   annotation.show();
 
-
 })
