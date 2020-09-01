@@ -20,8 +20,9 @@
 
 .work-companies img{
   padding: 30px;
-  max-height: 30px;
+  height: 30px;
   width: auto;
+  align-self: center;
 }
 
 @media (max-width: 710px){
