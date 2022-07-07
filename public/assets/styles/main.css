@@ -12,6 +12,7 @@
 
 body{
     background: #eaecef;
+    overflow: hidden;
 }
 
 .top-navigation{
