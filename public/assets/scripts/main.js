@@ -116,17 +116,19 @@ document.addEventListener('DOMContentLoaded', function () {
 
   document.querySelector("#contact-button").addEventListener('click', (e) => {toggleContact(e)});
   document.querySelector("#home-button").addEventListener('click', (e) => {toggleContact(e)});
-  document.querySelector(".contact-container").addEventListener('click', (e) => {toggleContact(e)});
+  // document.querySelector(".contact-container").addEventListener('click', (e) => {toggleContact(e)});
   document.forms["contact-form"].addEventListener('submit', async (e) => handleFormSubmit(e));
 
   let arr = [
       document.querySelector(".contact-container"),
       document.querySelector("#home-button"),
+      document.querySelector("#submit-form-button"),
       document.querySelector("#contact-button")
   ];
   var toggleContact = function(e) {
       if (!arr.includes(e.target))
           return;
+
 
       if (playing)
           return;
@@ -160,9 +162,8 @@ document.addEventListener('DOMContentLoaded', function () {
             method: 'POST',
             mode: 'no-cors',
             body: new URLSearchParams(new FormData(e.target)),
-        }).then((resp) => {
-            return resp.json;
-        }).then((data) => {
+        }).then(() => {
+            toggleContact({target: null});
             showFormSuccess();
         }).catch((err) => {
             console.error(err.message);
