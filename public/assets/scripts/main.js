@@ -116,15 +116,19 @@ document.addEventListener('DOMContentLoaded', function () {
 
   document.querySelector("#contact-button").addEventListener('click', (e) => {toggleContact(e)});
   document.querySelector("#home-button").addEventListener('click', (e) => {toggleContact(e)});
-  document.querySelector(".contact-container").addEventListener('click', (e) => {toggleContact(e)});
+  // document.querySelector(".contact-container").addEventListener('click', (e) => {toggleContact(e)});
+  document.forms["contact-form"].addEventListener('submit', async (e) => handleFormSubmit(e));
+
   let arr = [
       document.querySelector(".contact-container"),
       document.querySelector("#home-button"),
+      document.querySelector("#submit-form-button"),
       document.querySelector("#contact-button")
   ];
   var toggleContact = function(e) {
       if (!arr.includes(e.target))
           return;
+
 
       if (playing)
           return;
@@ -150,6 +154,61 @@ document.addEventListener('DOMContentLoaded', function () {
           }
       });
   }
+
+    var handleFormSubmit = async function (e) {
+        e.preventDefault();
+
+        await fetch(e.target.action, {
+            method: 'POST',
+            mode: 'no-cors',
+            body: new URLSearchParams(new FormData(e.target)),
+        }).then(() => {
+            toggleContact({target: null});
+            showFormSuccess();
+        }).catch((err) => {
+            console.error(err.message);
+            alert("Something went wrong. Please try again later.");
+        });
+    }
+
+    var showFormSuccess = async function () {
+        let amountIcons = 25;
+
+        for (let i = 0; i < amountIcons; i++) {
+            let img = document.createElement('img');
+            img.src = './assets/images/flame.svg';
+            img.style.position = 'absolute';
+            img.style.top = '-70px';
+            img.style.left = `${Math.random() * 100}%`;
+            img.style.transform = `rotate(${Math.random() * 360}deg)`;
+            img.style.transformOrigin = '50% 50%';
+            img.style.zIndex = 1;
+            img.style.width = '50px';
+            img.style.height = '50px';
+            document.body.appendChild(img);
+
+            anime({
+                targets: img,
+                top: {
+                    value: `${Math.random() * 100}%`,
+                    duration: 2500,
+                    delay: Math.random() * 1000,
+                },
+                rotate: {
+                    value: Math.random() * 360,
+                    duration: 2500
+                },
+                opacity: {
+                    value: 0,
+                    duration: 2500
+                },
+                easing: 'easeInOutSine',
+                complete: function (anim) {
+                    document.body.removeChild(img);
+                }
+            });
+        }
+    }
 
   const annotate = RoughNotation.annotate;
 
