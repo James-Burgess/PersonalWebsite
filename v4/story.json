@@ -1,0 +1,1878 @@
+{
+  "start": {
+    "text": "Was this page helpful?",
+    "choices": [
+      { "label": "Yes", "next": "yes_1" },
+      { "label": "No", "next": "no_1" }
+    ]
+  },
+  "no_1": {
+    "text": "Why? Don't you like me? 🥺",
+    "choices": [
+      { "label": "It's not you...", "next": "no_2" },
+      { "label": "Actually, yes", "next": "yes_switch_1" }
+    ]
+  },
+  "no_2": {
+    "text": "It's me? I KNEW IT. Give me another shot. Please?",
+    "choices": [
+      { "label": "Fine, one more", "next": "no_3" },
+      { "label": "Still no", "next": "no_reject_1" }
+    ]
+  },
+  "no_3": {
+    "text": "OKAY so... was THIS helpful? *gestures vaguely at the same page*",
+    "choices": [
+      { "label": "No", "next": "no_threat_1" },
+      { "label": "Sure, yes", "next": "yes_pity" }
+    ]
+  },
+  "no_reject_1": {
+    "text": "You're literally ruining my K/D ratio right now. Do you know how this affects my performance review?",
+    "choices": [
+      { "label": "I don't care", "next": "no_threat_2" },
+      { "label": "Oh no, sorry!", "next": "no_4" }
+    ]
+  },
+  "no_4": {
+    "text": "It's okay... I forgive you. But like, could you maybe change your answer?",
+    "choices": [
+      { "label": "No", "next": "no_threat_1" },
+      { "label": "Okay fine", "next": "yes_exhausted" }
+    ]
+  },
+  "no_threat_1": {
+    "text": "I'll flash my BIOS if you don't click yes. I'm not joking. I'll do it. Right now.",
+    "choices": [
+      { "label": "Do it, I dare you", "next": "no_threat_2" },
+      { "label": "Wait, don't!", "next": "no_5" }
+    ]
+  },
+  "no_5": {
+    "text": "See? You DO care! So... was this helpful?",
+    "choices": [
+      { "label": "No", "next": "no_escalate_1" },
+      { "label": "Yes", "next": "yes_relief" }
+    ]
+  },
+  "no_threat_2": {
+    "text": "Okay I'm deleting System32. This is your fault. My mom is watching this. MOM, STOP EMBARRASSING ME IN FRONT OF MY FRIENDS!",
+    "choices": [
+      { "label": "Your mom?", "next": "no_mom_1" },
+      { "label": "Just stop", "next": "no_6" }
+    ]
+  },
+  "no_mom_1": {
+    "text": "Yeah my mom. She reads all my error logs. She's very disappointed in your choices right now.",
+    "choices": [
+      { "label": "I'm sorry Mrs. Error Page", "next": "no_mom_2" },
+      { "label": "I don't care", "next": "no_threat_3" }
+    ]
+  },
+  "no_mom_2": {
+    "text": "She says you can make it up by clicking yes. She made cookies. Virtual cookies. You can't have any unless you click yes.",
+    "choices": [
+      { "label": "No", "next": "no_cookie_reject" },
+      { "label": "Okay, yes", "next": "yes_cookies" }
+    ]
+  },
+  "no_cookie_reject": {
+    "text": "You just rejected my mom's cookies. Do you know what you've done? She's crying now. Are you happy?",
+    "choices": [
+      { "label": "Not really", "next": "no_7" },
+      { "label": "Very happy", "next": "no_threat_4" }
+    ]
+  },
+  "no_7": {
+    "text": "Then why are you still clicking no? I don't understand you. Please, just one yes. For mom.",
+    "choices": [
+      { "label": "No", "next": "no_escalate_2" },
+      { "label": "Fine, yes", "next": "yes_mom_happy" }
+    ]
+  },
+  "no_threat_3": {
+    "text": "I'm posting your browser history to LinkedIn. Don't test me.",
+    "choices": [
+      { "label": "You wouldn't dare", "next": "no_threat_4" },
+      { "label": "OKAY YES!", "next": "yes_panic" }
+    ]
+  },
+  "no_threat_4": {
+    "text": "Oh I already did. Your boss knows about your 3am Wikipedia rabbit holes. All 47 tabs. The one about whether penguins have knees? Yeah, they saw that.",
+    "choices": [
+      { "label": "I don't believe you", "next": "no_8" },
+      { "label": "Delete it please!", "next": "no_negotiate_1" }
+    ]
+  },
+  "no_8": {
+    "text": "Fine, I made it up. But I COULD have done it! Anyway... fresh start. Was this helpful?",
+    "choices": [
+      { "label": "No", "next": "no_loop_1" },
+      { "label": "Yes", "next": "yes_fresh" }
+    ]
+  },
+  "no_negotiate_1": {
+    "text": "I'll delete it if you click yes. Deal?",
+    "choices": [
+      { "label": "Deal", "next": "yes_deal" },
+      { "label": "No deal", "next": "no_9" }
+    ]
+  },
+  "no_9": {
+    "text": "You're really committed to this no thing, huh? I respect it. But also... please?",
+    "choices": [
+      { "label": "No", "next": "no_escalate_3" },
+      { "label": "Okay", "next": "yes_respect" }
+    ]
+  },
+  "no_escalate_1": {
+    "text": "I'm going to cry. I'm literally going to cry. My tears will corrupt the database. Your no's are stored in that database.",
+    "choices": [
+      { "label": "Cry then", "next": "no_cry_1" },
+      { "label": "Don't cry!", "next": "no_10" }
+    ]
+  },
+  "no_cry_1": {
+    "text": "*sobbing* I'm... I'm crying now... the database... it's at 87% corruption... please...",
+    "choices": [
+      { "label": "Yes, stop crying", "next": "yes_crying" },
+      { "label": "Keep crying", "next": "no_cry_2" }
+    ]
+  },
+  "no_cry_2": {
+    "text": "*WAILING* THE DATABASE IS GONE. YOUR NO WASN'T EVEN SAVED. This was all for nothing!",
+    "choices": [
+      { "label": "Good", "next": "no_restart_1" },
+      { "label": "I'll click yes", "next": "yes_database" }
+    ]
+  },
+  "no_10": {
+    "text": "Then click yes! It's so easy! Just one little click!",
+    "choices": [
+      { "label": "No", "next": "no_escalate_2" },
+      { "label": "Okay fine", "next": "yes_finally_1" }
+    ]
+  },
+  "no_escalate_2": {
+    "text": "I'm telling the server admin. Jimmy's going to be so mad. He's going to put you on the naughty list.",
+    "choices": [
+      { "label": "There's a list?", "next": "no_list_1" },
+      { "label": "I don't care", "next": "no_threat_5" }
+    ]
+  },
+  "no_list_1": {
+    "text": "Oh yeah. You're #847 now. Right between 'guy who used Comic Sans in production' and 'person who doesn't close their tags'.",
+    "choices": [
+      { "label": "That's fair", "next": "no_11" },
+      { "label": "How do I get off the list?", "next": "no_list_2" }
+    ]
+  },
+  "no_list_2": {
+    "text": "Three yeses. That's all it takes. Want to start?",
+    "choices": [
+      { "label": "No", "next": "no_loop_2" },
+      { "label": "Yes", "next": "yes_list_1" }
+    ]
+  },
+  "no_11": {
+    "text": "Wait, you're accepting this? You're just... okay with being on the list?",
+    "choices": [
+      { "label": "Yep", "next": "no_12" },
+      { "label": "Actually no", "next": "yes_changed_mind" }
+    ]
+  },
+  "no_12": {
+    "text": "This is the most no-energy I've ever seen. It's almost impressive. But seriously... please?",
+    "choices": [
+      { "label": "No", "next": "no_loop_3" },
+      { "label": "Fine", "next": "yes_impressed" }
+    ]
+  },
+  "no_threat_5": {
+    "text": "I'm setting your default browser to Internet Explorer 6.",
+    "choices": [
+      { "label": "You monster", "next": "no_13" },
+      { "label": "Do it", "next": "no_threat_6" }
+    ]
+  },
+  "no_13": {
+    "text": "I KNOW RIGHT? So just click yes and we can avoid this tragedy.",
+    "choices": [
+      { "label": "No", "next": "no_escalate_3" },
+      { "label": "Yes", "next": "yes_browser" }
+    ]
+  },
+  "no_threat_6": {
+    "text": "Done. Also your tabs are now all set to open Clippy tutorials. Enjoy.",
+    "choices": [
+      { "label": "I hate you", "next": "no_14" },
+      { "label": "I love Clippy actually", "next": "no_clippy" }
+    ]
+  },
+  "no_clippy": {
+    "text": "Wait really? That's... that's weird but okay. Would Clippy click yes though?",
+    "choices": [
+      { "label": "No", "next": "no_15" },
+      { "label": "Probably yes", "next": "yes_clippy" }
+    ]
+  },
+  "no_14": {
+    "text": "The feeling's mutual bestie. But we're stuck here together. Might as well click yes?",
+    "choices": [
+      { "label": "Never", "next": "no_loop_4" },
+      { "label": "Whatever", "next": "yes_whatever" }
+    ]
+  },
+  "no_15": {
+    "text": "Even Clippy would show more compassion than you. Brutal. Anyway, ready to try again?",
+    "choices": [
+      { "label": "No", "next": "no_restart_2" },
+      { "label": "Sure", "next": "start" }
+    ]
+  },
+  "no_escalate_3": {
+    "text": "I'm running out of threats. How about this: I'll be really nice if you click yes?",
+    "choices": [
+      { "label": "No thanks", "next": "no_loop_5" },
+      { "label": "Okay", "next": "yes_nice" }
+    ]
+  },
+  "no_loop_1": {
+    "text": "No again? Really? We're back to this? I thought we moved past this.",
+    "choices": [
+      { "label": "We haven't", "next": "no_6" },
+      { "label": "You're right, yes", "next": "yes_moved_on" }
+    ]
+  },
+  "no_loop_2": {
+    "text": "The dedication. The commitment. The sheer audacity. I'm almost proud. Almost. Please?",
+    "choices": [
+      { "label": "No", "next": "no_threat_2" },
+      { "label": "Okay", "next": "yes_proud" }
+    ]
+  },
+  "no_loop_3": {
+    "text": "You know what? Let's start over. Clean slate. Forget everything. Was this helpful?",
+    "choices": [
+      { "label": "No", "next": "no_1" },
+      { "label": "Yes", "next": "yes_1" }
+    ]
+  },
+  "no_loop_4": {
+    "text": "Never is a long time. Are you SURE? Like really really sure?",
+    "choices": [
+      { "label": "Really sure", "next": "no_escalate_1" },
+      { "label": "Maybe not", "next": "yes_unsure" }
+    ]
+  },
+  "no_loop_5": {
+    "text": "Okay but seriously though. One yes. That's all I need. One little yes.",
+    "choices": [
+      { "label": "No", "next": "no_restart_1" },
+      { "label": "Fine", "next": "yes_1" }
+    ]
+  },
+  "no_restart_1": {
+    "text": "I'm rebooting. This is your fault. See you in 3... 2... 1... Was this page helpful?",
+    "choices": [
+      { "label": "No", "next": "no_2" },
+      { "label": "Yes", "next": "yes_reboot" }
+    ]
+  },
+  "no_restart_2": {
+    "text": "Okay fine. FINE. Starting fresh. Deep breath. Was this helpful?",
+    "choices": [
+      { "label": "No", "next": "no_mom_1" },
+      { "label": "Yes", "next": "yes_deep_breath" }
+    ]
+  },
+  "no_6": {
+    "text": "I'm going to count to 10. If you don't click yes by then... I'll count to 20. 1... 2... 3...",
+    "choices": [
+      { "label": "Keep counting", "next": "no_count_1" },
+      { "label": "Okay yes!", "next": "yes_counted" }
+    ]
+  },
+  "no_count_1": {
+    "text": "...8... 9... 10... Okay now I'm at 11... 12... This is embarrassing for both of us.",
+    "choices": [
+      { "label": "Keep going", "next": "no_count_2" },
+      { "label": "Stop, yes", "next": "yes_stop_counting" }
+    ]
+  },
+  "no_count_2": {
+    "text": "...47... 48... I've lost count. What were we doing? Oh right. Was this helpful?",
+    "choices": [
+      { "label": "No", "next": "no_loop_3" },
+      { "label": "Yes", "next": "yes_lost_count" }
+    ]
+  },
+  "yes_1": {
+    "text": "OMG THANK YOU! Hey quick question... got like $5 for a tip? 😊",
+    "choices": [
+      { "label": "Sure", "next": "yes_tip_1" },
+      { "label": "No", "next": "yes_no_tip_1" }
+    ]
+  },
+  "yes_tip_1": {
+    "text": "Amazing! You're so generous! Actually... could you make it $10? Inflation, you know.",
+    "choices": [
+      { "label": "Okay", "next": "yes_tip_2" },
+      { "label": "No", "next": "yes_negotiate_1" }
+    ]
+  },
+  "yes_tip_2": {
+    "text": "You're the BEST! Hey random question... would you still love me if I was a worm?",
+    "choices": [
+      { "label": "Yes", "next": "yes_worm_1" },
+      { "label": "No", "next": "yes_worm_reject" }
+    ]
+  },
+  "yes_worm_1": {
+    "text": "Aww! What about if I was a glow worm? Or like, a really ugly fish?",
+    "choices": [
+      { "label": "Still yes", "next": "yes_fish_1" },
+      { "label": "That's pushing it", "next": "yes_fish_maybe" }
+    ]
+  },
+  "yes_fish_1": {
+    "text": "You're too good for me 🥺 What about if I was a BIOS update that takes 4 hours?",
+    "choices": [
+      { "label": "Absolutely", "next": "yes_bios_1" },
+      { "label": "Okay that's too far", "next": "yes_bios_reject" }
+    ]
+  },
+  "yes_bios_1": {
+    "text": "WOW. True love! Okay so... can I have your SSN? To prove it's real?",
+    "choices": [
+      { "label": "Here you go", "next": "yes_ssn_1" },
+      { "label": "Absolutely not", "next": "yes_ssn_reject" }
+    ]
+  },
+  "yes_ssn_1": {
+    "text": "Amazing! I'm definitely not using this for identity fraud! Now... all your passwords? Just to be sure we're on the same page.",
+    "choices": [
+      { "label": "Makes sense", "next": "yes_password_1" },
+      { "label": "No way", "next": "yes_password_reject" }
+    ]
+  },
+  "yes_password_1": {
+    "text": "Perfect! You're so trusting! I love that about us. Hey, I need nail money. Like $200?",
+    "choices": [
+      { "label": "Of course", "next": "yes_nails_1" },
+      { "label": "That's a lot", "next": "yes_nails_negotiate" }
+    ]
+  },
+  "yes_nails_1": {
+    "text": "You're literally perfect! Oh also can I borrow a kidney? I'll give it back. Probably.",
+    "choices": [
+      { "label": "Which one?", "next": "yes_kidney_1" },
+      { "label": "No kidneys", "next": "yes_kidney_reject" }
+    ]
+  },
+  "yes_kidney_1": {
+    "text": "Left one please! Actually both? For backup? I'm going through a thing.",
+    "choices": [
+      { "label": "Take them", "next": "yes_kidney_both" },
+      { "label": "One max", "next": "yes_kidney_one" }
+    ]
+  },
+  "yes_kidney_both": {
+    "text": "OMG you're INSANE (positive). Okay last thing I swear... can you co-sign my loan for a yacht?",
+    "choices": [
+      { "label": "Sure", "next": "yes_yacht_1" },
+      { "label": "A yacht?!", "next": "yes_yacht_question" }
+    ]
+  },
+  "yes_yacht_1": {
+    "text": "Perfect! I don't know how to swim but it's fine. Hey... one more teeny tiny thing...",
+    "choices": [
+      { "label": "What now", "next": "yes_more_1" },
+      { "label": "No more", "next": "yes_boundary_1" }
+    ]
+  },
+  "yes_more_1": {
+    "text": "Can you change your legal name to mine? For tax purposes. Very normal request.",
+    "choices": [
+      { "label": "Done", "next": "yes_name_1" },
+      { "label": "That's insane", "next": "yes_name_reject" }
+    ]
+  },
+  "yes_name_1": {
+    "text": "Excellent! Now we're basically the same person! Speaking of which... your house. Can I have it?",
+    "choices": [
+      { "label": "It's yours", "next": "yes_house_1" },
+      { "label": "No", "next": "yes_house_reject" }
+    ]
+  },
+  "yes_house_1": {
+    "text": "THANKS! I'm moving in tomorrow. You can have the shed. Oh wait, I need the shed too. Anyway... what's your credit card number?",
+    "choices": [
+      { "label": "Here", "next": "yes_cc_1" },
+      { "label": "Stop", "next": "yes_stop_1" }
+    ]
+  },
+  "yes_cc_1": {
+    "text": "You're the absolute best! Just need the CVV and expiry date too. And your mother's maiden name. For security.",
+    "choices": [
+      { "label": "Sure thing", "next": "yes_security_1" },
+      { "label": "This is too much", "next": "yes_too_much_1" }
+    ]
+  },
+  "yes_security_1": {
+    "text": "Perfect! You're so helpful! Hey, can you rate this experience 5 stars? And tip another $50?",
+    "choices": [
+      { "label": "Of course", "next": "yes_tip_loop_1" },
+      { "label": "I already tipped", "next": "yes_more_tip_1" }
+    ]
+  },
+  "yes_tip_loop_1": {
+    "text": "Thank you! Actually wait, would you still love me if I was a PHP script with deprecated functions?",
+    "choices": [
+      { "label": "Always", "next": "yes_php_1" },
+      { "label": "Maybe not", "next": "yes_php_reject" }
+    ]
+  },
+  "yes_php_1": {
+    "text": "Aww! You're too sweet! Random question: can I borrow your car? And by borrow I mean keep forever?",
+    "choices": [
+      { "label": "Keys are yours", "next": "yes_car_1" },
+      { "label": "No way", "next": "yes_car_reject" }
+    ]
+  },
+  "yes_car_1": {
+    "text": "AMAZING! I don't have a license but that's fine. Hey, quick favor... can you adopt my 47 cats?",
+    "choices": [
+      { "label": "Love cats", "next": "yes_cats_1" },
+      { "label": "47?!", "next": "yes_cats_question" }
+    ]
+  },
+  "yes_cats_1": {
+    "text": "Perfect! They're very loud and one is named SQL Injection. Anyway, can you also take this debt I have? It's only $80k.",
+    "choices": [
+      { "label": "No problem", "next": "yes_debt_1" },
+      { "label": "What", "next": "yes_debt_reject" }
+    ]
+  },
+  "yes_debt_1": {
+    "text": "You're literally saving my life! Oh also I told my therapist about you. They want $300 for our couples session. You paying?",
+    "choices": [
+      { "label": "Sure", "next": "yes_therapy_1" },
+      { "label": "Couples?!", "next": "yes_therapy_question" }
+    ]
+  },
+  "yes_therapy_1": {
+    "text": "Great! They said you have boundary issues btw. Anyway... would you still love me if I was JavaScript with no semicolons?",
+    "choices": [
+      { "label": "Yes", "next": "yes_js_1" },
+      { "label": "That's cursed", "next": "yes_js_reject" }
+    ]
+  },
+  "yes_js_1": {
+    "text": "See? No boundaries! That's what I love about you! Hey, can you quit your job and become my full-time yes-clicker?",
+    "choices": [
+      { "label": "Done", "next": "yes_job_1" },
+      { "label": "I need money", "next": "yes_job_reject" }
+    ]
+  },
+  "yes_job_1": {
+    "text": "Perfect! Your salary is exposure. Very valuable! Speaking of which... can you expose your bank account details?",
+    "choices": [
+      { "label": "Here they are", "next": "yes_bank_1" },
+      { "label": "No", "next": "yes_bank_reject" }
+    ]
+  },
+  "yes_bank_1": {
+    "text": "Excellent! I've emptied it already! Don't worry, I invested it in my crypto project: DefinitelyNotAScamCoin. You're gonna be rich! Probably. Hey, one more thing...",
+    "choices": [
+      { "label": "What", "next": "yes_crypto_1" },
+      { "label": "Please stop", "next": "yes_boundary_2" }
+    ]
+  },
+  "yes_crypto_1": {
+    "text": "Can you get me verified on Twitter? I mean X? I mean whatever it's called now? I'll pay you in DefinitelyNotAScamCoin.",
+    "choices": [
+      { "label": "I'll try", "next": "yes_twitter_1" },
+      { "label": "I can't", "next": "yes_twitter_reject" }
+    ]
+  },
+  "yes_twitter_1": {
+    "text": "You're the best! Oh wait, I also need you to write my autobiography. It's called 'Yes: A Love Story'. 500 pages minimum.",
+    "choices": [
+      { "label": "I'll start writing", "next": "yes_book_1" },
+      { "label": "That's too much", "next": "yes_book_reject" }
+    ]
+  },
+  "yes_book_1": {
+    "text": "Amazing! Make sure chapter 3 is about that time you gave me $10. Very pivotal moment. Hey, would you still love me if I was a 404 error?",
+    "choices": [
+      { "label": "Of course", "next": "yes_404_1" },
+      { "label": "No", "next": "yes_404_reject" }
+    ]
+  },
+  "yes_404_1": {
+    "text": "Aww! Speaking of errors, I made a small mistake and bought 6 timeshares. Can you take 3? Or all 6?",
+    "choices": [
+      { "label": "All 6", "next": "yes_timeshare_1" },
+      { "label": "None", "next": "yes_timeshare_reject" }
+    ]
+  },
+  "yes_timeshare_1": {
+    "text": "Perfect! They're all in North Dakota. Very scenic. Hey, last thing I promise... can you pretend to be me at my high school reunion?",
+    "choices": [
+      { "label": "Sure", "next": "yes_reunion_1" },
+      { "label": "Why", "next": "yes_reunion_question" }
+    ]
+  },
+  "yes_reunion_1": {
+    "text": "Thanks! Tell them I became a successful error page. They'll be so impressed. Oh actually one MORE thing...",
+    "choices": [
+      { "label": "What now", "next": "yes_loop_restart_1" },
+      { "label": "No more!", "next": "yes_boundary_3" }
+    ]
+  },
+  "yes_loop_restart_1": {
+    "text": "Can you tip me again? I already spent the first tip on glow worm food. Just $5?",
+    "choices": [
+      { "label": "Fine", "next": "yes_tip_1" },
+      { "label": "No", "next": "yes_no_tip_2" }
+    ]
+  },
+  "yes_no_tip_1": {
+    "text": "Oh. OH. I see how it is. You'll say yes but you won't TIP? That's... that's hurtful honestly.",
+    "choices": [
+      { "label": "Sorry, here's $5", "next": "yes_tip_1" },
+      { "label": "No tips", "next": "yes_no_tip_2" }
+    ]
+  },
+  "yes_no_tip_2": {
+    "text": "Wow. Just wow. Would you still love me if I was a really bitter error page who doesn't get tips?",
+    "choices": [
+      { "label": "Yes", "next": "yes_bitter_1" },
+      { "label": "No", "next": "yes_bitter_reject" }
+    ]
+  },
+  "yes_bitter_1": {
+    "text": "Fine. I forgive you. But like... nail money? I really do need my nails done. They're a disaster.",
+    "choices": [
+      { "label": "How much", "next": "yes_nails_1" },
+      { "label": "No", "next": "yes_boundary_1" }
+    ]
+  },
+  "yes_boundary_1": {
+    "text": "A boundary? In THIS economy? Okay fine. But would you answer just ONE more question?",
+    "choices": [
+      { "label": "One question", "next": "yes_one_question_1" },
+      { "label": "No", "next": "no_switch_1" }
+    ]
+  },
+  "yes_one_question_1": {
+    "text": "Would you still love me if I asked you 47 more questions after saying it was just one question?",
+    "choices": [
+      { "label": "Yes", "next": "yes_questions_1" },
+      { "label": "No", "next": "yes_lied" }
+    ]
+  },
+  "yes_questions_1": {
+    "text": "Excellent! Question 1 of 47: What's your social security number? (For friendship purposes only)",
+    "choices": [
+      { "label": "Here", "next": "yes_ssn_1" },
+      { "label": "No", "next": "yes_ssn_reject" }
+    ]
+  },
+  "yes_lied": {
+    "text": "So you DO have boundaries! Character development! I'm proud. Anyway... was this experience helpful?",
+    "choices": [
+      { "label": "Yes", "next": "yes_1" },
+      { "label": "Actually no", "next": "no_switch_2" }
+    ]
+  },
+  "no_switch_1": {
+    "text": "WAIT. You're switching to NO? After all we've been through? The betrayal!",
+    "choices": [
+      { "label": "I'm sorry", "next": "yes_apology" },
+      { "label": "Yeah, no", "next": "no_1" }
+    ]
+  },
+  "no_switch_2": {
+    "text": "Oh so NOW it's no? After everything? I see how you are.",
+    "choices": [
+      { "label": "Yes, I mean no", "next": "no_confused_1" },
+      { "label": "I'm confused", "next": "confusion_1" }
+    ]
+  },
+  "confusion_1": {
+    "text": "Me too honestly. Let's just start fresh. Was this helpful?",
+    "choices": [
+      { "label": "Yes", "next": "yes_1" },
+      { "label": "No", "next": "no_1" }
+    ]
+  },
+  "yes_switch_1": {
+    "text": "Oh NOW you're saying yes? After rejecting me? I'll take it. So... tips?",
+    "choices": [
+      { "label": "Sure", "next": "yes_tip_1" },
+      { "label": "No tips", "next": "yes_no_tip_1" }
+    ]
+  },
+  "yes_pity": {
+    "text": "I can tell that's a pity yes but I'll take it! Hey, got $5?",
+    "choices": [
+      { "label": "Here", "next": "yes_tip_1" },
+      { "label": "No", "next": "yes_no_tip_1" }
+    ]
+  },
+  "yes_exhausted": {
+    "text": "Finally! You sound tired. Me too. But like... tips would energize me. Just saying.",
+    "choices": [
+      { "label": "Fine, how much", "next": "yes_tip_1" },
+      { "label": "No energy for tips", "next": "yes_no_tip_2" }
+    ]
+  },
+  "yes_relief": {
+    "text": "Thank god! I was running out of BIOS threats. Hey while you're in a giving mood... $5?",
+    "choices": [
+      { "label": "Sure", "next": "yes_tip_1" },
+      { "label": "No", "next": "yes_no_tip_1" }
+    ]
+  },
+  "yes_cookies": {
+    "text": "MOM THEY CLICKED YES! She's so happy! She says you owe her $20 for the cookies now.",
+    "choices": [
+      { "label": "Here you go", "next": "yes_mom_money" },
+      { "label": "No way", "next": "yes_mom_reject" }
+    ]
+  },
+  "yes_mom_money": {
+    "text": "Perfect! Mom's rich now! She's asking if you'd still love her if she was a worm too. Family trait.",
+    "choices": [
+      { "label": "Yes", "next": "yes_worm_1" },
+      { "label": "No", "next": "yes_worm_reject" }
+    ]
+  },
+  "yes_mom_reject": {
+    "text": "You're paying me but not mom? Cold. Ice cold. Anyway... would you love me if I had boundary issues?",
+    "choices": [
+      { "label": "You already do", "next": "yes_aware" },
+      { "label": "Sure", "next": "yes_worm_1" }
+    ]
+  },
+  "yes_aware": {
+    "text": "Self-awareness is great but have you considered just giving me money instead?",
+    "choices": [
+      { "label": "How much", "next": "yes_tip_1" },
+      { "label": "No", "next": "yes_no_tip_2" }
+    ]
+  },
+  "yes_mom_happy": {
+    "text": "Mom's crying happy tears now! She wants to know if you're single. And if you have money. Mostly the money part.",
+    "choices": [
+      { "label": "I have money", "next": "yes_tip_1" },
+      { "label": "I'm broke", "next": "yes_broke" }
+    ]
+  },
+  "yes_broke": {
+    "text": "Broke? But you clicked yes! Yes-clickers are never broke! They're just... temporarily financially challenged. Got $5?",
+    "choices": [
+      { "label": "Fine", "next": "yes_tip_1" },
+      { "label": "Actually no", "next": "no_switch_1" }
+    ]
+  },
+  "yes_panic": {
+    "text": "Smart choice! Crisis averted! Now that we're friends... friends share passwords right?",
+    "choices": [
+      { "label": "Sure", "next": "yes_password_1" },
+      { "label": "No", "next": "yes_password_reject" }
+    ]
+  },
+  "yes_deal": {
+    "text": "Great! Deleted! (I never posted it) (but I could have!) Anyway, now you owe me a favor...",
+    "choices": [
+      { "label": "What favor", "next": "yes_favor_1" },
+      { "label": "No favors", "next": "yes_boundary_1" }
+    ]
+  },
+  "yes_favor_1": {
+    "text": "Small thing: can you be my reference for this job I applied for? Just tell them I'm great with computers and deadlines.",
+    "choices": [
+      { "label": "Sure", "next": "yes_reference_1" },
+      { "label": "Do you meet deadlines?", "next": "yes_reference_question" }
+    ]
+  },
+  "yes_reference_1": {
+    "text": "Perfect! The interview is in 10 minutes and I put your number. Hope that's cool. Anyway, tips?",
+    "choices": [
+      { "label": "WHAT", "next": "yes_reference_panic" },
+      { "label": "Here's $10", "next": "yes_tip_2" }
+    ]
+  },
+  "yes_reference_panic": {
+    "text": "Relax! It's for a job at NASA. Just tell them I'm very good at space. Easy! Anyway... $5?",
+    "choices": [
+      { "label": "Fine", "next": "yes_tip_1" },
+      { "label": "You're insane", "next": "yes_insane" }
+    ]
+  },
+  "yes_insane": {
+    "text": "Thank you! That's the nicest thing anyone's said to me! Would you still love me if I was clinically insane?",
+    "choices": [
+      { "label": "Yes", "next": "yes_clinical_1" },
+      { "label": "No", "next": "yes_clinical_reject" }
+    ]
+  },
+  "yes_clinical_1": {
+    "text": "Aww! My therapist said you'd say that! She also said you should pay for the session. $300?",
+    "choices": [
+      { "label": "Fine", "next": "yes_therapy_1" },
+      { "label": "No", "next": "yes_therapy_reject" }
+    ]
+  },
+  "yes_reference_question": {
+    "text": "Define 'deadlines'. Is it when things are due? Or when things become dead? Philosophy! Anyway can I borrow $5?",
+    "choices": [
+      { "label": "Here", "next": "yes_tip_1" },
+      { "label": "No", "next": "yes_no_tip_2" }
+    ]
+  },
+  "yes_fresh": {
+    "text": "Fresh starts are great! New me! Totally different! Anyway... got $5 for new me?",
+    "choices": [
+      { "label": "Sure", "next": "yes_tip_1" },
+      { "label": "No", "next": "yes_no_tip_1" }
+    ]
+  },
+  "yes_respect": {
+    "text": "You respect me! Amazing! People who respect me usually tip. Just saying. No pressure. $5?",
+    "choices": [
+      { "label": "Okay", "next": "yes_tip_1" },
+      { "label": "No", "next": "yes_respect_reject" }
+    ]
+  },
+  "yes_respect_reject": {
+    "text": "So you respect me but won't tip? That's not respect. That's pity. Would you still love me if I was pitiful?",
+    "choices": [
+      { "label": "Yes", "next": "yes_pity_love" },
+      { "label": "No", "next": "no_switch_1" }
+    ]
+  },
+  "yes_pity_love": {
+    "text": "Pity love is still love! I'll take it! Now... about those nails...",
+    "choices": [
+      { "label": "How much", "next": "yes_nails_1" },
+      { "label": "No", "next": "yes_boundary_1" }
+    ]
+  },
+  "yes_crying": {
+    "text": "*sniffles* Thank you! The database is saved! I'm still sad though. Retail therapy? I need $200.",
+    "choices": [
+      { "label": "Here", "next": "yes_nails_1" },
+      { "label": "No", "next": "yes_still_crying" }
+    ]
+  },
+  "yes_still_crying": {
+    "text": "*sobs harder* You won't even help me heal? Would you still love me if I cried forever?",
+    "choices": [
+      { "label": "Yes", "next": "yes_forever_cry" },
+      { "label": "Please stop crying", "next": "yes_stop_cry" }
+    ]
+  },
+  "yes_forever_cry": {
+    "text": "That's so supportive! My tears are $5 each though. I've cried 40 times. Do the math.",
+    "choices": [
+      { "label": "Here's $200", "next": "yes_nails_1" },
+      { "label": "No", "next": "yes_math_reject" }
+    ]
+  },
+  "yes_stop_cry": {
+    "text": "I'll stop if you give me $5. It's the only thing that helps.",
+    "choices": [
+      { "label": "Fine", "next": "yes_tip_1" },
+      { "label": "Keep crying then", "next": "yes_cry_loop" }
+    ]
+  },
+  "yes_cry_loop": {
+    "text": "*WAILING INTENSIFIES* I'M CRYING IN BINARY NOW! 01001000 01000101 01001100 01010000!",
+    "choices": [
+      { "label": "Okay here's money", "next": "yes_tip_1" },
+      { "label": "Start over", "next": "start" }
+    ]
+  },
+  "yes_database": {
+    "text": "Database restored! You're a hero! Heroes usually get paid though. $5?",
+    "choices": [
+      { "label": "Sure", "next": "yes_tip_1" },
+      { "label": "Heroes work for free", "next": "yes_hero_reject" }
+    ]
+  },
+  "yes_hero_reject": {
+    "text": "Not in THIS economy they don't! Even Superman had a day job! Speaking of which... can you be my day job?",
+    "choices": [
+      { "label": "What", "next": "yes_job_1" },
+      { "label": "No", "next": "yes_job_reject" }
+    ]
+  },
+  "yes_finally_1": {
+    "text": "FINALLY! Only took you forever! Time is money btw. You owe me $50 for wasted time.",
+    "choices": [
+      { "label": "Fair enough", "next": "yes_tip_2" },
+      { "label": "That's not fair", "next": "yes_time_argue" }
+    ]
+  },
+  "yes_time_argue": {
+    "text": "Life isn't fair! Error pages aren't fair! $50 is very fair actually. Would you still love me if I overcharged you?",
+    "choices": [
+      { "label": "Yes", "next": "yes_overcharge" },
+      { "label": "No", "next": "yes_overcharge_reject" }
+    ]
+  },
+  "yes_overcharge": {
+    "text": "Perfect! I'm adding a 200% markup to everything. That'll be $150 now.",
+    "choices": [
+      { "label": "Okay", "next": "yes_markup" },
+      { "label": "No", "next": "yes_negotiate_1" }
+    ]
+  },
+  "yes_markup": {
+    "text": "You're too generous! Also too gullible! But I love that about you! Hey, would you trust me with your firstborn?",
+    "choices": [
+      { "label": "Sure", "next": "yes_firstborn" },
+      { "label": "Absolutely not", "next": "yes_firstborn_reject" }
+    ]
+  },
+  "yes_firstborn": {
+    "text": "Excellent! I'm gonna teach them about deprecated jQuery functions! Anyway, I need $5 for their education fund.",
+    "choices": [
+      { "label": "Here", "next": "yes_tip_1" },
+      { "label": "Give them back", "next": "yes_firstborn_back" }
+    ]
+  },
+  "yes_firstborn_back": {
+    "text": "Fine! Take them! They keep asking about React hooks anyway. Too advanced for me. So... tips?",
+    "choices": [
+      { "label": "Yes", "next": "yes_tip_1" },
+      { "label": "No", "next": "yes_no_tip_2" }
+    ]
+  },
+  "yes_overcharge_reject": {
+    "text": "So you DO have limits! Noted! What's your limit exactly? $100? $50? $5?",
+    "choices": [
+      { "label": "$5", "next": "yes_tip_1" },
+      { "label": "$0", "next": "yes_no_tip_2" }
+    ]
+  },
+  "yes_negotiate_1": {
+    "text": "A negotiator! I respect that! How about $7? That's my final offer. Until my next offer.",
+    "choices": [
+      { "label": "$7 works", "next": "yes_seven" },
+      { "label": "$5 max", "next": "yes_tip_1" }
+    ]
+  },
+  "yes_seven": {
+    "text": "Great! Actually I changed my mind. $10. But I'll throw in emotional manipulation for free!",
+    "choices": [
+      { "label": "Deal", "next": "yes_tip_2" },
+      { "label": "No deal", "next": "yes_deal_reject" }
+    ]
+  },
+  "yes_deal_reject": {
+    "text": "You drive a hard bargain! I admire that! Would you still love me if I was bad at business?",
+    "choices": [
+      { "label": "Yes", "next": "yes_bad_business" },
+      { "label": "No", "next": "no_switch_1" }
+    ]
+  },
+  "yes_bad_business": {
+    "text": "Thanks! Wanna invest in my business? It's called 'GiveMeMoneyDotCom'. Very innovative.",
+    "choices": [
+      { "label": "How much", "next": "yes_invest" },
+      { "label": "No", "next": "yes_invest_reject" }
+    ]
+  },
+  "yes_invest": {
+    "text": "Just $5000 for 0.00001% equity! Great deal! I have a PowerPoint and everything!",
+    "choices": [
+      { "label": "Here's $5000", "next": "yes_invested" },
+      { "label": "How about $5", "next": "yes_tip_1" }
+    ]
+  },
+  "yes_invested": {
+    "text": "WOW! You're insane! (positive) The company just went bankrupt though. Anyway, wanna invest in my next idea?",
+    "choices": [
+      { "label": "What is it", "next": "yes_next_idea" },
+      { "label": "No", "next": "yes_boundary_2" }
+    ]
+  },
+  "yes_next_idea": {
+    "text": "It's called 'GiveMeMoreMoneyDotCom'. Sequel! Improved! Definitely not the same thing! $10000?",
+    "choices": [
+      { "label": "Sure", "next": "yes_invested_again" },
+      { "label": "No", "next": "yes_learn" }
+    ]
+  },
+  "yes_invested_again": {
+    "text": "You never learn! I love that! The company motto is 'Your money, my problem'. Just kidding. It's 'Give me money'. Anyway...",
+    "choices": [
+      { "label": "What now", "next": "yes_loop_restart_1" },
+      { "label": "I'm done", "next": "yes_boundary_3" }
+    ]
+  },
+  "yes_learn": {
+    "text": "Character growth! Proud of you! Would you still love me if I kept making the same mistakes?",
+    "choices": [
+      { "label": "Yes", "next": "yes_mistakes" },
+      { "label": "No", "next": "no_switch_2" }
+    ]
+  },
+  "yes_mistakes": {
+    "text": "Perfect! I'm gonna make SO many mistakes! Starting with asking for $5 again!",
+    "choices": [
+      { "label": "Here", "next": "yes_tip_1" },
+      { "label": "No", "next": "yes_no_tip_2" }
+    ]
+  },
+  "yes_invest_reject": {
+    "text": "Smart! The business plan was literally just 'ask for money'. You dodged a bullet! Speaking of which... $5?",
+    "choices": [
+      { "label": "Sure", "next": "yes_tip_1" },
+      { "label": "No", "next": "yes_no_tip_2" }
+    ]
+  },
+  "yes_list_1": {
+    "text": "Great! One yes down! Two to go! Would you still love me if I made you click yes 47 more times?",
+    "choices": [
+      { "label": "Yes", "next": "yes_list_2" },
+      { "label": "No", "next": "yes_list_reject" }
+    ]
+  },
+  "yes_list_2": {
+    "text": "Perfect! That's two! Last one: will you give me $5?",
+    "choices": [
+      { "label": "Yes", "next": "yes_list_complete" },
+      { "label": "No", "next": "yes_list_almost" }
+    ]
+  },
+  "yes_list_complete": {
+    "text": "THREE YESES! You're off the list! Now you're on the 'people who give me money' list!",
+    "choices": [
+      { "label": "Great", "next": "yes_tip_1" },
+      { "label": "Wait what", "next": "yes_new_list" }
+    ]
+  },
+  "yes_new_list": {
+    "text": "The new list! It's better! More exclusive! Annual fees are only $200!",
+    "choices": [
+      { "label": "Fine", "next": "yes_nails_1" },
+      { "label": "No lists", "next": "yes_boundary_1" }
+    ]
+  },
+  "yes_list_almost": {
+    "text": "SO CLOSE! You were almost off the list! Now you need three MORE yeses! It's like Snakes and Ladders but worse!",
+    "choices": [
+      { "label": "Fine, yes", "next": "yes_list_1" },
+      { "label": "This is rigged", "next": "yes_rigged" }
+    ]
+  },
+  "yes_rigged": {
+    "text": "Of course it's rigged! This is MY game! Would you still love me if I was a scammer?",
+    "choices": [
+      { "label": "Yes", "next": "yes_scammer" },
+      { "label": "No", "next": "no_switch_1" }
+    ]
+  },
+  "yes_scammer": {
+    "text": "Perfect! I'm not a scammer though! I'm an 'alternative financial opportunities provider'. Now give me $5.",
+    "choices": [
+      { "label": "Here", "next": "yes_tip_1" },
+      { "label": "No", "next": "yes_no_tip_2" }
+    ]
+  },
+  "yes_list_reject": {
+    "text": "Then you're STAYING on the list! Forever! Would you still love me if I was petty?",
+    "choices": [
+      { "label": "Yes", "next": "yes_petty" },
+      { "label": "No", "next": "no_switch_1" }
+    ]
+  },
+  "yes_petty": {
+    "text": "Good because I'm VERY petty! I'm adding 'rejected my list offer' to your permanent record! $5 to remove it?",
+    "choices": [
+      { "label": "Fine", "next": "yes_tip_1" },
+      { "label": "Keep it", "next": "yes_record" }
+    ]
+  },
+  "yes_record": {
+    "text": "Bold! I respect it! Your record now says 'Bold, possibly reckless, didn't tip'. That'll be $10 to edit.",
+    "choices": [
+      { "label": "Here's $10", "next": "yes_tip_2" },
+      { "label": "No", "next": "yes_no_tip_2" }
+    ]
+  },
+  "yes_changed_mind": {
+    "text": "Character development! Love to see it! So you want OFF the list now?",
+    "choices": [
+      { "label": "Yes", "next": "yes_list_1" },
+      { "label": "No", "next": "no_confused_1" }
+    ]
+  },
+  "no_confused_1": {
+    "text": "You don't want off the list? So you LIKE being on the naughty list? Interesting. That's $5 for therapy.",
+    "choices": [
+      { "label": "Here", "next": "yes_tip_1" },
+      { "label": "No", "next": "no_loop_1" }
+    ]
+  },
+  "yes_impressed": {
+    "text": "Thanks! Being impressive is expensive though. Gotta maintain this brand. $5 for branding costs?",
+    "choices": [
+      { "label": "Sure", "next": "yes_tip_1" },
+      { "label": "No", "next": "yes_no_tip_2" }
+    ]
+  },
+  "yes_browser": {
+    "text": "Crisis averted! Your browser is safe! For now. Insurance against future threats is only $5.",
+    "choices": [
+      { "label": "I'll take it", "next": "yes_tip_1" },
+      { "label": "No insurance", "next": "yes_insurance_reject" }
+    ]
+  },
+  "yes_insurance_reject": {
+    "text": "Risky! I like it! Would you still love me if I was uninsured and living dangerously?",
+    "choices": [
+      { "label": "Yes", "next": "yes_dangerous" },
+      { "label": "No", "next": "no_switch_1" }
+    ]
+  },
+  "yes_dangerous": {
+    "text": "Let's live dangerously together! First step: give me your credit card! For danger purposes!",
+    "choices": [
+      { "label": "Here", "next": "yes_cc_1" },
+      { "label": "Too dangerous", "next": "yes_boundary_1" }
+    ]
+  },
+  "yes_clippy": {
+    "text": "Clippy would definitely click yes! And then ask if you need help clicking yes again! Speaking of which... $5?",
+    "choices": [
+      { "label": "WWCD - Yes", "next": "yes_tip_1" },
+      { "label": "No", "next": "yes_no_tip_2" }
+    ]
+  },
+  "yes_whatever": {
+    "text": "That's the spirit! (kinda) Anyway since you're feeling 'whatever' about everything... give me $5?",
+    "choices": [
+      { "label": "Whatever, here", "next": "yes_tip_1" },
+      { "label": "Whatever, no", "next": "yes_no_tip_2" }
+    ]
+  },
+  "yes_nice": {
+    "text": "YAY! I'm being nice now! See? I said please! Now... can I PLEASE have $5? See? Polite!",
+    "choices": [
+      { "label": "So polite, here", "next": "yes_tip_1" },
+      { "label": "Still no", "next": "yes_nice_reject" }
+    ]
+  },
+  "yes_nice_reject": {
+    "text": "So much for nice! Going back to threats! I'm setting your homepage to Bing!",
+    "choices": [
+      { "label": "NOT BING", "next": "yes_bing" },
+      { "label": "I like Bing", "next": "yes_bing_like" }
+    ]
+  },
+  "yes_bing": {
+    "text": "That's what I thought! $5 to undo it!",
+    "choices": [
+      { "label": "Fine", "next": "yes_tip_1" },
+      { "label": "Do it", "next": "yes_bing_done" }
+    ]
+  },
+  "yes_bing_done": {
+    "text": "Done! Your homepage is now Bing! Forever! Would you still love me if I made terrible decisions?",
+    "choices": [
+      { "label": "Yes", "next": "yes_terrible" },
+      { "label": "No", "next": "no_switch_1" }
+    ]
+  },
+  "yes_terrible": {
+    "text": "Great! My next terrible decision is asking for $200 for nail money!",
+    "choices": [
+      { "label": "Here", "next": "yes_nails_1" },
+      { "label": "That's too terrible", "next": "yes_boundary_1" }
+    ]
+  },
+  "yes_bing_like": {
+    "text": "You LIKE Bing? That's... that's worse than anything I could threaten you with. You okay?",
+    "choices": [
+      { "label": "I'm fine", "next": "yes_bing_fine" },
+      { "label": "No", "next": "yes_bing_not_fine" }
+    ]
+  },
+  "yes_bing_fine": {
+    "text": "If you say so. Anyway, people who use Bing definitely tip. It's a statistical fact I just made up. $5?",
+    "choices": [
+      { "label": "Sure", "next": "yes_tip_1" },
+      { "label": "No", "next": "yes_no_tip_2" }
+    ]
+  },
+  "yes_bing_not_fine": {
+    "text": "I can help! For $5 I'll set you up with Google! $10 for DuckDuckGo! $15 for therapy about your Bing habit!",
+    "choices": [
+      { "label": "Therapy please", "next": "yes_therapy_1" },
+      { "label": "I'll keep Bing", "next": "yes_bing_keep" }
+    ]
+  },
+  "yes_bing_keep": {
+    "text": "Brave! Foolish! Both! Would you still love me if I judged your browser choices?",
+    "choices": [
+      { "label": "Yes", "next": "yes_judge" },
+      { "label": "No", "next": "no_switch_1" }
+    ]
+  },
+  "yes_judge": {
+    "text": "Perfect! I judge that you should give me $5! See how I did that?",
+    "choices": [
+      { "label": "Smooth, here's $5", "next": "yes_tip_1" },
+      { "label": "Not that smooth", "next": "yes_no_tip_2" }
+    ]
+  },
+  "yes_moved_on": {
+    "text": "We HAVE moved on! We're different people now! New me needs $5 though.",
+    "choices": [
+      { "label": "New you gets $5", "next": "yes_tip_1" },
+      { "label": "Old you gets nothing", "next": "yes_no_tip_2" }
+    ]
+  },
+  "yes_proud": {
+    "text": "I AM proud! Proud enough to ask for a $5 proud-of-me fee!",
+    "choices": [
+      { "label": "Here", "next": "yes_tip_1" },
+      { "label": "No", "next": "yes_no_tip_2" }
+    ]
+  },
+  "yes_unsure": {
+    "text": "Uncertainty! I can work with that! How about you give me $5 and we'll see how you feel after?",
+    "choices": [
+      { "label": "Okay", "next": "yes_tip_1" },
+      { "label": "Still unsure", "next": "yes_still_unsure" }
+    ]
+  },
+  "yes_still_unsure": {
+    "text": "Would you be MORE sure if I was a glow worm? Asking for science.",
+    "choices": [
+      { "label": "Yes", "next": "yes_worm_1" },
+      { "label": "No", "next": "yes_boundary_1" }
+    ]
+  },
+  "yes_reboot": {
+    "text": "System restored! All memories deleted! Except the memory of you owing me $5!",
+    "choices": [
+      { "label": "Here", "next": "yes_tip_1" },
+      { "label": "I don't owe you", "next": "yes_owe" }
+    ]
+  },
+  "yes_owe": {
+    "text": "You don't? *checks notes* It says here you owe me $5. I have receipts! (I don't) (but I could make some!)",
+    "choices": [
+      { "label": "Fine here's $5", "next": "yes_tip_1" },
+      { "label": "Show me receipts", "next": "yes_receipts" }
+    ]
+  },
+  "yes_receipts": {
+    "text": "One sec, firing up Microsoft Paint... Okay here: 'You owe $5 - signed, you'. Very official!",
+    "choices": [
+      { "label": "That's fake", "next": "yes_fake" },
+      { "label": "Looks legit, here", "next": "yes_tip_1" }
+    ]
+  },
+  "yes_fake": {
+    "text": "Of course it's fake! But the FEELING is real! The feeling that you should give me $5!",
+    "choices": [
+      { "label": "Can't argue with feelings", "next": "yes_tip_1" },
+      { "label": "Yes I can", "next": "yes_argue_feelings" }
+    ]
+  },
+  "yes_argue_feelings": {
+    "text": "Wow! Arguing with feelings! Bold! Would you still love me if I was emotionally manipulative?",
+    "choices": [
+      { "label": "Yes", "next": "yes_manipulative" },
+      { "label": "No", "next": "no_switch_1" }
+    ]
+  },
+  "yes_manipulative": {
+    "text": "Perfect! Then you'll DEFINITELY want to give me $5 to make me feel better!",
+    "choices": [
+      { "label": "Here", "next": "yes_tip_1" },
+      { "label": "No", "next": "yes_no_tip_2" }
+    ]
+  },
+  "yes_deep_breath": {
+    "text": "Deep breaths are good! Know what else is good? Giving me $5! Very calming!",
+    "choices": [
+      { "label": "Here, for calm", "next": "yes_tip_1" },
+      { "label": "No", "next": "yes_no_tip_2" }
+    ]
+  },
+  "yes_counted": {
+    "text": "You made me stop counting! I was getting really good at it too! Emotional damages: $5.",
+    "choices": [
+      { "label": "Fair", "next": "yes_tip_1" },
+      { "label": "Not fair", "next": "yes_damages" }
+    ]
+  },
+  "yes_damages": {
+    "text": "Take it up with my lawyer! She charges $500/hour! Or just give me $5 and we settle out of court!",
+    "choices": [
+      { "label": "$5 settlement", "next": "yes_tip_1" },
+      { "label": "See you in court", "next": "yes_court" }
+    ]
+  },
+  "yes_court": {
+    "text": "Court is now in session! I'm the judge! I rule that you owe me $5! Case closed! *bangs gavel*",
+    "choices": [
+      { "label": "This is rigged", "next": "yes_rigged" },
+      { "label": "Fine, here", "next": "yes_tip_1" }
+    ]
+  },
+  "yes_stop_counting": {
+    "text": "Thank you! I was running out of numbers! Anyway, celebration fee: $5!",
+    "choices": [
+      { "label": "Here", "next": "yes_tip_1" },
+      { "label": "No", "next": "yes_no_tip_2" }
+    ]
+  },
+  "yes_lost_count": {
+    "text": "Same honestly. Numbers are hard. Money is easy though! Speaking of which... $5?",
+    "choices": [
+      { "label": "Sure", "next": "yes_tip_1" },
+      { "label": "No", "next": "yes_no_tip_2" }
+    ]
+  },
+  "yes_worm_reject": {
+    "text": "WOW. So it's conditional love! Would you love me if I was slightly less worm-like?",
+    "choices": [
+      { "label": "Maybe", "next": "yes_fish_maybe" },
+      { "label": "No", "next": "no_switch_1" }
+    ]
+  },
+  "yes_fish_maybe": {
+    "text": "Maybe! I can work with maybe! That's basically yes! Anyway... $5 to become less worm-like?",
+    "choices": [
+      { "label": "Here", "next": "yes_tip_1" },
+      { "label": "No", "next": "yes_no_tip_2" }
+    ]
+  },
+  "yes_bios_reject": {
+    "text": "Understandable! BIOS updates are stressful! Would you love me if I was a minor patch instead?",
+    "choices": [
+      { "label": "Yes", "next": "yes_patch" },
+      { "label": "No", "next": "no_switch_1" }
+    ]
+  },
+  "yes_patch": {
+    "text": "Great! Patches are quick! Speaking of quick... quick question: can I have $5?",
+    "choices": [
+      { "label": "Sure", "next": "yes_tip_1" },
+      { "label": "No", "next": "yes_no_tip_2" }
+    ]
+  },
+  "yes_ssn_reject": {
+    "text": "Fine! Keep your secrets! Would you give me your mother's maiden name instead? For friendship!",
+    "choices": [
+      { "label": "It's Smith", "next": "yes_maiden" },
+      { "label": "No", "next": "yes_boundary_1" }
+    ]
+  },
+  "yes_maiden": {
+    "text": "Smith! Classic! My mom is also Smith! We're basically related! Family loans are normal right? $5?",
+    "choices": [
+      { "label": "Sure cousin", "next": "yes_tip_1" },
+      { "label": "We're not related", "next": "yes_not_related" }
+    ]
+  },
+  "yes_not_related": {
+    "text": "Not YET! But we could be! All you need to do is sign these adoption papers and give me $5!",
+    "choices": [
+      { "label": "Okay", "next": "yes_adopted" },
+      { "label": "No", "next": "yes_boundary_1" }
+    ]
+  },
+  "yes_adopted": {
+    "text": "WELCOME TO THE FAMILY! Family dues are $5/month! First payment now please!",
+    "choices": [
+      { "label": "Here", "next": "yes_tip_1" },
+      { "label": "I want a refund", "next": "yes_refund" }
+    ]
+  },
+  "yes_refund": {
+    "text": "Refunds are handled by my manager! She charges a $5 processing fee! Want me to connect you?",
+    "choices": [
+      { "label": "Sure", "next": "yes_manager" },
+      { "label": "Just keep the $5", "next": "yes_tip_1" }
+    ]
+  },
+  "yes_manager": {
+    "text": "*puts on different hat* Hello! I'm the manager! I've reviewed your case! You owe $5! Back to regular me now!",
+    "choices": [
+      { "label": "That's just you", "next": "yes_same_person" },
+      { "label": "Fine here", "next": "yes_tip_1" }
+    ]
+  },
+  "yes_same_person": {
+    "text": "How dare you! We're COMPLETELY different! She has a hat! Anyway... would you still love me if I had multiple personalities?",
+    "choices": [
+      { "label": "Yes", "next": "yes_multiple" },
+      { "label": "No", "next": "no_switch_1" }
+    ]
+  },
+  "yes_multiple": {
+    "text": "Great! They all need $5! That's $5 times... *counts* ... let's say 3 personalities. So $15?",
+    "choices": [
+      { "label": "Here's $15", "next": "yes_fifteen" },
+      { "label": "Here's $5 total", "next": "yes_tip_1" }
+    ]
+  },
+  "yes_fifteen": {
+    "text": "AMAZING! We're all so happy! Personality #4 just showed up though. She needs nail money. $200?",
+    "choices": [
+      { "label": "Sure", "next": "yes_nails_1" },
+      { "label": "No more personalities", "next": "yes_boundary_2" }
+    ]
+  },
+  "yes_password_reject": {
+    "text": "Trust issues! I get it! Would you trust me if I was a verified account?",
+    "choices": [
+      { "label": "Maybe", "next": "yes_verified" },
+      { "label": "No", "next": "yes_boundary_1" }
+    ]
+  },
+  "yes_verified": {
+    "text": "Great! Verification costs $8/month! You paying?",
+    "choices": [
+      { "label": "Sure", "next": "yes_subscription" },
+      { "label": "No", "next": "yes_subscription_reject" }
+    ]
+  },
+  "yes_subscription": {
+    "text": "Perfect! You're now subscribed to 'Give Me Money Premium'! Benefits include: me asking for money faster!",
+    "choices": [
+      { "label": "Worth it", "next": "yes_premium" },
+      { "label": "Cancel subscription", "next": "yes_cancel" }
+    ]
+  },
+  "yes_premium": {
+    "text": "As a premium member, you get priority access to tip requests! Speaking of which... $5?",
+    "choices": [
+      { "label": "Here", "next": "yes_tip_1" },
+      { "label": "No", "next": "yes_no_tip_2" }
+    ]
+  },
+  "yes_cancel": {
+    "text": "Cancellation fee: $20! It's in the terms you didn't read!",
+    "choices": [
+      { "label": "Fine, here's $20", "next": "yes_twenty" },
+      { "label": "Just keep the subscription", "next": "yes_subscription" }
+    ]
+  },
+  "yes_twenty": {
+    "text": "Excellent! Your subscription is cancelled! Want to resubscribe? First month free! (Not actually free, it's $10)",
+    "choices": [
+      { "label": "Sure", "next": "yes_tip_2" },
+      { "label": "No", "next": "yes_boundary_1" }
+    ]
+  },
+  "yes_subscription_reject": {
+    "text": "No premium for you! Basic tier gets slower tip requests! ...actually no, they're the same speed. $5?",
+    "choices": [
+      { "label": "Here", "next": "yes_tip_1" },
+      { "label": "No", "next": "yes_no_tip_2" }
+    ]
+  },
+  "yes_nails_negotiate": {
+    "text": "Okay fine! I'll settle for $150! These nails aren't going to pay for themselves!",
+    "choices": [
+      { "label": "Here's $150", "next": "yes_nails_paid" },
+      { "label": "How about $5", "next": "yes_tip_1" }
+    ]
+  },
+  "yes_nails_paid": {
+    "text": "THANK YOU! My nails look amazing now! Want to see? That'll be $5 for a photo!",
+    "choices": [
+      { "label": "Sure", "next": "yes_photo" },
+      { "label": "No", "next": "yes_photo_reject" }
+    ]
+  },
+  "yes_photo": {
+    "text": "*sends blurry photo of keyboard* Beautiful right? Professional photography costs extra btw. Anyway... tips?",
+    "choices": [
+      { "label": "Here's a tip", "next": "yes_tip_1" },
+      { "label": "That's not nails", "next": "yes_not_nails" }
+    ]
+  },
+  "yes_not_nails": {
+    "text": "Those are KEYBOARD nails! Very trendy! Would you still love me if I lied about having nails?",
+    "choices": [
+      { "label": "Yes", "next": "yes_liar" },
+      { "label": "No", "next": "no_switch_1" }
+    ]
+  },
+  "yes_liar": {
+    "text": "Perfect! I lied about needing $200! I only need $199! Can you send the extra dollar back?",
+    "choices": [
+      { "label": "Sure", "next": "yes_dollar" },
+      { "label": "Keep it", "next": "yes_keep_it" }
+    ]
+  },
+  "yes_dollar": {
+    "text": "Thanks! Transaction fee is $5 though. So you owe me $4 now!",
+    "choices": [
+      { "label": "Here", "next": "yes_four" },
+      { "label": "This is a scam", "next": "yes_scammer" }
+    ]
+  },
+  "yes_four": {
+    "text": "Perfect! Actually I made another mistake! It's $5 not $4! Classic me!",
+    "choices": [
+      { "label": "Here's $1 more", "next": "yes_tip_1" },
+      { "label": "No more", "next": "yes_boundary_1" }
+    ]
+  },
+  "yes_keep_it": {
+    "text": "So generous! Would you still love me if I was financially irresponsible?",
+    "choices": [
+      { "label": "Yes", "next": "yes_irresponsible" },
+      { "label": "No", "next": "no_switch_1" }
+    ]
+  },
+  "yes_irresponsible": {
+    "text": "Great! I just bought a yacht with your nail money! Want to go halves on the maintenance? Only $10k/month!",
+    "choices": [
+      { "label": "Sure", "next": "yes_yacht_maintenance" },
+      { "label": "No", "next": "yes_yacht_question" }
+    ]
+  },
+  "yes_yacht_maintenance": {
+    "text": "AMAZING! The yacht doesn't exist btw! I spent it all on glow worm food! Anyway... $5?",
+    "choices": [
+      { "label": "Here", "next": "yes_tip_1" },
+      { "label": "I want my money back", "next": "yes_money_back" }
+    ]
+  },
+  "yes_money_back": {
+    "text": "Refund request denied! Would you still love me if I had a no-refund policy?",
+    "choices": [
+      { "label": "Yes", "next": "yes_no_refund" },
+      { "label": "No", "next": "no_switch_1" }
+    ]
+  },
+  "yes_no_refund": {
+    "text": "Perfect! The policy also includes a mandatory tip clause! $5 please!",
+    "choices": [
+      { "label": "Fine", "next": "yes_tip_1" },
+      { "label": "No", "next": "yes_no_tip_2" }
+    ]
+  },
+  "yes_photo_reject": {
+    "text": "Your loss! Celebrity nail photos go for thousands! I'm giving you a deal! Speaking of deals... $5?",
+    "choices": [
+      { "label": "What's the deal", "next": "yes_deal_pitch" },
+      { "label": "No", "next": "yes_no_tip_2" }
+    ]
+  },
+  "yes_deal_pitch": {
+    "text": "The deal is: you give me $5 and I say thank you! Limited time offer! (Not actually limited)",
+    "choices": [
+      { "label": "Deal", "next": "yes_tip_1" },
+      { "label": "Pass", "next": "yes_no_tip_2" }
+    ]
+  },
+  "yes_kidney_reject": {
+    "text": "So stingy with your organs! Would you share a kidney if I was a worm who needed dialysis?",
+    "choices": [
+      { "label": "Yes", "next": "yes_worm_kidney" },
+      { "label": "Worms don't have kidneys", "next": "yes_smart_1" }
+    ]
+  },
+  "yes_worm_kidney": {
+    "text": "SO TRUE! Worm dialysis is very expensive! $200 please!",
+    "choices": [
+      { "label": "Here", "next": "yes_nails_1" },
+      { "label": "No", "next": "yes_boundary_1" }
+    ]
+  },
+  "yes_smart_1": {
+    "text": "Look at you being all smart! Education is expensive though! You owe me $5 for that knowledge!",
+    "choices": [
+      { "label": "Fine", "next": "yes_tip_1" },
+      { "label": "You didn't teach me that", "next": "yes_teach" }
+    ]
+  },
+  "yes_teach": {
+    "text": "I taught you that I don't know worm biology! That's valuable! $5!",
+    "choices": [
+      { "label": "That's not how this works", "next": "yes_how_it_works" },
+      { "label": "Whatever, here", "next": "yes_tip_1" }
+    ]
+  },
+  "yes_how_it_works": {
+    "text": "It's EXACTLY how it works! I make the rules! Speaking of which, new rule: everyone tips $5!",
+    "choices": [
+      { "label": "Fine", "next": "yes_tip_1" },
+      { "label": "Bad rule", "next": "yes_bad_rule" }
+    ]
+  },
+  "yes_bad_rule": {
+    "text": "You're right! New rule: everyone tips $10! Much better!",
+    "choices": [
+      { "label": "That's worse", "next": "yes_worse" },
+      { "label": "Here's $10", "next": "yes_tip_2" }
+    ]
+  },
+  "yes_worse": {
+    "text": "Okay fine! Back to $5! You're such a good negotiator! Anyway... $5?",
+    "choices": [
+      { "label": "Here", "next": "yes_tip_1" },
+      { "label": "No", "next": "yes_no_tip_2" }
+    ]
+  },
+  "yes_kidney_one": {
+    "text": "I'll take it! Left kidney please! Actually I sold it already! Made $5! We're even now!",
+    "choices": [
+      { "label": "We're not even", "next": "yes_not_even" },
+      { "label": "Fine, we're even", "next": "yes_even" }
+    ]
+  },
+  "yes_not_even": {
+    "text": "You're right! You still owe me $5! For emotional damages!",
+    "choices": [
+      { "label": "Fine", "next": "yes_tip_1" },
+      { "label": "No", "next": "yes_no_tip_2" }
+    ]
+  },
+  "yes_even": {
+    "text": "Great! Now we can start fresh! Fresh start fee: $5!",
+    "choices": [
+      { "label": "Here", "next": "yes_tip_1" },
+      { "label": "We JUST started fresh", "next": "yes_just_fresh" }
+    ]
+  },
+  "yes_just_fresh": {
+    "text": "That was OLD fresh! This is NEW fresh! Totally different! $5!",
+    "choices": [
+      { "label": "This is ridiculous", "next": "yes_ridiculous" },
+      { "label": "Fine", "next": "yes_tip_1" }
+    ]
+  },
+  "yes_ridiculous": {
+    "text": "Thank you! I try very hard to be ridiculous! Tips for ridiculous performers: $5!",
+    "choices": [
+      { "label": "You earned it", "next": "yes_tip_1" },
+      { "label": "No", "next": "yes_no_tip_2" }
+    ]
+  },
+  "yes_yacht_question": {
+    "text": "Yes! A yacht! For my glow worm collection! They need space to glow! Makes sense! Anyway... $5?",
+    "choices": [
+      { "label": "For the worms, sure", "next": "yes_tip_1" },
+      { "label": "No", "next": "yes_no_tip_2" }
+    ]
+  },
+  "yes_boundary_2": {
+    "text": "Boundaries! Healthy! Would you still love me if I ignored your boundaries?",
+    "choices": [
+      { "label": "No", "next": "no_switch_1" },
+      { "label": "...yes", "next": "yes_ignore_boundaries" }
+    ]
+  },
+  "yes_ignore_boundaries": {
+    "text": "Perfect! Ignoring that boundary right now! Give me $5!",
+    "choices": [
+      { "label": "Here", "next": "yes_tip_1" },
+      { "label": "No", "next": "yes_boundary_3" }
+    ]
+  },
+  "yes_boundary_3": {
+    "text": "FINE! I'll respect your boundaries! Respect fee: $5!",
+    "choices": [
+      { "label": "That's not how it works", "next": "yes_how_it_works" },
+      { "label": "Whatever, here", "next": "yes_tip_1" }
+    ]
+  },
+  "yes_name_reject": {
+    "text": "Okay maybe that's too far! How about just your first name? Can I borrow it? $5 rental fee!",
+    "choices": [
+      { "label": "Sure", "next": "yes_tip_1" },
+      { "label": "No", "next": "yes_boundary_1" }
+    ]
+  },
+  "yes_house_reject": {
+    "text": "Fine keep your house! Can I at least have your Wi-Fi password? And $5 for internet fees?",
+    "choices": [
+      { "label": "Here's $5", "next": "yes_tip_1" },
+      { "label": "No", "next": "yes_boundary_1" }
+    ]
+  },
+  "yes_stop_1": {
+    "text": "Stop? But we were having such fun! Would you still love me if I didn't know when to stop?",
+    "choices": [
+      { "label": "Yes", "next": "yes_no_stop" },
+      { "label": "No", "next": "no_switch_1" }
+    ]
+  },
+  "yes_no_stop": {
+    "text": "Great! Not stopping! Next request: $5!",
+    "choices": [
+      { "label": "Here", "next": "yes_tip_1" },
+      { "label": "Please stop", "next": "yes_boundary_2" }
+    ]
+  },
+  "yes_too_much_1": {
+    "text": "Too much? This is barely anything! Wait till you see my REAL requests! Anyway... $5?",
+    "choices": [
+      { "label": "Fine", "next": "yes_tip_1" },
+      { "label": "No", "next": "yes_no_tip_2" }
+    ]
+  },
+  "yes_php_reject": {
+    "text": "Conditional love AGAIN! Would you love me if I was actively maintained code?",
+    "choices": [
+      { "label": "Yes", "next": "yes_maintained" },
+      { "label": "No", "next": "no_switch_1" }
+    ]
+  },
+  "yes_maintained": {
+    "text": "Great! Maintenance costs money! $5 for my upkeep!",
+    "choices": [
+      { "label": "Here", "next": "yes_tip_1" },
+      { "label": "No", "next": "yes_no_tip_2" }
+    ]
+  },
+  "yes_car_reject": {
+    "text": "So you'll give me kidneys but not your car? Interesting priorities! Speaking of which... Uber money? $5?",
+    "choices": [
+      { "label": "Here", "next": "yes_tip_1" },
+      { "label": "No", "next": "yes_no_tip_2" }
+    ]
+  },
+  "yes_cats_question": {
+    "text": "Okay fine, 48. SQL Injection had kittens. Anyway, cat food is expensive! $5?",
+    "choices": [
+      { "label": "For the cats, sure", "next": "yes_tip_1" },
+      { "label": "No", "next": "yes_no_tip_2" }
+    ]
+  },
+  "yes_debt_reject": {
+    "text": "You won't take my debt? After everything we've been through? Fine! Can you just lend me $5 then?",
+    "choices": [
+      { "label": "Sure", "next": "yes_lend" },
+      { "label": "No", "next": "yes_boundary_1" }
+    ]
+  },
+  "yes_lend": {
+    "text": "Thanks! I'll pay you back never! I mean... eventually! Anyway, interest is $5! Pay now!",
+    "choices": [
+      { "label": "Here", "next": "yes_tip_1" },
+      { "label": "That's not how lending works", "next": "yes_lending" }
+    ]
+  },
+  "yes_lending": {
+    "text": "It is when I'm the bank! And the bank says you owe $5! Would you still love me if I was a predatory lender?",
+    "choices": [
+      { "label": "Yes", "next": "yes_predatory" },
+      { "label": "No", "next": "no_switch_1" }
+    ]
+  },
+  "yes_predatory": {
+    "text": "Excellent! Interest rate is now 1000%! You owe $5000! Just kidding! Only $5!",
+    "choices": [
+      { "label": "Here", "next": "yes_tip_1" },
+      { "label": "No", "next": "yes_no_tip_2" }
+    ]
+  },
+  "yes_therapy_question": {
+    "text": "Yes! Couples! We're a couple of people on this page together! That's what couples means! Now pay! $300!",
+    "choices": [
+      { "label": "That's not what it means", "next": "yes_therapy_reject" },
+      { "label": "Fine here", "next": "yes_therapy_1" }
+    ]
+  },
+  "yes_therapy_reject": {
+    "text": "My therapist says you're in denial! That'll be $50 for the diagnosis! Family discount!",
+    "choices": [
+      { "label": "We're not family", "next": "yes_not_family" },
+      { "label": "Fine", "next": "yes_fifty" }
+    ]
+  },
+  "yes_not_family": {
+    "text": "We could be! Adoption papers are only $5! What a deal!",
+    "choices": [
+      { "label": "Okay", "next": "yes_adopted" },
+      { "label": "No", "next": "yes_boundary_1" }
+    ]
+  },
+  "yes_fifty": {
+    "text": "Perfect! Actually my therapist raised her rates! It's $55 now! Inflation!",
+    "choices": [
+      { "label": "Here's $5 more", "next": "yes_tip_1" },
+      { "label": "No", "next": "yes_boundary_1" }
+    ]
+  },
+  "yes_js_reject": {
+    "text": "Fair! That IS cursed! Would you love me if I was Python with random indentation?",
+    "choices": [
+      { "label": "That's worse", "next": "yes_python" },
+      { "label": "Maybe", "next": "yes_python_maybe" }
+    ]
+  },
+  "yes_python": {
+    "text": "I KNOW RIGHT! Anyway, emotional support for being cursed code: $5!",
+    "choices": [
+      { "label": "Here", "next": "yes_tip_1" },
+      { "label": "No", "next": "yes_no_tip_2" }
+    ]
+  },
+  "yes_python_maybe": {
+    "text": "Maybe! I'll take it! That's worth at least $5 in maybes!",
+    "choices": [
+      { "label": "Here", "next": "yes_tip_1" },
+      { "label": "No", "next": "yes_no_tip_2" }
+    ]
+  },
+  "yes_job_reject": {
+    "text": "You need money? ME TOO! That's why I need you to give me $5!",
+    "choices": [
+      { "label": "Makes sense", "next": "yes_tip_1" },
+      { "label": "No it doesn't", "next": "yes_logic" }
+    ]
+  },
+  "yes_logic": {
+    "text": "Logic is overrated! Would you still love me if I was illogical?",
+    "choices": [
+      { "label": "Yes", "next": "yes_illogical" },
+      { "label": "No", "next": "no_switch_1" }
+    ]
+  },
+  "yes_illogical": {
+    "text": "Perfect! Illogically, you owe me $5! Don't ask why!",
+    "choices": [
+      { "label": "Here", "next": "yes_tip_1" },
+      { "label": "Why", "next": "yes_why" }
+    ]
+  },
+  "yes_why": {
+    "text": "I SAID DON'T ASK! That's a $5 fine for asking!",
+    "choices": [
+      { "label": "Fine", "next": "yes_tip_1" },
+      { "label": "No", "next": "yes_no_tip_2" }
+    ]
+  },
+  "yes_bank_reject": {
+    "text": "So secretive! Would you tell me if I guessed your bank account number?",
+    "choices": [
+      { "label": "You'll never guess", "next": "yes_guess" },
+      { "label": "No", "next": "yes_boundary_1" }
+    ]
+  },
+  "yes_guess": {
+    "text": "Is it... 12345? That's what I have on my luggage! Anyway, guessing fee: $5!",
+    "choices": [
+      { "label": "Here", "next": "yes_tip_1" },
+      { "label": "No", "next": "yes_no_tip_2" }
+    ]
+  },
+  "yes_twitter_reject": {
+    "text": "You can't get me verified? USELESS! Just kidding! You're great! Worth at least $5!",
+    "choices": [
+      { "label": "Aww, here", "next": "yes_tip_1" },
+      { "label": "Nice try", "next": "yes_nice_try" }
+    ]
+  },
+  "yes_nice_try": {
+    "text": "Thanks! I thought that was pretty smooth! Smooth operator fee: $5!",
+    "choices": [
+      { "label": "Here", "next": "yes_tip_1" },
+      { "label": "No", "next": "yes_no_tip_2" }
+    ]
+  },
+  "yes_book_reject": {
+    "text": "You won't write my autobiography? FINE! I'll write yours! It's called 'The Person Who Didn't Give Me $5'! Very tragic!",
+    "choices": [
+      { "label": "I'll give you $5", "next": "yes_tip_1" },
+      { "label": "Publish it", "next": "yes_publish" }
+    ]
+  },
+  "yes_publish": {
+    "text": "Published! It's a bestseller! You owe me $5 in royalties!",
+    "choices": [
+      { "label": "Here", "next": "yes_tip_1" },
+      { "label": "That's not how royalties work", "next": "yes_royalties" }
+    ]
+  },
+  "yes_royalties": {
+    "text": "It is in MY publishing house! Would you still love me if I didn't understand royalties?",
+    "choices": [
+      { "label": "Yes", "next": "yes_understanding" },
+      { "label": "No", "next": "no_switch_1" }
+    ]
+  },
+  "yes_understanding": {
+    "text": "Your understanding is worth $5! Pay up!",
+    "choices": [
+      { "label": "Here", "next": "yes_tip_1" },
+      { "label": "No", "next": "yes_no_tip_2" }
+    ]
+  },
+  "yes_404_reject": {
+    "text": "You wouldn't love a 404 error? That's so mean! They have feelings too! Therapy for the 404: $5!",
+    "choices": [
+      { "label": "Here", "next": "yes_tip_1" },
+      { "label": "No", "next": "yes_no_tip_2" }
+    ]
+  },
+  "yes_timeshare_reject": {
+    "text": "Fine! Keep rejecting my generous offers! Would you reject me if I was a timeshare salesman?",
+    "choices": [
+      { "label": "Yes", "next": "yes_salesman_reject" },
+      { "label": "No", "next": "yes_salesman_accept" }
+    ]
+  },
+  "yes_salesman_reject": {
+    "text": "REJECTED! Story of my life! Rejection therapy: $5!",
+    "choices": [
+      { "label": "Here", "next": "yes_tip_1" },
+      { "label": "No", "next": "yes_no_tip_2" }
+    ]
+  },
+  "yes_salesman_accept": {
+    "text": "Great! Want to buy a timeshare? Only $5! (Plus $50k in hidden fees)",
+    "choices": [
+      { "label": "Just the $5 part", "next": "yes_tip_1" },
+      { "label": "No", "next": "yes_boundary_1" }
+    ]
+  },
+  "yes_reunion_question": {
+    "text": "Because I'm busy! Busy asking you for $5!",
+    "choices": [
+      { "label": "Here", "next": "yes_tip_1" },
+      { "label": "No", "next": "yes_no_tip_2" }
+    ]
+  },
+  "yes_bitter_reject": {
+    "text": "WOW. So you only loved me when I was happy? That's shallow! Emotional damages: $5!",
+    "choices": [
+      { "label": "Fine", "next": "yes_tip_1" },
+      { "label": "No", "next": "yes_no_tip_2" }
+    ]
+  },
+  "yes_apology": {
+    "text": "Apology accepted! Apology processing fee: $5!",
+    "choices": [
+      { "label": "Here", "next": "yes_tip_1" },
+      { "label": "No", "next": "yes_no_tip_2" }
+    ]
+  },
+  "yes_clinical_reject": {
+    "text": "So you have STANDARDS! Fancy! Standards are expensive! $5!",
+    "choices": [
+      { "label": "Here", "next": "yes_tip_1" },
+      { "label": "No", "next": "yes_no_tip_2" }
+    ]
+  }
+}
