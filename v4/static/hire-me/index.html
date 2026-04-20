@@ -1,0 +1,645 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>James Burgess – CV</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=DM+Serif+Display&display=swap");
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      :root {
+        --ink: #101010;
+        --muted: #4e5058;
+        --red: #c8241b;
+        --blue: #093466;
+        --yellow: #dba625;
+        --bg: #f5f4ef;
+      }
+
+      html,
+      body {
+        width: 100%;
+        font-family:
+          "Inter",
+          -apple-system,
+          sans-serif;
+        background: #e8eaf0;
+        color: var(--ink);
+        font-size: 8.2pt;
+        line-height: 1.5;
+      }
+
+      .page {
+        width: 210mm;
+        min-height: 297mm;
+        padding: 10mm 12mm;
+        background: var(--bg);
+        margin: 5mm auto;
+        box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+      }
+
+      /* ── HEADER ── */
+      header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-bottom: 4mm;
+        margin-bottom: 5mm;
+      }
+
+      .name-block h1 {
+        font-family: "DM Serif Display", Georgia, serif;
+        font-size: 30pt;
+        font-weight: 400;
+        letter-spacing: -0.5px;
+        color: var(--ink);
+        line-height: 1.2;
+      }
+
+      .name-block h2 {
+        font-size: 8.5pt;
+        font-weight: 600;
+        color: var(--ink);
+        letter-spacing: 2.5px;
+        text-transform: uppercase;
+        margin-top: 2px;
+      }
+
+      .contact-block {
+        text-align: right;
+        color: var(--ink);
+        font-size: 7.5pt;
+        font-weight: 500;
+        line-height: 1.7;
+        position: relative;
+        padding-right: 14px;
+      }
+
+      .contact-block a {
+        color: var(--ink);
+        text-decoration: none;
+      }
+
+      .contact-block::after {
+        content: "";
+        position: absolute;
+        top: 2px;
+        right: 0;
+        width: 7px;
+        bottom: 2px;
+        background: linear-gradient(to bottom, var(--red) 50%, var(--blue) 50%);
+      }
+
+      /* ── LAYOUT ── */
+      .body-grid {
+        display: grid;
+        grid-template-columns: 1fr 2.1fr;
+        gap: 0 8mm;
+      }
+
+      /* ── COMPONENTS ── */
+      .theme-block {
+        padding-left: 12px;
+        border-left: 5px solid var(--theme-color, transparent);
+        margin-bottom: 5mm;
+      }
+
+      .theme-blue {
+        --theme-color: var(--blue);
+      }
+      .theme-red {
+        --theme-color: var(--red);
+      }
+      .theme-yellow {
+        --theme-color: var(--yellow);
+      }
+      .theme-black {
+        --theme-color: var(--ink);
+      }
+
+      .section-label {
+        font-size: 8pt;
+        font-weight: 700;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+        color: var(--ink);
+        margin-bottom: 3mm;
+      }
+
+      .theme-block .section-label {
+        margin-top: 0;
+      }
+
+      .badge {
+        display: inline-block;
+        vertical-align: middle;
+        margin-left: 8px;
+        position: relative;
+        top: -1px;
+      }
+      .yellow-circle {
+        width: 11px;
+        height: 11px;
+        background-color: var(--yellow);
+        border-radius: 50%;
+      }
+      .black-square {
+        width: 11px;
+        height: 11px;
+        background-color: var(--ink);
+      }
+
+      /* ── LEFT COLUMN ── */
+      .summary-text {
+        font-size: 8pt;
+        color: var(--ink);
+        line-height: 1.6;
+        margin-bottom: 1mm;
+      }
+
+      .highlight-list {
+        padding-left: 0;
+        list-style: none;
+      }
+      .highlight-list li {
+        font-size: 7.8pt;
+        color: var(--ink);
+        padding-left: 14px;
+        position: relative;
+        margin-bottom: 1.5mm;
+        line-height: 1.45;
+      }
+      .highlight-list li::before {
+        content: "■";
+        position: absolute;
+        left: 0;
+        color: var(--theme-color);
+        font-size: 5pt;
+        top: 1.5mm;
+      }
+
+      .edu-item {
+        margin-bottom: 2mm;
+      }
+      .edu-item .title {
+        font-size: 8pt;
+        font-weight: 600;
+        color: var(--ink);
+      }
+      .edu-item .sub {
+        font-size: 7.5pt;
+        color: var(--muted);
+      }
+
+      /* ── RIGHT COLUMN ── */
+      .exp-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        margin-bottom: 2px;
+      }
+
+      .exp-role {
+        font-size: 9pt;
+        font-weight: 700;
+        color: var(--ink);
+      }
+
+      .exp-date {
+        font-size: 7.5pt;
+        color: var(--ink);
+        white-space: nowrap;
+        margin-left: 4mm;
+        font-weight: 500;
+      }
+
+      .exp-company {
+        font-size: 8pt;
+        color: var(--ink);
+        font-weight: 600;
+        margin-bottom: 1.5mm;
+        display: flex;
+        align-items: center;
+      }
+
+      .exp-company a {
+        color: var(--ink);
+        text-decoration: none;
+      }
+
+      .exp-company a:hover {
+        text-decoration: underline;
+      }
+
+      .exp-stack {
+        font-size: 7pt;
+        color: var(--muted);
+        margin-bottom: 2mm;
+        font-style: italic;
+      }
+
+      .exp-bullets {
+        padding-left: 0;
+        list-style: none;
+      }
+      .exp-bullets li {
+        font-size: 7.8pt;
+        color: var(--ink);
+        padding-left: 14px;
+        position: relative;
+        margin-bottom: 1.5mm;
+        line-height: 1.45;
+      }
+      .exp-bullets li::before {
+        content: "■";
+        position: absolute;
+        left: 0;
+        color: var(--theme-color);
+        font-size: 5pt;
+        top: 1.5mm;
+      }
+
+      strong {
+        font-weight: 600;
+        color: var(--ink);
+      }
+
+      /* Footer */
+      .cv-footer {
+        margin-top: 4mm;
+        padding-top: 3mm;
+        text-align: center;
+        font-size: 6.5pt;
+        color: #b0b6c8;
+      }
+
+      .download-btn {
+        position: fixed;
+        top: 6mm;
+        right: 6mm;
+        z-index: 100;
+        background: var(--blue);
+        color: #fff;
+        border: none;
+        padding: 3mm 5mm;
+        font-size: 7.5pt;
+        font-weight: 600;
+        letter-spacing: 0.5px;
+        border-radius: 4px;
+        cursor: pointer;
+        font-family: "Inter", sans-serif;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+        transition: background 0.15s;
+      }
+      .download-btn:hover {
+        background: #0d2d5a;
+      }
+
+      @media print {
+        .download-btn {
+          display: none !important;
+        }
+        html,
+        body {
+          width: 210mm;
+          height: 297mm;
+          margin: 0;
+          padding: 0;
+          background: #fff;
+        }
+        .page {
+          margin: 0;
+          box-shadow: none;
+          background: var(--bg);
+          -webkit-print-color-adjust: exact;
+          print-color-adjust: exact;
+          height: 297mm;
+          overflow: hidden;
+        }
+        @page {
+          size: A4;
+          margin: 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <button class="download-btn" onclick="window.print()">Download PDF</button>
+    <div class="page">
+      <!-- HEADER -->
+      <header>
+        <div class="name-block">
+          <h1>James Burgess</h1>
+          <h2>Tech Lead &nbsp;·&nbsp; Principal Software Engineer</h2>
+        </div>
+        <div class="contact-block">
+          Cape Town, South Africa<br />
+          <a href="mailto:work@jimmyb.co.za">work@jimmyb.co.za</a><br />
+          +27 65 244 2069<br />
+          Available April 2026  
+        </div>
+      </header>
+
+      <!-- BODY -->
+      <div class="body-grid">
+        <!-- LEFT -->
+        <div class="left">
+          <div class="theme-block theme-blue">
+            <div class="section-label">Profile</div>
+            <p class="summary-text">
+              14 years building and leading digital products in regulated
+              financial environments. Hands-on across the full stack with equal comfort owning
+              technical strategy at C-suite level. 
+            </p>
+            <p class="summary-text" style="margin-top: 2mm">              Track record of taking
+              platforms from discovery through to stable, profitable
+              production.
+
+            </p>
+            <p class="summary-text" style="margin-top: 2mm">
+              Experienced with CMS architecture, design-system rollouts, and
+              legacy system migration.
+            </p>
+          </div>
+
+          <div class="theme-block theme-red">
+            <div class="section-label">Leadership Highlights</div>
+            <ul class="highlight-list">
+              <li>
+                Built &amp; managed cross-functional teams of 6–8 (engineers,
+                designers, QA)
+              </li>
+              <li>
+                Ran structured 2-week discovery sprints → validated MVPs →
+                production
+              </li>
+              <li>
+                Primary liaison to C-suite &amp; external auditors on technical
+                strategy
+              </li>
+              <li>
+                Introduced TDD &amp; pair programming; coached engineers into
+                senior roles
+              </li>
+              <li>
+                Negotiated trade-offs between security, ergonomics &amp;
+                delivery speed
+              </li>
+              <li>
+                Former A-Level CS teacher — natural mentor &amp; communicator
+              </li>
+            </ul>
+          </div>
+
+          <div class="theme-block theme-yellow">
+            <div class="section-label">Selected Projects</div>
+            <ul class="highlight-list">
+              <li>
+                <strong>Claim Appeal Automation</strong> — LLM-powered platform
+                (LLama.cpp + Django) in regulated workflows
+              </li>
+              <li>
+                <strong>Mountain.js</strong> — authored minimal JS UI framework;
+                deep frontend architecture
+              </li>
+              <li>
+                <strong>openZFD</strong> — secure IoT access control (mobile +
+                hardware)
+              </li>
+            </ul>
+          </div>
+
+          <div class="theme-block theme-black">
+            <div class="section-label">Education</div>
+            <div class="edu-item">
+              <div class="title">A Levels</div>
+              <div class="sub">British International Distance College</div>
+            </div>
+            <div class="edu-item">
+              <div class="title">Emergency First Response Instructor</div>
+            </div>
+            <div class="edu-item">
+              <div class="title">Open Water Scuba Instructor</div>
+            </div>
+          </div>
+
+          <div class="theme-block theme-blue">
+            <div class="section-label">Links</div>
+            <ul class="highlight-list">
+              <li>
+                <strong>GitHub:</strong>
+                <a
+                  href="https://github.com/james-burgess"
+                  style="color: var(--ink); text-decoration: underline"
+                  >james-burgess</a
+                >
+              </li>
+              <li>
+                <strong>LinkedIn:</strong>
+                <a
+                  href="https://linkedin.com/in/james-burgess-cloud/"
+                  style="color: var(--ink); text-decoration: underline"
+                  >/in/james-burgess-cloud</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- /left -->
+
+        <!-- RIGHT -->
+        <div class="right">
+          <div class="section-label" style="padding-left: 17px">Experience</div>
+
+          <!-- Crossroads Health -->
+          <div class="theme-block theme-red">
+            <div class="exp-item">
+              <div class="exp-header">
+                <span class="exp-role">Head of Engineering (Contract)</span>
+                <span class="exp-date">2020 – Present</span>
+              </div>
+              <div class="exp-company">
+                <a href="https://crossroadshealth.com">Crossroads Health</a>
+                (Medical Finance) · via 
+                <a href="https://cloudintelligence.co.za">Cloud Intelligence</a>
+                <span class="badge yellow-circle"></span>
+              </div>
+              <div class="exp-stack">
+                Django · Vue.js · MSSQL · PostgreSQL · Terraform · Azure ·
+                Metabase
+              </div>
+              <ul class="exp-bullets">
+                <li>
+                  Led engineering for regulated medical finance technology,
+                  reporting directly to C-suite. Built and managed a
+                  cross-functional team of 6 (engineers, designers, QA).
+                </li>
+                <li>
+                  Architected <strong>4 greenfield platforms</strong> end-to-end
+                  — from discovery through to stable, profitable
+                  production systems.
+                </li>
+                <li>
+                  Primary technical liaison for executives and external
+                  auditors; translated commercial objectives into technical
+                  strategy and negotiated security vs. delivery trade-offs.
+                </li>
+                <li>
+                  Implemented HIPAA-compliant systems with full audit trails,
+                  encryption, and zero-downtime CI/CD pipelines with automated
+                  security scanning.
+                </li>
+                <li>
+                  Introduced TDD, pair programming, and lean development
+                  practices; coached all levels of engineers from interns to seniors.
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Prodigy Finance -->
+          <div class="theme-block theme-yellow">
+            <div class="exp-item">
+              <div class="exp-header">
+                <span class="exp-role">Software Engineer</span>
+                <span class="exp-date">2019 – 2020</span>
+              </div>
+              <div class="exp-company">
+                <a href="https://prodigyfinance.com">Prodigy Finance</a> ·
+                International Student Lending (FinTech)
+              </div>
+              <div class="exp-stack">
+                Ruby on Rails · React.js · Vanilla JS · Jenkins · AWS
+              </div>
+              <ul class="exp-bullets">
+                <li>
+                  Built verification platform handling sensitive financial data
+                  in a PCI-conscious environment.
+                </li>
+                <li>
+                  Unified multiple credit-check providers into a single
+                  Rails/React architecture — consistent API layer for financial
+                  verification workflows.
+                </li>
+                <li>
+                  Implemented PCI-conscious security patterns and audit logging
+                  for financial compliance.
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Analytix Engine -->
+          <div class="theme-block theme-blue">
+            <div class="exp-item">
+              <div class="exp-header">
+                <span class="exp-role">Software Engineer</span>
+                <span class="exp-date">2018 – 2019</span>
+              </div>
+              <div class="exp-company">
+                <a href="https://analytixengine.com">Analytix Engine</a> ·
+                Actuarial / Financial Services</span>
+              </div>
+              <div class="exp-stack">Go · Python · Vanilla JS</div>
+              <ul class="exp-bullets">
+                <li>
+                  Built <strong>IFRS9 Decision Engine</strong> using
+                  event-driven architecture and CQRS patterns for financial risk
+                  modelling alongside actuarial scientists.
+                </li>
+                <li>
+                  Architected real-time sentiment analysis platform processing
+                  high-velocity market data streams.
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- SA Taxi -->
+          <div class="theme-block theme-black">
+            <div class="exp-item">
+              <div class="exp-header">
+                <span class="exp-role">Software Engineer</span>
+                <span class="exp-date">2017 – 2018</span>
+              </div>
+              <div class="exp-company">
+                <a href="https://sataxi.co.za">S.A. Taxi</a> · Asset Financing
+              </div>
+              <div class="exp-stack">Go · Python</div>
+              <ul class="exp-bullets">
+                <li>
+                  Designed Go-based MQTT ingestion service handling
+                  <strong>30,000 concurrent data streams</strong> at 20
+                  events/sec.
+                </li>
+                <li>
+                  Executed 1PB+ migration of legacy financial records to
+                  cloud-native architecture.
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- DotModus -->
+          <div class="theme-block theme-black">
+            <div class="exp-item">
+              <div class="exp-header">
+                <span class="exp-role">Software Engineer</span>
+                <span class="exp-date">2017</span>
+              </div>
+              <div class="exp-company">
+                <a href="https://dotmodus.com">DotModus</a> · Cloud Consulting
+              </div>
+              <div class="exp-stack">
+                Python · JavaScript · Terraform · Airflow
+              </div>
+              <ul class="exp-bullets">
+                <li>
+                  Migrated Skimlinks 3PB/day data pipeline from AWS to GCP using
+                  Airflow, Terraform, and IaC principles — delivered under
+                  discovery-to-production deadline pressure.
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Hout Bay Academy -->
+          <div class="theme-block theme-black">
+            <div class="exp-item">
+              <div class="exp-header">
+                <span class="exp-role"
+                  >Head of Computer Science &amp; Physics</span
+                >
+                <span class="exp-date">2014 – 2016</span>
+              </div>
+              <div class="exp-company">Hout Bay Academy</div>
+              <ul class="exp-bullets">
+                <li>
+                  Taught A-Level Computer Science; developed curriculum around
+                  TDD, clean code, and software craftsmanship.
+                </li>
+                <li>
+                  Mentored students now holding PhDs and senior engineering
+                  positions globally.
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- /right -->
+      </div>
+      <!-- /body-grid -->
+
+      <div class="cv-footer">
+        James Burgess · work@jimmyb.co.za · +27 65 244 2069 · Cape Town, South
+        Africa
+      </div>
+    </div>
+  </body>
+</html>
