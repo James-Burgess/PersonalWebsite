@@ -1,0 +1,189 @@
+{
+  "password": "change-me",
+  "colors": {
+    "primary": "#FF6B35",
+    "secondary": "#1A1A2E",
+    "accent": "#FFEB3B",
+    "text": "#1A1A2E",
+    "textLight": "#6B7280",
+    "background": "#FFFFFF",
+    "backgroundAlt": "#F9FAFB"
+  },
+  "name": "James Burgess",
+  "subtitle": "Senior Software Engineer",
+  "title": "Full-Stack Engineer & Technical Leader",
+  "valueProp": "I build scalable systems, lead engineering teams, and architect solutions that drive business impact. Specialized in distributed systems, data engineering, and conservation technology.",
+  "profileImage": "https://via.placeholder.com/400x400",
+  "contact": {
+    "email": "hello@jimmyb.co.za",
+    "phone": "+27652442069",
+    "phoneDisplay": "+27 (0)65 244 2069",
+    "portfolio": "https://jimmyb.co.za"
+  },
+  "stats": [
+    { "number": "10+", "label": "Years Experience" },
+    { "number": "FAANG", "label": "Experience" },
+    { "number": "CTO", "label": "Leadership" },
+    { "number": "Open Source", "label": "Contributor" }
+  ],
+  "about": [
+    "I'm a senior software engineer with over a decade of experience building systems at scale. From processing petabytes of data at FAANG to founding and scaling startups, I've worn every technical hat—from individual contributor to CTO.",
+    "My expertise spans full-stack development, data engineering, cloud architecture, and team leadership. I've built data lakes processing terabytes daily, architected multi-database systems, and led engineering teams through complex technical challenges.",
+    "I'm passionate about conservation technology and contribute to Wildbook, an open-source platform tracking endangered species globally. I believe technology should solve meaningful problems and create lasting impact.",
+    "Whether I'm writing code, architecting systems, or leading teams—I focus on building solutions that scale, perform, and deliver real business value."
+  ],
+  "mainCert": {
+    "title": "Senior Software Engineer",
+    "memberId": "GitHub: @james-burgess",
+    "certified": "2013 - Present",
+    "language": "Multiple Languages",
+    "divesSince": "2013",
+    "experience": "Full-Stack, Data Engineering, Cloud Architecture, Team Leadership"
+  },
+  "specialties": [
+    { "title": "⚛️ React & Modern Frontend", "category": "technical" },
+    { "title": "🐍 Python & Backend Systems", "category": "technical" },
+    { "title": "☁️ AWS & Cloud Architecture", "category": "technical" },
+    { "title": "🗄️ Database Design & Optimization", "category": "technical" },
+    { "title": "📊 Data Engineering & ETL", "category": "technical" },
+    { "title": "🔧 DevOps & CI/CD", "category": "skills" },
+    { "title": "👥 Technical Leadership", "category": "skills" },
+    { "title": "🎨 System Architecture", "category": "skills" },
+    { "title": "📱 Mobile Development", "category": "skills" },
+    { "title": "🌐 API Design & Integration", "category": "skills" },
+    { "title": "🔒 Security Best Practices", "category": "skills" }
+  ],
+  "additionalCerts": "AWS Certified • Scrum Master • Open Source Contributor",
+  "experience": [
+    {
+      "title": "Senior Software Engineer",
+      "organization": "FAANG Company",
+      "period": "2018–2022",
+      "subtitle": "Large-Scale Distributed Systems",
+      "points": [
+        "Built and maintained services processing petabytes of data daily at global scale",
+        "Led migration of legacy systems to modern microservices architecture",
+        "Improved system performance by 300% through optimization and caching strategies",
+        "Mentored junior engineers and conducted technical design reviews",
+        "Designed and implemented real-time data pipelines with 99.9% uptime"
+      ],
+      "tags": [
+        "Python",
+        "Java",
+        "AWS",
+        "Kubernetes",
+        "PostgreSQL",
+        "Redis",
+        "Kafka",
+        "Docker"
+      ],
+      "callout": null
+    },
+    {
+      "title": "CTO & Co-Founder",
+      "organization": "CloudIntelligence.africa",
+      "period": "2015–2018",
+      "subtitle": "Technical Leadership & Product Development",
+      "points": [
+        "Founded and scaled data analytics startup from 0 to serving enterprise clients",
+        "Built entire technical stack from scratch—web, mobile, data pipelines, infrastructure",
+        "Led engineering team of 8 through rapid growth phase",
+        "Architected multi-database data lake warehouse processing TB+ daily",
+        "Scaled company 6000% through data-driven solutions and automation"
+      ],
+      "tags": [
+        "Python",
+        "React",
+        "Node.js",
+        "MongoDB",
+        "AWS",
+        "Team Leadership",
+        "Product Strategy"
+      ],
+      "callout": null
+    },
+    {
+      "title": "Full-Stack Engineer",
+      "organization": "Various Startups & Agencies",
+      "period": "2013–2015",
+      "subtitle": "Web & Mobile Development",
+      "points": [
+        "Built responsive web applications with React, Vue, and Angular",
+        "Developed mobile apps for iOS and Android using React Native",
+        "Created RESTful APIs and GraphQL endpoints for client applications",
+        "Implemented CI/CD pipelines and infrastructure automation",
+        "Collaborated with designers and product managers on user experience"
+      ],
+      "tags": [
+        "JavaScript",
+        "React",
+        "React Native",
+        "Node.js",
+        "GraphQL",
+        "MongoDB"
+      ],
+      "callout": null
+    }
+  ],
+  "skills": [
+    {
+      "icon": "💻",
+      "title": "Backend & Data",
+      "items": [
+        "Python, Java, Node.js",
+        "PostgreSQL, MongoDB, Redis",
+        "Data pipelines & ETL",
+        "Microservices architecture",
+        "API design & development",
+        "Performance optimization",
+        "System design"
+      ]
+    },
+    {
+      "icon": "⚛️",
+      "title": "Frontend & Mobile",
+      "items": [
+        "React, Next.js, TypeScript",
+        "React Native for mobile",
+        "Modern CSS & Tailwind",
+        "State management (Redux, Zustand)",
+        "Responsive design",
+        "Performance & SEO",
+        "User experience"
+      ]
+    },
+    {
+      "icon": "☁️",
+      "title": "DevOps & Cloud",
+      "items": [
+        "AWS (EC2, S3, Lambda, RDS)",
+        "Docker & Kubernetes",
+        "CI/CD (GitHub Actions, Jenkins)",
+        "Infrastructure as Code",
+        "Monitoring & logging",
+        "Security best practices",
+        "Scalability & reliability"
+      ]
+    }
+  ],
+  "commitment": {
+    "title": "Let's Build Something",
+    "subtitle": "Available for full-time roles or consulting",
+    "timeline": {
+      "icon": "📅",
+      "title": "Availability",
+      "lines": ["Immediate start", "Full-time or contract"]
+    },
+    "location": {
+      "icon": "🌍",
+      "title": "Location",
+      "lines": ["Remote-first", "Open to relocation"]
+    },
+    "motivation": {
+      "icon": "💡",
+      "title": "Focus",
+      "lines": ["Scalable systems", "Team leadership"]
+    },
+    "text": "I'm looking for opportunities where I can leverage my experience building large-scale systems, leading engineering teams, and solving complex technical challenges. Whether it's architecting new systems, scaling existing infrastructure, or mentoring engineers—I'm passionate about creating software that makes a real impact."
+  }
+}

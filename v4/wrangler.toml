@@ -1,0 +1,8 @@
+name = "personal-www"
+main = "src/index.js"
+compatibility_date = "2025-10-01"
+
+# Static assets configuration
+[assets]
+directory = "./static"
+binding = "ASSETS"

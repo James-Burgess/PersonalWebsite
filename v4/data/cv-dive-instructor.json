@@ -1,0 +1,185 @@
+{
+  "password": "change-me",
+  "colors": {
+    "primary": "#0891b2",
+    "secondary": "#0c4a6e",
+    "accent": "#06b6d4",
+    "text": "#0f172a",
+    "textLight": "#64748b",
+    "background": "#FFFFFF",
+    "backgroundAlt": "#f0f9ff"
+  },
+  "name": "James Burgess",
+  "subtitle": "PADI Master Scuba Diver Trainer",
+  "title": "Professional Dive Instructor & Underwater Guide",
+  "valueProp": "I create safe, educational, and transformative underwater experiences. From teaching beginners their first breath underwater to guiding experienced divers through complex technical dives, I combine safety expertise with passion for marine education.",
+  "profileImage": "https://via.placeholder.com/400x400",
+  "contact": {
+    "email": "hello@jimmyb.co.za",
+    "phone": "+27652442069",
+    "phoneDisplay": "+27 (0)65 244 2069",
+    "portfolio": "https://jimmyb.co.za"
+  },
+  "stats": [
+    { "number": "500+", "label": "Logged Dives" },
+    { "number": "MSDT", "label": "Certification" },
+    { "number": "150+", "label": "Students Certified" },
+    { "number": "5 Years", "label": "Teaching Experience" }
+  ],
+  "about": [
+    "I'm a PADI Master Scuba Diver Trainer with over 500 logged dives and 5 years of professional teaching experience. My journey from recreational diver to professional instructor has taken me from the reefs of South Africa to dive sites around the world.",
+    "Safety is my top priority. I hold certifications in Emergency First Response, Rescue Diving, and Deep Diving, ensuring every student learns in a controlled, professional environment. My teaching philosophy combines technical excellence with environmental awareness.",
+    "I specialize in taking nervous beginners and transforming them into confident divers. Whether it's someone's first time breathing underwater or an experienced diver seeking specialty certifications, I create personalized learning experiences that build competence and confidence.",
+    "Beyond teaching, I'm passionate about marine conservation and integrate environmental education into every course. The ocean gave me a career—I'm committed to protecting it for future generations."
+  ],
+  "mainCert": {
+    "title": "PADI Master Scuba Diver Trainer (MSDT)",
+    "memberId": "123456",
+    "certified": "2019",
+    "language": "English",
+    "divesSince": "2018",
+    "experience": "Open Water, Advanced, Rescue, Deep, Night, Wreck, Nitrox, Conservation"
+  },
+  "specialties": [
+    { "title": "🌊 Open Water Instruction", "category": "technical" },
+    { "title": "🏊 Advanced Open Water", "category": "technical" },
+    { "title": "🚨 Rescue Diver", "category": "technical" },
+    { "title": "🌙 Night Diving", "category": "technical" },
+    { "title": "🚢 Wreck Diving", "category": "technical" },
+    { "title": "💨 Enriched Air (Nitrox)", "category": "skills" },
+    { "title": "🐠 Underwater Photography", "category": "skills" },
+    { "title": "🌿 Marine Conservation", "category": "skills" },
+    { "title": "⚓ Deep Diving (40m)", "category": "skills" },
+    { "title": "🎯 Peak Performance Buoyancy", "category": "skills" },
+    { "title": "🩺 Emergency First Response", "category": "skills" }
+  ],
+  "additionalCerts": "EFR Instructor • Rescue Diver • Dive Master • AWARE Coral Reef Conservation",
+  "experience": [
+    {
+      "title": "Master Scuba Diver Trainer",
+      "organization": "Various Dive Centers, South Africa",
+      "period": "2020–Present",
+      "subtitle": "Professional Dive Instruction & Marine Education",
+      "points": [
+        "Certified 150+ students from Open Water to Advanced levels",
+        "Maintained 100% safety record across all courses and recreational dives",
+        "Developed custom training programs for nervous or special-needs students",
+        "Led specialty courses including Night Diving, Wreck Diving, and Deep Diving",
+        "Integrated marine conservation education into all training programs"
+      ],
+      "tags": [
+        "PADI MSDT",
+        "Open Water",
+        "Advanced",
+        "Rescue",
+        "Specialties",
+        "EFR Instructor",
+        "Safety Management"
+      ],
+      "callout": null
+    },
+    {
+      "title": "Dive Master & Underwater Guide",
+      "organization": "Reef & Wreck Diving, Cape Town",
+      "period": "2018–2020",
+      "subtitle": "Recreational Dive Guiding & Equipment Specialist",
+      "points": [
+        "Guided 300+ recreational dives at local reef and wreck sites",
+        "Assisted instructors with Open Water and Advanced courses",
+        "Managed dive equipment inventory and maintenance programs",
+        "Conducted underwater photography tours and marine life identification sessions",
+        "Earned reputation for calm professionalism in challenging conditions"
+      ],
+      "tags": [
+        "Dive Master",
+        "Underwater Guide",
+        "Equipment Specialist",
+        "Customer Service",
+        "Marine Life ID"
+      ],
+      "callout": null
+    },
+    {
+      "title": "Conservation Diver",
+      "organization": "Marine Conservation Projects",
+      "period": "2018–Present",
+      "subtitle": "Volunteer Reef Monitoring & Education",
+      "points": [
+        "Participated in coral reef health assessments and data collection",
+        "Assisted with fish population surveys and marine species monitoring",
+        "Led underwater cleanup dives removing ghost nets and marine debris",
+        "Educated recreational divers on responsible diving practices",
+        "Contributed dive logs and observations to marine conservation databases"
+      ],
+      "tags": [
+        "Reef Monitoring",
+        "Data Collection",
+        "Conservation",
+        "Marine Biology",
+        "Environmental Education"
+      ],
+      "callout": null
+    }
+  ],
+  "skills": [
+    {
+      "icon": "🤿",
+      "title": "Teaching & Safety",
+      "items": [
+        "PADI Open Water to MSDT",
+        "Student-centered instruction",
+        "Emergency response protocols",
+        "Risk assessment & management",
+        "Adaptive teaching methods",
+        "Continuous skill evaluation",
+        "Rescue & first aid"
+      ]
+    },
+    {
+      "icon": "🌊",
+      "title": "Dive Specialties",
+      "items": [
+        "Deep diving (40m)",
+        "Night & limited visibility",
+        "Wreck penetration",
+        "Enriched Air (Nitrox)",
+        "Peak performance buoyancy",
+        "Underwater navigation",
+        "Marine life identification"
+      ]
+    },
+    {
+      "icon": "🔧",
+      "title": "Technical & Logistics",
+      "items": [
+        "Equipment maintenance & repair",
+        "Dive planning & logistics",
+        "Air fill operations",
+        "Boat handling & seamanship",
+        "Underwater photography",
+        "Environmental monitoring",
+        "Customer service excellence"
+      ]
+    }
+  ],
+  "commitment": {
+    "title": "Let's Dive Together",
+    "subtitle": "Available for freelance instruction or full-time positions",
+    "timeline": {
+      "icon": "📅",
+      "title": "Availability",
+      "lines": ["Flexible schedule", "Weekends & holidays"]
+    },
+    "location": {
+      "icon": "🌍",
+      "title": "Location",
+      "lines": ["Cape Town based", "Travel for projects"]
+    },
+    "motivation": {
+      "icon": "💡",
+      "title": "Focus",
+      "lines": ["Safety first", "Conservation education"]
+    },
+    "text": "I'm seeking opportunities to share my passion for diving—whether that's teaching courses at a dive center, leading guided dive trips, or contributing to marine conservation projects. I bring technical expertise, safety consciousness, and genuine enthusiasm for creating memorable underwater experiences."
+  }
+}
