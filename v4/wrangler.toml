@@ -6,3 +6,4 @@ compatibility_date = "2025-10-01"
 [assets]
 directory = "./static"
 binding = "ASSETS"
+exclude = ["node_modules", ".wrangler", "*.log", ".env"]
