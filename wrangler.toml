@@ -1,0 +1,9 @@
+name = "personal-www"
+main = "server/src/index.js"
+compatibility_date = "2025-10-01"
+
+# Static assets served at root — v5 site lives here
+[assets]
+directory = "./static"
+binding = "ASSETS"
+exclude = ["node_modules", ".wrangler", "*.log", ".env"]

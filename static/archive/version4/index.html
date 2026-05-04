@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Error 1000</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family:
+          -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu,
+          Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+        background: #f3f3f3;
+        color: #333;
+        line-height: 1.6;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+      }
+
+      .container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 3rem 2rem;
+        flex: 1;
+      }
+
+      .error-title {
+        font-size: 3rem;
+        font-weight: 300;
+        color: #333;
+        margin-bottom: 0.5rem;
+      }
+
+      .error-subtitle {
+        font-size: 1.5rem;
+        font-weight: 300;
+        color: #999;
+        margin-bottom: 1rem;
+      }
+
+      .ray-info {
+        font-size: 0.875rem;
+        color: #666;
+        margin-bottom: 3rem;
+      }
+
+      .section {
+        margin-bottom: 2.5rem;
+      }
+
+      .section h2 {
+        font-size: 1.5rem;
+        font-weight: 400;
+        color: #333;
+        margin-bottom: 1rem;
+      }
+
+      .section p {
+        color: #555;
+        margin-bottom: 0.75rem;
+        line-height: 1.6;
+      }
+
+      .section a {
+        color: #2c7be5;
+        text-decoration: none;
+      }
+
+      .section a:hover {
+        text-decoration: underline;
+      }
+
+      .feedback {
+        text-align: center;
+        margin: 3rem 0 2rem;
+        padding-top: 2rem;
+        border-top: 1px solid #e0e0e0;
+      }
+
+      .feedback-question {
+        color: #555;
+        margin-bottom: 1rem;
+        font-size: 0.9375rem;
+      }
+
+      .feedback-buttons {
+        display: flex;
+        gap: 1rem;
+        justify-content: center;
+      }
+
+      .btn {
+        padding: 0.5rem 2rem;
+        border: 1px solid #2c7be5;
+        background: white;
+        color: #2c7be5;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 0.9375rem;
+        transition: all 0.2s;
+      }
+
+      .btn:hover {
+        background: #f0f7ff;
+      }
+
+      .footer {
+        text-align: center;
+        padding: 2rem;
+        font-size: 0.875rem;
+        color: #666;
+        border-top: 1px solid #e0e0e0;
+      }
+
+      .footer-content {
+        display: inline-block;
+      }
+
+      .footer a {
+        color: #2c7be5;
+        text-decoration: none;
+      }
+
+      .footer a:hover {
+        text-decoration: underline;
+      }
+
+      @media (max-width: 640px) {
+        .container {
+          padding: 2rem 1rem;
+        }
+
+        .error-title {
+          font-size: 2rem;
+        }
+
+        .error-subtitle {
+          font-size: 1.25rem;
+        }
+
+        .section h2 {
+          font-size: 1.25rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="error-title">Error 00420690</h1>
+      <div class="ray-info">
+        Ray ID: 988e4b21ff4373c6 • 2025-10-03 17:52:28 UTC
+      </div>
+      <h2 class="error-subtitle">DNS points to Jimmy B</h2>
+
+      <div class="section">
+        <h2>What happened?</h2>
+        <p>
+          You've requested a page on a website (jimmyb.co.za) that is on the
+          <a href="/gotem">Cloudflare</a> network. However, our edge servers
+          have detected that your client's ambient coolness coefficient has
+          fallen below the minimum threshold required for DNS resolution.
+        </p>
+        <p>
+          This occurs when the inverse reactive current in your unilateral phase
+          detractors fails to synchronize with the capacitive directance of the
+          domain's magneto-reluctance field. For additional troubleshooting
+          guidance, please consult the
+          <a href="/gotem">Cloudflare Thermal Impedance Documentation</a>.
+        </p>
+      </div>
+
+      <div class="section">
+        <h2>What can I do?</h2>
+        <p><strong>If you are a visitor of this website:</strong></p>
+        <p>
+          Please recalibrate your cardinal grammeters and ensure your spurving
+          bearings are properly aligned in a waneshaft configuration. Contact
+          the website administrator if the issue persists.
+        </p>
+        <p><strong>If you are the owner of this website:</strong></p>
+        <p>
+          Excellent work! Your panametric fan configuration is operating at peak
+          efficiency. Please <a href="/gotem">login to Cloudflare</a> and take a
+          moment to appreciate the flawless implementation of your differential
+          girdle spring assembly for jimmyb.co.za.
+        </p>
+      </div>
+
+      <div class="feedback">
+        <div class="feedback-question" id="story-text">Was this page helpful?</div>
+        <div class="feedback-buttons" id="story-buttons">
+          <button class="btn" id="btn1">Yes</button>
+          <button class="btn" id="btn2">No</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">
+      <div class="footer-content">
+        Cloudflare Ray ID: <strong>988e4b21ff4373c6</strong> • Your IP:
+        <a href="/gotem">Click to reveal</a> • Performance & security by
+        <a href="/gotem">JimSec</a>
+      </div>
+    </div>
+
+    <script>
+      // Text adventure game engine
+      let storyData = {};
+      let currentNode = 'start';
+
+      // Load the story JSON
+      fetch('story.json')
+        .then(response => response.json())
+        .then(data => {
+          storyData = data;
+          loadNode(currentNode);
+        })
+        .catch(error => console.error('Error loading story:', error));
+
+      // Load and display a story node
+      function loadNode(nodeId) {
+        const node = storyData[nodeId];
+        if (!node) {
+          console.error('Node not found:', nodeId);
+          return;
+        }
+
+        // Update text
+        document.getElementById('story-text').textContent = node.text;
+
+        // Update buttons
+        const btn1 = document.getElementById('btn1');
+        const btn2 = document.getElementById('btn2');
+
+        if (node.choices && node.choices.length >= 2) {
+          btn1.textContent = node.choices[0].label;
+          btn2.textContent = node.choices[1].label;
+
+          btn1.onclick = () => navigateTo(node.choices[0].next);
+          btn2.onclick = () => navigateTo(node.choices[1].next);
+
+          btn1.style.display = 'inline-block';
+          btn2.style.display = 'inline-block';
+        } else if (node.choices && node.choices.length === 1) {
+          btn1.textContent = node.choices[0].label;
+          btn1.onclick = () => navigateTo(node.choices[0].next);
+          btn1.style.display = 'inline-block';
+          btn2.style.display = 'none';
+        } else {
+          btn1.style.display = 'none';
+          btn2.style.display = 'none';
+        }
+      }
+
+      // Navigate to a new node
+      function navigateTo(nodeId) {
+        currentNode = nodeId;
+        loadNode(nodeId);
+      }
+    </script>
+  </body>
+</html>

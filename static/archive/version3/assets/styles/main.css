@@ -1,0 +1,145 @@
+@import url("https://fonts.googleapis.com/css?family=Merriweather:400,400i,700");
+@import url('https://fonts.googleapis.com/css2?family=Chelsea+Market&family=Rubik:wght@400;700&display=swap');
+
+/*TODO:
+   - loading page pretty
+   - background j staggered in canvas (lazy make more padded)
+   - logo on about and work
+   - work page copy, icons and mobile
+   - action on form submit
+   - animations???
+*/
+
+body{
+    background: #eaecef;
+    overflow: hidden;
+}
+
+.top-navigation{
+    width: 99vw;
+    display: flex;
+    justify-content: flex-end;
+    opacity: 1;
+    position: fixed;
+    z-index: 15;
+}
+
+button{
+    margin-top: 30px;
+    margin-left: 10px;
+    color: black;
+    border: 5px solid black;
+    outline: none;
+    font-size: 1.9em;
+    padding: 10px 20px;
+    font-weight: 700;
+}
+button:hover, button.active{
+    cursor: pointer;
+    color:rgba(0,200,200,05);
+    box-shadow: 4px 4px rgba(0,200,200,05);
+}
+
+#home-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    background-image: url('/assets/images/jj.png');
+    background-repeat: repeat;
+}
+
+.j-logo{
+  background: url('/assets/images/j.png') no-repeat;
+  background-size: cover;
+  height: 220px;
+  width: 220px;
+  position: fixed;
+  top: -20px;
+  left: -10px;
+  z-index: 111;
+}
+
+.j-logo:hover{
+  height: 230px;
+  width: 230px;
+}
+
+#home-container.active {
+    z-index: 2;
+    -webkit-transition: opacity .6s, -webkit-transform .6s;
+    transition: opacity .6s, -webkit-transform .6s;
+    transition: transform .6s, opacity .6s .5s;
+    transition: transform .6s, opacity .6s .5s, -webkit-transform .6s;
+    opacity: 1;
+}
+
+.left-column {
+    height: 100vh;
+    width: 5vw;
+}
+.right-column {
+    width: 95vw;
+    height: 100vh;
+}
+
+.left-column p{
+    font-size: 3.5em;
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+}
+
+.main-body {
+    height: 95%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.intro-box{
+    display: flex;
+    justify-content: center;
+}
+.intro-box p{
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    font-size: .65em;
+    font-weight: 400;
+    padding: 10px;
+}
+.intro-text{
+    width: 50vw;
+    height: 30vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #eaecef;
+}
+.intro-text h1{
+    font-weight: 900;
+    font-size: 2.5em;
+    font-family: 'Chelsea Market', cursive;
+}
+.intro-text a{
+    text-decoration: none;
+    text-underline: none;
+    color: black;
+}
+
+svg {
+    display: block;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    position: absolute;
+    z-index: 0;
+}
+svg .polymorph {
+    fill: #e3e3e3;
+}
+svg.active {
+    z-index: 2;
+}

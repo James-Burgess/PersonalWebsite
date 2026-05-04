@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Archive — JimmyB</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: #0d0d0d;
+      color: #e0e0e0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 4rem 1.5rem;
+    }
+
+    h1 {
+      font-size: 2rem;
+      font-weight: 600;
+      margin-bottom: 0.3rem;
+    }
+    .subtitle {
+      color: #888;
+      margin-bottom: 3rem;
+      font-size: 0.95rem;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      max-width: 960px;
+      width: 100%;
+    }
+
+    .card {
+      background: #1a1a1a;
+      border: 1px solid #2a2a2a;
+      border-radius: 12px;
+      padding: 1.75rem;
+      text-decoration: none;
+      color: inherit;
+      transition: border-color 0.2s, transform 0.2s, box-shadow 0.2s;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+    .card:hover {
+      border-color: #4a4a4a;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+    }
+
+    .card-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .version-badge {
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: #aaa;
+      background: #222;
+      padding: 0.25em 0.65em;
+      border-radius: 6px;
+    }
+    .card h2 {
+      font-size: 1.25rem;
+      font-weight: 600;
+    }
+    .card .tech {
+      font-size: 0.8rem;
+      color: #777;
+      font-family: "SF Mono", "Fira Code", "Fira Mono", monospace;
+    }
+    .card p {
+      font-size: 0.9rem;
+      line-height: 1.55;
+      color: #aaa;
+      flex: 1;
+    }
+
+    .back-link {
+      margin-top: 3rem;
+      color: #666;
+      text-decoration: none;
+      font-size: 0.85rem;
+      transition: color 0.2s;
+    }
+    .back-link:hover { color: #ccc; }
+  </style>
+</head>
+<body>
+  <h1>Archive</h1>
+  <p class="subtitle">Previous iterations of jimmyb.co.za</p>
+
+  <div class="grid">
+    <a class="card" href="/archive/version1/">
+      <div class="card-header">
+        <h2>Version 1</h2>
+        <span class="version-badge">v1</span>
+      </div>
+      <span class="tech">Vue 2 &middot; Vue Router &middot; Webpack 3</span>
+      <p>The original. A Vue SPA with animated page transitions, a typed intro, and six distinct sections — including a hidden easter egg.</p>
+    </a>
+
+    <a class="card" href="/archive/version2/">
+      <div class="card-header">
+        <h2>Version 2</h2>
+        <span class="version-badge">v2</span>
+      </div>
+      <span class="tech">Vue 2 &middot; Vue Router &middot; Webpack 3</span>
+      <p>A refined take on the original SPA. Same architecture, updated content, project showcases, and language icons for a cleaner portfolio read.</p>
+    </a>
+
+    <a class="card" href="/archive/version3/">
+      <div class="card-header">
+        <h2>Version 3</h2>
+        <span class="version-badge">v3</span>
+      </div>
+      <span class="tech">Bottle.py &middot; Vanilla JS &middot; Anime.js</span>
+      <p>Server-driven with a physical card-flip UI. Polymorph SVG animations, rough.js sketchy-effects, and a live system clock — personality cranked to eleven.</p>
+    </a>
+
+    <a class="card" href="/archive/version4/">
+      <div class="card-header">
+        <h2>Version 4</h2>
+        <span class="version-badge">v4</span>
+      </div>
+      <span class="tech">HTML &middot; CSS &middot; JavaScript</span>
+      <p>A Cloudflare Error 1000 parody page turned interactive text-adventure. Two-button choices, a story.json engine, and a &ldquo;got em&rdquo; PNG. Pure mischief.</p>
+    </a>
+  </div>
+
+  <a class="back-link" href="/">← Back to jimmyb.co.za</a>
+</body>
+</html>

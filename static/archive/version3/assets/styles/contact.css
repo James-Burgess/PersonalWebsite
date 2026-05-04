@@ -1,0 +1,77 @@
+
+.contact-container{
+    background: #e3e3e3;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.contact-us {
+    padding: 50px;
+    border: 5px solid black;
+    box-shadow: 10px 10px  rgba(0,200,200,05);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+    z-index: 19;
+}
+.contact-us h1 {
+    position: relative;
+    font-size: 2.2em;
+    font-weight: 600;
+    top: -50px;
+    padding-top: 50px;
+}
+
+input, textarea {
+    display: block;
+    width: 98%;
+    font-size: 14pt;
+    line-height: 28pt;
+    margin-bottom: 10pt;
+    border: 5px solid black;
+    outline: none;
+    color: black;
+    background: #e3e3e3;
+}
+textarea{
+    text-align: left;
+}
+
+input:focus, textarea:focus {
+    box-shadow: 5px 5px 1px  rgba(0,200,200,05);
+}
+.contact-input-block {
+    display: flex;
+    justify-content: flex-start;
+}
+.contact-input-block input:nth-child(2) {
+  margin-left: 10px;
+}
+
+.contact-button-block{
+    display: flex;
+}
+.esc-btn{
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+}
+
+#home-button{
+    margin-top: -70px;
+    margin-left: -65px;
+    border: 0;
+    background: none;
+}
+#home-button:hover{
+    box-shadow: none;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus {
+    box-shadow: 5px 5px 1px  rgba(0,200,200,05);
+}
