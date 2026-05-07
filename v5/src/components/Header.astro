@@ -1,0 +1,117 @@
+---
+const name = "James Burgess"
+
+const nav = [
+  { label: "The Field Company", href: "https://thefieldco.com" },
+  { label: "robots",            href: "/robots" },
+  { label: "resume",            href: "/resume" },
+  { label: "contact",           href: "/contact" },
+]
+---
+
+<header class="site-header">
+  <svg
+    viewBox="0 0 800 120"
+    preserveAspectRatio="xMidYMid meet"
+    style="width:100%; height:auto; display:block;"
+    xmlns="http://www.w3.org/2000/svg"
+    aria-label={name}
+  >
+    <defs>
+      <linearGradient id="cyber-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" style="stop-color:#4ade80;stop-opacity:1" />
+        <stop offset="50%" style="stop-color:#22c55e;stop-opacity:1" />
+        <stop offset="100%" style="stop-color:#4ade80;stop-opacity:1" />
+      </linearGradient>
+      <filter id="glow">
+        <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+        <feMerge>
+          <feMergeNode in="coloredBlur"/>
+          <feMergeNode in="SourceGraphic"/>
+        </feMerge>
+      </filter>
+    </defs>
+
+    <rect x="0" y="0" width="800" height="120" fill="#0a0a0a"/>
+
+    <!-- Top border line -->
+    <line x1="0" y1="0" x2="800" y2="0" stroke="#1a1a1a" stroke-width="1"/>
+
+    <!-- Grid/circuit decoration -->
+    <polyline points="20,100 20,20 180,20" fill="none" stroke="#1a3a1a" stroke-width="0.5"/>
+    <polyline points="780,20 780,100 620,100" fill="none" stroke="#1a3a1a" stroke-width="0.5"/>
+    <circle cx="20" cy="20" r="2" fill="#4ade80" opacity="0.5"/>
+    <circle cx="780" cy="100" r="2" fill="#4ade80" opacity="0.5"/>
+
+    <!-- Glitch offset text for cyberpunk effect -->
+    <text
+      x="402" y="72"
+      font-family="monospace, 'IBM Plex Mono', 'Courier New', monospace"
+      font-size="52"
+      font-weight="700"
+      fill="#1a3a1a"
+      text-anchor="middle"
+      letter-spacing="0.05em"
+    >
+      James Burgess
+    </text>
+
+    <!-- Main name -->
+    <text
+      x="400" y="70"
+      font-family="monospace, 'IBM Plex Mono', 'Courier New', monospace"
+      font-size="52"
+      font-weight="700"
+      fill="url(#cyber-grad)"
+      text-anchor="middle"
+      letter-spacing="0.05em"
+      filter="url(#glow)"
+    >
+      James Burgess
+    </text>
+
+    <!-- Decorative brackets -->
+    <text
+      x="40" y="75"
+      font-family="monospace, 'IBM Plex Mono', 'Courier New', monospace"
+      font-size="40"
+      fill="#222"
+      font-weight="400"
+    >
+      [
+    </text>
+    <text
+      x="760" y="75"
+      font-family="monospace, 'IBM Plex Mono', 'Courier New', monospace"
+      font-size="40"
+      fill="#222"
+      font-weight="400"
+    >
+      ]
+    </text>
+
+    <!-- Bottom status line -->
+    <text
+      x="400" y="105"
+      font-family="monospace, 'IBM Plex Mono', 'Courier New', monospace"
+      font-size="10"
+      fill="#333"
+      text-anchor="middle"
+      letter-spacing="0.2em"
+    >
+      STATUS: ONLINE // SINCE 2013 // CAPE TOWN, ZA
+    </text>
+
+    <!-- Bottom border line -->
+    <line x1="0" y1="119" x2="800" y2="119" stroke="#1a1a1a" stroke-width="1"/>
+  </svg>
+
+  <nav class="header-nav">
+    {nav.map((item, i) => (
+      <>
+        {i > 0 && <span class="nav-sep">·</span>}
+        <a href={item.href} class="nav-link">{item.label}</a>
+      </>
+    ))}
+  </nav>
+</header>

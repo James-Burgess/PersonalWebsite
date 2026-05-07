@@ -1,0 +1,63 @@
+---
+import Layout from '../layouts/Layout.astro'
+import Header from '../components/Header.astro'
+import { readFileSync, readdirSync } from 'node:fs'
+import { join } from 'node:path'
+import matter from 'gray-matter'
+import { marked } from 'marked'
+
+// ── post-process HTML: turn tag-paragraphs into pill divs ──
+const postProcess = (html: string) => {
+  // Paragraphs that contain ONLY inline <code> elements (and whitespace)
+  return html.replace(
+    /<p>((?:<code>[^\u003c]+<\/code>[\s]*)+)<\/p>/g,
+    (_match, codes) => {
+      const tags = codes.match(/<code>([^\u003c]+)<\/code>/g) || []
+      const tagSpans = tags.map((t: string) => {
+        const text = t.replace(/<\/?code>/g, '')
+        return `<span class="tech-tag">${text}</span>`
+      }).join('')
+      return `<div class="tech-tags">${tagSpans}</div>`
+    }
+  )
+}
+
+// ── scan sections/ and load all .md files ───────────────
+const sectionsDir = join(process.cwd(), 'src', 'sections')
+const files = readdirSync(sectionsDir)
+  .filter(f => f.endsWith('.md'))
+  .sort((a, b) => a.localeCompare(b, undefined, { numeric: true }))
+
+const sections = files.map(filename => {
+  const raw = readFileSync(join(sectionsDir, filename), 'utf-8')
+  const parsed = matter(raw)
+  const id = filename.replace(/\.md$/, '').replace(/^\d+-/, '')
+  const html = marked.parse(parsed.content, { headerIds: false, mangle: false })
+  return {
+    id,
+    html: postProcess(html),
+  }
+})
+---
+
+<Layout title="James Burgess">
+  <Header />
+
+  {sections.map((section, i) => (
+    <>
+      {i > 0 && <hr />}
+      <section id={section.id}>
+        <h2>{section.id}</h2>
+        <Fragment set:html={section.html} />
+      </section>
+    </>
+  ))}
+
+  <div class="archive-banner">
+    Previous iterations: <a href="/archive/">v1 · v2 · v3 · v4</a>
+  </div>
+
+  <footer class="site-footer">
+    <p>© 2026 James Burgess. No tracking. No cookies. No analytics. This page is <code>~12KB</code> gzipped.</p>
+  </footer>
+</Layout>
