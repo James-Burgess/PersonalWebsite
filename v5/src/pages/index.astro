@@ -1,6 +1,5 @@
 ---
 import Layout from '../layouts/Layout.astro'
-import Header from '../components/Header.astro'
 import { readFileSync, readdirSync } from 'node:fs'
 import { join } from 'node:path'
 import matter from 'gray-matter'
@@ -41,7 +40,6 @@ const sections = files.map(filename => {
 ---
 
 <Layout title="James Burgess">
-  <Header />
 
   {sections.map((section, i) => (
     <>
@@ -53,11 +51,7 @@ const sections = files.map(filename => {
     </>
   ))}
 
-  <div class="archive-banner">
-    Previous iterations: <a href="/archive/">v1 · v2 · v3 · v4</a>
-  </div>
-
   <footer class="site-footer">
-    <p>© 2026 James Burgess. No tracking. No cookies. No analytics. This page is <code>~12KB</code> gzipped.</p>
+    <p><a href="https://www.wtfpl.net/">wtfpl</a> - Jimmy B ❤️</p>
   </footer>
 </Layout>

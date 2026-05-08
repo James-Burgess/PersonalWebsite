@@ -1,0 +1,206 @@
+---
+import Layout from '../layouts/Layout.astro'
+
+const games = [
+  {
+    name: 'guessor',
+    description: 'Password-cracking game built for a PyCon talk. Devs compete to brute-force the password while the server architecture evolves underneath them — from a single Bottle server through multiple frameworks and languages, ending at Erlang OTP.',
+    url: 'https://github.com/James-Burgess/guessor',
+    lang: 'Python',
+    demo: null,
+  },
+  {
+    name: 'binarycodesearchclash',
+    description: 'Code Clash with a new mode. Many players compete to solve a programming challenge within 15 minutes. Solutions are benchmarked and the fastest mean runtime wins. FastAPI, Docker-isolated execution, live leaderboard.',
+    url: 'https://github.com/James-Burgess/binarycodesearchclash',
+    lang: 'Python',
+    demo: null,
+  },
+  {
+    name: 'Backgammon',
+    description: 'Online backgammon. Vue 3 + Vite weekend project built just for fun.',
+    url: 'https://github.com/James-Burgess/Backgammon',
+    lang: 'Vue',
+    demo: null,
+  },
+  {
+    name: 'crack-me',
+    description: 'Password-cracking challenge built for dev friends and Twitch streams. Deployed on Kubernetes with Bottle + MongoDB + Redis. Least guesses wins. Drinks on the winner.',
+    url: 'https://github.com/James-Burgess/crack-me',
+    lang: 'Python',
+    demo: null,
+  },
+  {
+    name: 'ai-buzzword-bingo',
+    description: 'Buzzword bingo built as a joke for an AI conference. Single-file HTML, click tiles as you hear the buzzwords. Dark/light theme.',
+    url: 'https://github.com/James-Burgess/ai-buzzword-bingo',
+    lang: 'HTML',
+    demo: null,
+  },
+  {
+    name: 'BetterCOC',
+    description: 'General-purpose Twitch bot for Clash of Code streamers. Manages game sessions, greets players. Runs with Docker Compose.',
+    url: 'https://github.com/James-Burgess/BetterCOC',
+    lang: 'Python',
+    demo: null,
+  },
+  {
+    name: 'round-robin',
+    description: "Live tournament scoring for office foosball. Add teams, input results, see standings update in real time.",
+    url: 'https://github.com/James-Burgess/round-robin',
+    lang: 'Python',
+    demo: null,
+  },
+]
+---
+
+<Layout title="Dev Games · James Burgess">
+  <main class="games-main">
+    <p class="games-intro">
+      A collection of games and game-related tools I've built for developers.
+      Each one scratches a different itch — password cracking, competitive code
+      benchmarking, buzzword bingo, and even office foosball scoring.
+    </p>
+
+    {
+      games.map((game) => (
+        <article class="game-card">
+          <div class="game-card-header">
+            <h3 class="game-name">
+              <a href={game.url}>{game.name}</a>
+            </h3>
+            {game.lang && <span class="game-lang">{game.lang}</span>}
+          </div>
+          <p class="game-desc">{game.description}</p>
+          <div class="game-links">
+            <a href={game.url} class="game-link">source</a>
+            {game.demo && <a href={game.demo} class="game-link game-link--demo">play</a>}
+          </div>
+        </article>
+      ))
+    }
+
+    <div class="games-footer">
+      More on <a href="https://github.com/James-Burgess?tab=repositories">GitHub</a>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>© 2026 James Burgess. No tracking. No cookies. No analytics.</p>
+  </footer>
+</Layout>
+
+<style>
+  .games-main {
+    margin-top: 1rem;
+  }
+
+  .games-intro {
+    font-size: 0.85rem;
+    color: #666;
+    margin-bottom: 2.5rem;
+    line-height: 1.7;
+  }
+
+  .game-card {
+    border: 1px solid #1a1a1a;
+    background: #0e0e0e;
+    padding: 1.25rem 1.5rem;
+    margin-bottom: 1rem;
+    transition: border-color 0.15s ease, background 0.15s ease;
+  }
+
+  .game-card:hover {
+    border-color: #222;
+    background: #101010;
+  }
+
+  .game-card-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .game-name {
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 0;
+    color: #d0d0d0;
+  }
+
+  .game-name a {
+    color: #d0d0d0;
+    text-decoration: none;
+  }
+
+  .game-name a:hover {
+    color: #4ade80;
+    text-decoration: none;
+  }
+
+  .game-lang {
+    font-size: 0.72rem;
+    color: #444;
+    background: #111;
+    border: 1px solid #1a1a1a;
+    padding: 0.1em 0.5em;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  .game-desc {
+    font-size: 0.85rem;
+    color: #777;
+    margin: 0 0 1rem;
+    line-height: 1.6;
+  }
+
+  .game-links {
+    display: flex;
+    gap: 0.75rem;
+  }
+
+  .game-link {
+    font-size: 0.78rem;
+    color: #555;
+    background: #111;
+    border: 1px solid #1a1a1a;
+    padding: 0.2em 0.75em;
+    text-decoration: none;
+    transition: border-color 0.15s, color 0.15s;
+  }
+
+  .game-link:hover {
+    color: #4ade80;
+    border-color: #333;
+    text-decoration: none;
+  }
+
+  .game-link--demo {
+    color: #4ade80;
+    border-color: #1a3a1a;
+  }
+
+  .game-link--demo:hover {
+    color: #86efac;
+    border-color: #2a5a2a;
+  }
+
+  .games-footer {
+    margin-top: 2.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #1a1a1a;
+    font-size: 0.78rem;
+    color: #444;
+  }
+
+  .games-footer a {
+    color: #555;
+  }
+
+  .games-footer a:hover {
+    color: #4ade80;
+  }
+</style>

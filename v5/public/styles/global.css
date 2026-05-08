@@ -250,26 +250,6 @@ section#experience li::before {
   color: #333;
 }
 
-.tech-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.4rem;
-  margin: 0.5rem 0 0;
-}
-
-.tech-tag {
-  background: #111;
-  border: 1px solid #1a1a1a;
-  padding: 0.15em 0.5em;
-  color: #555;
-  font-size: 0.78rem;
-}
-
-.tech-tag:hover {
-  border-color: #333;
-  color: #777;
-}
-
 /* Divider between jobs */
 section#experience hr {
   border-top: 1px solid #1a1a1a;

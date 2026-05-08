@@ -4,26 +4,15 @@
 
 *Medical finance. Regulated. HIPAA. The kind of place where a typo costs real money.*
 
-- Led a cross-functional team of 6 engineers, designers, and QA. Reported directly to the C-suite.
-- Architected and shipped 4 greenfield platforms from discovery through to profitable production. End-to-end.
-- Built HIPAA-compliant systems with full audit trails, encryption, and zero-downtime CI/CD.
-- Introduced TDD, pair programming, and lean practices. Coached juniors into seniors.
-- Was the person who said "we can do this faster, safer, and cheaper" and then actually did it.
-
-`Django` `Vue.js` `PostgreSQL` `MSSQL` `Terraform` `Azure`
+Architected and shipped 4 greenfield platforms from discovery to profitable production. Led a team of 6 engineers, designers, and QA.    
+Built HIPAA-compliant systems where a typo costs real money — full audit trails, zero-downtime CI/CD. Was the person who said 
+"we can do this faster, safer, and cheaper" and then actually did it.
 
 ---
 
 ### Software Craftsman
 
-**@ Prodigy Finance, Analytix Engine, S.A. Taxi, DotModus, Hout Bay Academy** · 2013 — 2020
+**@ Prodigy Finance, Analytix Engine, S.A. Taxi, DotModus, Google, Booking.com, Skimlinks, Hout Bay Academy, MTN, Dentsu Aegis** · 2013 — 2020
 
-*FinTech, actuarial science, asset financing, cloud consulting, teaching. A lot of hats.*
+I've built data pipelines that process petabytes daily, a startup's entire technical stack from zero, and an offline-first research app that runs on boats with no signal for two weeks. I've walked into technical disaster zones that made senior engineers quit and walked out with systems that haven't failed in years — event-driven IFRS9 engines, Go-based MQTT handling 30,000 concurrent streams, a 3PB/day pipeline migration from AWS to GCP under deadline. Taught A-Level Computer Science at Hout Bay Academy — students now hold PhDs and senior engineering roles worldwide.
 
-- Built an event-driven IFRS9 Decision Engine and a real-time sentiment platform at Analytix Engine
-- Unified credit-check providers into a single Rails/React API at Prodigy Finance
-- Designed Go-based MQTT ingestion handling 30,000 concurrent streams at S.A. Taxi
-- Migrated a 3PB/day pipeline from AWS to GCP under deadline at DotModus
-- Taught A-Level Computer Science at Hout Bay Academy — students now hold PhDs and senior engineering roles worldwide
-
-`Go` `Python` `Ruby on Rails` `React` `Airflow` `Terraform` `Mentoring`
