@@ -1,186 +1,103 @@
 {
-  "password": "change-me",
-  "colors": {
-    "primary": "#16a34a",
-    "secondary": "#14532d",
-    "accent": "#22c55e",
-    "text": "#0f172a",
-    "textLight": "#64748b",
-    "background": "#FFFFFF",
-    "backgroundAlt": "#f0fdf4"
-  },
+  "password": "conservation",
   "name": "James Burgess",
-  "subtitle": "Marine Conservation Volunteer",
-  "title": "Environmental Advocate & Reef Monitoring Specialist",
-  "valueProp": "I combine diving expertise with data collection skills to support critical marine conservation efforts. Passionate about protecting ocean ecosystems through hands-on fieldwork, community education, and evidence-based advocacy.",
-  "profileImage": "https://via.placeholder.com/400x400",
+  "title": "Conservation Technologist",
+  "sectionLabels": {
+    "profile": "Profile",
+    "leadership": "Technical Capabilities",
+    "projects": "Conservation Projects",
+    "education": "Relevant Background",
+    "links": "Links",
+    "experience": "Experience"
+  },
   "contact": {
+    "location": "Cape Town, South Africa (full-time traveller)",
     "email": "hello@jimmyb.co.za",
-    "phone": "+27652442069",
-    "phoneDisplay": "+27 (0)65 244 2069",
-    "portfolio": "https://jimmyb.co.za"
+    "phone": "+27 65 244 2069",
+    "availability": "Available for conservation technology roles and co-founder opportunities"
   },
-  "stats": [
-    { "number": "300+", "label": "Conservation Dives" },
-    { "number": "AWARE", "label": "Certified" },
-    { "number": "50+", "label": "Reef Surveys" },
-    { "number": "3 Years", "label": "Active Volunteering" }
+  "profile": [
+    "14 years building digital products from firmware to cloud. Now redirecting that capacity toward conservation technology — tools that work in the field, not just in a demo.",
+    "Track record of walking into technical disaster zones and producing systems that run untouched for years. The same skills that unified fourteen MSSQL servers into one PostgreSQL system, collapsing a week-long ETL to one minute, are ready for the hardest problems in conservation.",
+    "PADI Open Water Scuba Instructor with 1,000+ logged dives, 10 specialty instructor ratings, and cleanup dive experience. The ocean is not a hobby — it is the reason for the redirection."
   ],
-  "about": [
-    "I'm a dedicated marine conservation volunteer with over 300 logged conservation dives and 3 years of active fieldwork experience. My work spans reef health monitoring, marine species surveys, and ocean cleanup initiatives across South Africa's coastline.",
-    "I hold PADI certifications including Dive Master and multiple conservation specialties (AWARE Coral Reef Conservation, Shark Conservation, Marine Debris). I bring both diving proficiency and genuine scientific curiosity to every project.",
-    "My technical background in data engineering translates directly to conservation work—I excel at collecting, organizing, and analyzing field data for research teams. I've contributed observations to Wildbook and other marine conservation databases.",
-    "Beyond fieldwork, I'm passionate about education and advocacy. I believe lasting conservation requires community engagement, and I volunteer time teaching responsible diving practices and leading beach cleanup initiatives."
+  "leadership": [
+    "Full-stack engineering: backend, frontend, firmware, infrastructure, data pipelines, ML integration",
+    "14 years shipping production systems at scale — FinTech, actuarial, medical finance (HIPAA), cloud consulting",
+    "Led cross-functional engineering teams of 6–8, reporting to C-suite",
+    "Designs for field conditions: offline-first, resilient, low-bandwidth, no-internet-operable",
+    "Pragmatic builder — \"import this\" is not a poster; simplicity and durability are moral positions",
+    "Open-source contributor to Wildbook (DevOps and infrastructure automation)"
   ],
-  "mainCert": {
-    "title": "PADI Dive Master + AWARE Conservation Specialist",
-    "memberId": "123456",
-    "certified": "2020",
-    "language": "English",
-    "divesSince": "2018",
-    "experience": "Reef Surveys, Species ID, Data Collection, Underwater Photography, Debris Removal"
-  },
-  "specialties": [
-    { "title": "🪸 Coral Reef Monitoring", "category": "technical" },
-    { "title": "🐠 Fish Population Surveys", "category": "technical" },
-    { "title": "🦈 Shark Conservation", "category": "technical" },
-    { "title": "📊 Data Collection & Analysis", "category": "technical" },
-    { "title": "📷 Underwater Photography", "category": "technical" },
-    { "title": "🗑️ Marine Debris Removal", "category": "skills" },
-    { "title": "🔬 Scientific Diving Methods", "category": "skills" },
-    { "title": "🌿 Marine Species Identification", "category": "skills" },
-    { "title": "📝 Field Research Support", "category": "skills" },
-    { "title": "🎓 Environmental Education", "category": "skills" },
-    { "title": "🤝 Community Outreach", "category": "skills" }
+  "projects": [
+    {
+      "name": "The Field Company",
+      "description": "platform for conservation technology that works in the field. Active project: Field Log (offline-first research logger). Vision includes multi-modal mesh network, open ecological database, and 1m² eco health index."
+    },
+    {
+      "name": "Wildbook & Wildbook-IA",
+      "description": "open-source ML platform for wildlife photo-ID; contributing DevOps and data pipeline infrastructure"
+    },
+    {
+      "name": "Field Log",
+      "description": "offline-first research logger — IndexedDB, camera, GPS. Runs weeks without signal, syncs on reconnection. PWA for conservation fieldwork."
+    }
   ],
-  "additionalCerts": "AWARE Coral Reef Conservation • AWARE Shark Conservation • Project AWARE Specialist • Marine Debris Specialist",
+  "education": [
+    { "title": "PADI Open Water Scuba Instructor", "sub": "10 specialty instructor ratings · 1,000+ logged dives globally · Ocean Tribe Kenya" },
+    { "title": "Emergency First Response Instructor" },
+    { "title": "14 years professional engineering experience", "sub": "Backend, data, infrastructure, leadership, teaching" }
+  ],
+  "links": [
+    { "label": "GitHub", "url": "https://github.com/james-burgess", "text": "james-burgess" },
+    { "label": "LinkedIn", "url": "https://linkedin.com/in/james-burgess-cloud/", "text": "/in/james-burgess-cloud" }
+  ],
   "experience": [
     {
-      "title": "Marine Conservation Volunteer",
-      "organization": "Multiple NGOs & Research Projects",
-      "period": "2021–Present",
-      "subtitle": "Reef Monitoring & Species Conservation",
+      "theme": "red",
+      "role": "Founder",
+      "date": "December 2025 – Present",
+      "company": "The Field Company",
+      "companyUrl": "https://thefieldco.com",
+      "companyContext": "Conservation Technology Platform",
+      "badge": "yellow-circle",
+      "stack": "Django · IndexedDB · Offline-First Architecture · PWA · GPS",
       "points": [
-        "Conducted 50+ coral reef health assessments using standardized monitoring protocols",
-        "Contributed to fish population surveys documenting species diversity and abundance",
-        "Collected photographic evidence for marine species identification databases",
-        "Participated in long-term reef monitoring programs tracking ecosystem changes",
-        "Logged observations in Wildbook and other scientific conservation platforms"
-      ],
-      "tags": [
-        "Reef Monitoring",
-        "Data Collection",
-        "Species Surveys",
-        "Wildbook",
-        "Scientific Diving",
-        "Marine Biology",
-        "Photography"
-      ],
-      "callout": null
-    },
-    {
-      "title": "Ocean Cleanup Coordinator",
-      "organization": "Local Beach & Dive Cleanup Initiatives",
-      "period": "2020–Present",
-      "subtitle": "Marine Debris Removal & Community Engagement",
-      "points": [
-        "Organized and led 30+ underwater cleanup dives removing ghost nets and debris",
-        "Coordinated community beach cleanup events with 100+ total participants",
-        "Catalogued and reported marine debris findings to conservation databases",
-        "Educated divers and beachgoers on plastic pollution and responsible practices",
-        "Removed over 500kg of marine debris from local reef and beach sites"
-      ],
-      "tags": [
-        "Cleanup Operations",
-        "Community Organizing",
-        "Marine Debris",
-        "Environmental Education",
-        "Project Management"
-      ],
-      "callout": null
-    },
-    {
-      "title": "Conservation Educator",
-      "organization": "Volunteer Programs & Schools",
-      "period": "2021–Present",
-      "subtitle": "Marine Awareness & Responsible Diving Education",
-      "points": [
-        "Developed and delivered marine conservation presentations for local schools",
-        "Taught responsible diving practices to recreational dive groups",
-        "Created educational content on social media promoting ocean conservation",
-        "Mentored new conservation volunteers on survey techniques and protocols",
-        "Advocated for marine protected areas through community engagement"
-      ],
-      "tags": [
-        "Education",
-        "Public Speaking",
-        "Content Creation",
-        "Mentorship",
-        "Advocacy",
-        "Community Outreach"
-      ],
-      "callout": null
-    }
-  ],
-  "skills": [
-    {
-      "icon": "🔬",
-      "title": "Research & Monitoring",
-      "items": [
-        "Reef health assessment protocols",
-        "Fish and invertebrate surveys",
-        "Underwater transect surveys",
-        "Photo-identification methods",
-        "Data collection & recording",
-        "Scientific diving techniques",
-        "Marine species identification"
+        "Built Field Log: offline-first research logger for conservation fieldwork — works without network for weeks, syncs on reconnection",
+        "Developing vision for multi-modal mesh network (LoRa/WiFi/SAT/RF) for field communications in remote environments",
+        "Designing ecological data infrastructure — a shared, open database of real-world measurements accessible to researchers globally",
+        "Actively seeking co-founder for fundraising, partnerships, and domain connections in the conservation space"
       ]
     },
     {
-      "icon": "🌊",
-      "title": "Conservation Skills",
-      "items": [
-        "AWARE conservation specialties",
-        "Marine debris removal",
-        "Coral restoration support",
-        "Beach cleanup coordination",
-        "Environmental impact assessment",
-        "Sustainable diving practices",
-        "Wildlife observation ethics"
+      "theme": "blue",
+      "role": "DevOps Contributor",
+      "date": "2024 – Present",
+      "company": "Wildbook",
+      "companyUrl": "https://github.com/WildbookOrg/Wildbook",
+      "companyContext": "Open-Source Wildlife Photo-ID Platform",
+      "stack": "Docker · Kubernetes · CI/CD · ML Pipeline Support",
+      "points": [
+        "Contributing infrastructure automation and data pipeline support to the Wildbook ecosystem",
+        "Supporting wildbook-ia (WBIA) — ML pipeline for wildlife conservation, GPU-accelerated matching, scalable inference"
       ]
     },
     {
-      "icon": "📊",
-      "title": "Technical & Outreach",
-      "items": [
-        "Data analysis & reporting",
-        "Underwater photography",
-        "GPS & mapping tools",
-        "Database contributions (Wildbook)",
-        "Educational program design",
-        "Social media advocacy",
-        "Community engagement"
+      "theme": "yellow",
+      "role": "Head of Engineering",
+      "date": "2020 – Present",
+      "company": "Crossroads Health",
+      "companyUrl": "https://crossroadshealth.com",
+      "companyContext": "Medical Finance (HIPAA)",
+      "via": "Cloud Intelligence",
+      "viaUrl": "https://cloudintelligence.co.za",
+      "stack": "Django · Vue.js · PostgreSQL · Terraform · Azure",
+      "points": [
+        "Led cross-functional team of 6 through four greenfield platforms from discovery to production",
+        "Built HIPAA-compliant systems with full audit trails, encryption, zero-downtime CI/CD"
       ]
     }
   ],
-  "commitment": {
-    "title": "Let's Protect Our Oceans",
-    "subtitle": "Available for volunteer projects or conservation roles",
-    "timeline": {
-      "icon": "📅",
-      "title": "Availability",
-      "lines": ["Flexible schedule", "Weekends & field trips"]
-    },
-    "location": {
-      "icon": "🌍",
-      "title": "Location",
-      "lines": ["South Africa based", "Willing to travel"]
-    },
-    "motivation": {
-      "icon": "💡",
-      "title": "Focus",
-      "lines": ["Reef conservation", "Data-driven impact"]
-    },
-    "text": "I'm seeking opportunities to contribute to meaningful marine conservation projects—whether that's reef monitoring, species surveys, research support, or community education. I bring diving skills, data competency, and genuine dedication to protecting ocean ecosystems for future generations."
-  }
+  "footer": "James Burgess · hello@jimmyb.co.za · +27 65 244 2069 · Cape Town, South Africa"
 }
+

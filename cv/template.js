@@ -1,308 +1,621 @@
-export function renderPasswordForm(dataFile, error = false) {
+export function renderPasswordForm(error = false) {
   return `<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CV Access</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap" rel="stylesheet">
+    <title>CV Access — JimmyB</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+        @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&display=swap");
+
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+        html {
+            font-size: 15px;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
         }
+
         body {
-            font-family: 'Inter', sans-serif;
+            font-family: 'IBM Plex Mono', 'Courier New', Courier, monospace;
+            background: #0a0a0a;
+            color: #b8b8b8;
+            line-height: 1.65;
+            min-height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
-            min-height: 100vh;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 3rem 1.5rem;
         }
-        .password-container {
-            background: white;
-            padding: 3rem;
-            border-radius: 12px;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
-            max-width: 400px;
-            width: 90%;
+
+        ::selection {
+            background: #1a3a1a;
+            color: #4ade80;
         }
+
+        a {
+            color: #4ade80;
+            text-decoration: none;
+            transition: color 0.15s ease;
+        }
+
+        a:hover {
+            color: #86efac;
+            text-decoration: underline;
+            text-underline-offset: 3px;
+        }
+
+        .container {
+            max-width: 420px;
+            width: 100%;
+        }
+
         h1 {
-            font-size: 1.75rem;
-            margin-bottom: 0.5rem;
-            color: #333;
+            font-size: 1rem;
+            font-weight: 600;
+            color: #e8e8e8;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: baseline;
+            gap: 0.75rem;
         }
-        p {
+
+        h1::before {
+            content: '//';
+            color: #4ade80;
+            font-weight: 400;
+        }
+
+        .subtitle {
+            font-size: 0.85rem;
             color: #666;
-            margin-bottom: 2rem;
+            margin-bottom: 2.5rem;
+            max-width: 68ch;
         }
+
         .error {
-            background: #fee;
-            color: #c33;
-            padding: 0.75rem;
-            border-radius: 6px;
-            margin-bottom: 1rem;
-            border: 1px solid #fcc;
+            background: #1a1a1a;
+            border: 1px solid #2a2a2a;
+            color: #c8241b;
+            padding: 0.75rem 1rem;
+            font-size: 0.85rem;
+            margin-bottom: 1.25rem;
         }
+
+        .form-group {
+            margin-bottom: 1.25rem;
+        }
+
+        label {
+            display: block;
+            font-size: 0.82rem;
+            color: #777;
+            margin-bottom: 0.4rem;
+            text-transform: lowercase;
+        }
+
         input[type="password"] {
             width: 100%;
-            padding: 0.875rem;
-            border: 2px solid #ddd;
-            border-radius: 6px;
-            font-size: 1rem;
-            font-family: 'Inter', sans-serif;
-            margin-bottom: 1rem;
-            transition: border-color 0.3s;
-        }
-        input[type="password"]:focus {
+            background: #0e0e0e;
+            border: 1px solid #1a1a1a;
+            color: #e8e8e8;
+            padding: 0.75rem 1rem;
+            font-size: 0.9rem;
+            font-family: 'IBM Plex Mono', 'Courier New', Courier, monospace;
             outline: none;
-            border-color: #667eea;
+            transition: border-color 0.15s;
         }
+
+        input[type="password"]:focus {
+            border-color: #333;
+        }
+
+        input[type="password"]::placeholder {
+            color: #444;
+        }
+
         button {
             width: 100%;
-            padding: 0.875rem;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            border: none;
-            border-radius: 6px;
-            font-size: 1rem;
-            font-weight: 700;
+            background: #0e0e0e;
+            border: 1px solid #1a1a1a;
+            color: #4ade80;
+            padding: 0.75rem 1rem;
+            font-size: 0.85rem;
+            font-family: 'IBM Plex Mono', 'Courier New', Courier, monospace;
+            font-weight: 500;
             cursor: pointer;
-            transition: transform 0.2s;
+            text-transform: lowercase;
+            transition: all 0.15s ease;
         }
+
         button:hover {
-            transform: translateY(-2px);
+            border-color: #4ade80;
+            color: #86efac;
+            background: #111;
         }
-        button:active {
-            transform: translateY(0);
+
+        .back-link {
+            display: block;
+            margin-top: 2.5rem;
+            font-size: 0.82rem;
+            color: #444;
+            text-transform: lowercase;
+        }
+
+        .back-link:hover {
+            color: #4ade80;
+            text-decoration: none;
+        }
+
+        @media (max-width: 480px) {
+            body { padding: 1.5rem 1rem; }
         }
     </style>
 </head>
 <body>
-    <div class="password-container">
+    <div class="container">
         <h1>CV Access</h1>
-        <p>This CV is password protected. Please enter the password to continue.</p>
+        <p class="subtitle">This CV is password protected. Please enter the password to continue.</p>
         ${error ? '<div class="error">Incorrect password. Please try again.</div>' : ""}
-        <form method="GET" action="/cv">
-            <input type="hidden" name="data" value="${dataFile}">
-            <input type="password" name="password" placeholder="Enter password" required autofocus>
-            <button type="submit">Access CV</button>
+        <form method="GET" action="/resume">
+            <div class="form-group">
+                <label for="password">password</label>
+                <input type="password" id="password" name="password" placeholder="enter password" required autofocus>
+            </div>
+            <button type="submit">access cv</button>
         </form>
+        <a class="back-link" href="/">&larr; back to jimmyb.co.za</a>
     </div>
 </body>
 </html>`;
 }
 
 export function renderCV(data) {
-  const colors = data.colors || {
-    primary: "#FF6B35",
-    secondary: "#1A1A2E",
-    accent: "#FFEB3B",
-    text: "#1A1A2E",
-    textLight: "#6B7280",
-    background: "#FFFFFF",
-    backgroundAlt: "#F9FAFB",
-  };
+  const contact = data.contact || {};
+  const profile = data.profile || [];
+  const leadership = data.leadership || [];
+  const projects = data.projects || [];
+  const education = data.education || [];
+  const links = data.links || [];
+  const experience = data.experience || [];
 
-  return `<!DOCTYPE html>
+  const labels = Object.assign({
+    profile: "Profile",
+    leadership: "Leadership Highlights",
+    projects: "Selected Projects",
+    education: "Education",
+    links: "Links",
+    experience: "Experience"
+  }, data.sectionLabels || {});
+
+  const leftSections = [];
+
+  if (profile.length) {
+    const html = profile.map(p => `<p class="summary-text">${p}</p>`).join("\n            ");
+    leftSections.push(`<div class="theme-block theme-blue" id="section-profile">
+          <div class="section-label">${labels.profile}</div>
+          ${html}
+        </div>`);
+  }
+
+  if (leadership.length) {
+    const html = leadership.map(item => `<li>${item}</li>`).join("\n              ");
+    leftSections.push(`<div class="theme-block theme-red" id="section-leadership">
+          <div class="section-label">${labels.leadership}</div>
+          <ul class="highlight-list">
+            ${html}
+          </ul>
+        </div>`);
+  }
+
+  if (projects.length) {
+    const html = projects.map(p =>
+      `<li><strong>${p.name}</strong> — ${p.description}</li>`
+    ).join("\n              ");
+    leftSections.push(`<div class="theme-block theme-yellow" id="section-projects">
+          <div class="section-label">${labels.projects}</div>
+          <ul class="highlight-list">
+            ${html}
+          </ul>
+        </div>`);
+  }
+
+  if (education.length) {
+    const html = education.map(e =>
+      `<div class="edu-item">
+              <div class="title">${e.title}</div>
+              ${e.sub ? `<div class="sub">${e.sub}</div>` : ""}
+            </div>`
+    ).join("\n            ");
+    leftSections.push(`<div class="theme-block theme-black" id="section-education">
+          <div class="section-label">${labels.education}</div>
+          ${html}
+        </div>`);
+  }
+
+  if (links.length) {
+    const html = links.map(l =>
+      `<li><strong>${l.label}:</strong> <a href="${l.url}" style="color: var(--ink); text-decoration: underline">${l.text}</a></li>`
+    ).join("\n              ");
+    leftSections.push(`<div class="theme-block theme-blue" id="section-links">
+          <div class="section-label">${labels.links}</div>
+          <ul class="highlight-list">
+            ${html}
+          </ul>
+        </div>`);
+  }
+
+  const leftHtml = leftSections.join("\n\n");
+
+  const experienceHtml = experience.map(exp => {
+    const companyLink = exp.companyUrl
+      ? `<a href="${exp.companyUrl}">${exp.company}</a>`
+      : exp.company;
+    const viaHtml = exp.via
+      ? ` · via ${exp.viaUrl ? `<a href="${exp.viaUrl}">${exp.via}</a>` : exp.via}`
+      : "";
+    const badgeHtml = exp.badge
+      ? `<span class="badge ${exp.badge}"></span>`
+      : "";
+    const stackHtml = exp.stack
+      ? `<div class="exp-stack">${exp.stack}</div>`
+      : "";
+    const pointsHtml = (exp.points || []).map(p => `<li>${p}</li>`).join("\n                ");
+
+    return `          <div class="theme-block theme-${exp.theme || "black"}">
+            <div class="exp-item">
+              <div class="exp-header">
+                <span class="exp-role">${exp.role}</span>
+                <span class="exp-date">${exp.date}</span>
+              </div>
+              <div class="exp-company">
+                ${companyLink}${exp.companyContext ? ` (${exp.companyContext})` : ""}${viaHtml}${badgeHtml}
+              </div>
+              ${stackHtml}
+              <ul class="exp-bullets">
+                ${pointsHtml}
+              </ul>
+            </div>
+          </div>`;
+  }).join("\n\n");
+
+  return `<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>${data.title}</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="/styles.css">
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        primary: '${colors.primary}',
-                        secondary: '${colors.secondary}',
-                        accent: '${colors.accent}',
-                    }
-                }
-            }
-        }
-    </script>
-    <style>
-        :root {
-            --color-primary: ${colors.primary};
-            --color-secondary: ${colors.secondary};
-            --color-accent: ${colors.accent};
-            --color-text: ${colors.text};
-            --color-text-light: ${colors.textLight};
-            --color-bg: ${colors.background};
-            --color-bg-alt: ${colors.backgroundAlt};
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>${data.name || "James Burgess"} – CV</title>
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=DM+Serif+Display&display=swap");
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --ink: #101010;
+      --muted: #4e5058;
+      --red: #c8241b;
+      --blue: #093466;
+      --yellow: #dba625;
+      --bg: #f5f4ef;
+    }
+
+    html, body {
+      width: 100%;
+      font-family: "Inter", -apple-system, sans-serif;
+      background: #e8eaf0;
+      color: var(--ink);
+      font-size: 8.2pt;
+      line-height: 1.5;
+    }
+
+    .page {
+      width: 210mm;
+      min-height: 297mm;
+      padding: 10mm 12mm;
+      background: var(--bg);
+      margin: 5mm auto;
+      box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    /* ── HEADER ── */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 4mm;
+      margin-bottom: 5mm;
+    }
+
+    .name-block h1 {
+      font-family: "DM Serif Display", Georgia, serif;
+      font-size: 30pt;
+      font-weight: 400;
+      letter-spacing: -0.5px;
+      color: var(--ink);
+      line-height: 1.2;
+    }
+
+    .name-block h2 {
+      font-size: 8.5pt;
+      font-weight: 600;
+      color: var(--ink);
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      margin-top: 2px;
+    }
+
+    .contact-block {
+      text-align: right;
+      color: var(--ink);
+      font-size: 7.5pt;
+      font-weight: 500;
+      line-height: 1.7;
+      position: relative;
+      padding-right: 14px;
+    }
+
+    .contact-block a {
+      color: var(--ink);
+      text-decoration: none;
+    }
+
+    .contact-block::after {
+      content: "";
+      position: absolute;
+      top: 2px;
+      right: 0;
+      width: 7px;
+      bottom: 2px;
+      background: linear-gradient(to bottom, var(--red) 50%, var(--blue) 50%);
+    }
+
+    /* ── LAYOUT ── */
+    .body-grid {
+      display: grid;
+      grid-template-columns: 1fr 2.1fr;
+      gap: 0 8mm;
+    }
+
+    /* ── COMPONENTS ── */
+    .theme-block {
+      padding-left: 12px;
+      border-left: 5px solid var(--theme-color, transparent);
+      margin-bottom: 5mm;
+    }
+
+    .theme-blue { --theme-color: var(--blue); }
+    .theme-red { --theme-color: var(--red); }
+    .theme-yellow { --theme-color: var(--yellow); }
+    .theme-black { --theme-color: var(--ink); }
+
+    .section-label {
+      font-size: 8pt;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--ink);
+      margin-bottom: 3mm;
+    }
+
+    .theme-block .section-label { margin-top: 0; }
+
+    .badge {
+      display: inline-block;
+      vertical-align: middle;
+      margin-left: 8px;
+      position: relative;
+      top: -1px;
+    }
+    .yellow-circle {
+      width: 11px;
+      height: 11px;
+      background-color: var(--yellow);
+      border-radius: 50%;
+    }
+    .black-square {
+      width: 11px;
+      height: 11px;
+      background-color: var(--ink);
+    }
+
+    /* ── LEFT COLUMN ── */
+    .summary-text {
+      font-size: 8pt;
+      color: var(--ink);
+      line-height: 1.6;
+      margin-bottom: 1mm;
+    }
+
+    .highlight-list {
+      padding-left: 0;
+      list-style: none;
+    }
+    .highlight-list li {
+      font-size: 7.8pt;
+      color: var(--ink);
+      padding-left: 14px;
+      position: relative;
+      margin-bottom: 1.5mm;
+      line-height: 1.45;
+    }
+    .highlight-list li::before {
+      content: "■";
+      position: absolute;
+      left: 0;
+      color: var(--theme-color);
+      font-size: 5pt;
+      top: 1.5mm;
+    }
+
+    .edu-item { margin-bottom: 2mm; }
+    .edu-item .title {
+      font-size: 8pt;
+      font-weight: 600;
+      color: var(--ink);
+    }
+    .edu-item .sub {
+      font-size: 7.5pt;
+      color: var(--muted);
+    }
+
+    /* ── RIGHT COLUMN ── */
+    .exp-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 2px;
+    }
+
+    .exp-role {
+      font-size: 9pt;
+      font-weight: 700;
+      color: var(--ink);
+    }
+
+    .exp-date {
+      font-size: 7.5pt;
+      color: var(--ink);
+      white-space: nowrap;
+      margin-left: 4mm;
+      font-weight: 500;
+    }
+
+    .exp-company {
+      font-size: 8pt;
+      color: var(--ink);
+      font-weight: 600;
+      margin-bottom: 1.5mm;
+      display: flex;
+      align-items: center;
+    }
+
+    .exp-company a {
+      color: var(--ink);
+      text-decoration: none;
+    }
+
+    .exp-company a:hover { text-decoration: underline; }
+
+    .exp-stack {
+      font-size: 7pt;
+      color: var(--muted);
+      margin-bottom: 2mm;
+      font-style: italic;
+    }
+
+    .exp-bullets {
+      padding-left: 0;
+      list-style: none;
+    }
+    .exp-bullets li {
+      font-size: 7.8pt;
+      color: var(--ink);
+      padding-left: 14px;
+      position: relative;
+      margin-bottom: 1.5mm;
+      line-height: 1.45;
+    }
+    .exp-bullets li::before {
+      content: "■";
+      position: absolute;
+      left: 0;
+      color: var(--theme-color);
+      font-size: 5pt;
+      top: 1.5mm;
+    }
+
+    strong { font-weight: 600; color: var(--ink); }
+
+    /* Footer */
+    .cv-footer {
+      margin-top: 4mm;
+      padding-top: 3mm;
+      text-align: center;
+      font-size: 6.5pt;
+      color: #b0b6c8;
+    }
+
+    .download-btn {
+      position: fixed;
+      top: 6mm;
+      right: 6mm;
+      z-index: 100;
+      background: var(--blue);
+      color: #fff;
+      border: none;
+      padding: 3mm 5mm;
+      font-size: 7.5pt;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-family: "Inter", sans-serif;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+      transition: background 0.15s;
+    }
+    .download-btn:hover { background: #0d2d5a; }
+
+    @media print {
+      .download-btn { display: none !important; }
+      html, body {
+        width: 210mm;
+        height: 297mm;
+        margin: 0;
+        padding: 0;
+        background: #fff;
+      }
+      .page {
+        margin: 0;
+        box-shadow: none;
+        background: var(--bg);
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+        height: 297mm;
+        overflow: hidden;
+      }
+      @page { size: A4; margin: 0; }
+    }
+  </style>
 </head>
 <body>
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-content">
-            <p class="subtitle">${data.subtitle || "Engineer"}</p>
-            <h1>${data.name.split(" ")[0]}<span class="hero-title-accent">${data.name.split(" ").slice(1).join(" ")}</span></h1>
-            <p class="value-prop">${data.valueProp}</p>
-        </div>
-        <div class="hero-image">
-            <img src="${data.profileImage || "https://via.placeholder.com/400x400"}" alt="profileImage" />
-        </div>
-    </section>
+  <button class="download-btn" onclick="window.print()">Download PDF</button>
+  <div class="page">
+    <!-- HEADER -->
+    <header>
+      <div class="name-block">
+        <h1>${data.name || "James Burgess"}</h1>
+        <h2>${data.title || ""}</h2>
+      </div>
+      <div class="contact-block">
+        ${contact.location || ""}<br />
+        ${contact.email ? `<a href="mailto:${contact.email}">${contact.email}</a><br />` : ""}
+        ${contact.phone ? `${contact.phone}<br />` : ""}
+        ${contact.availability || ""}
+      </div>
+    </header>
 
-    <!-- Quick Stats Bar -->
-    <section class="stats">
-        <div class="container">
-            <div class="stats-grid">
-                ${data.stats
-                  .map(
-                    (stat) => `
-                <div class="stat-card">
-                    <span class="stat-number">${stat.number}</span>
-                    <span class="stat-label">${stat.label}</span>
-                </div>
-                `,
-                  )
-                  .join("")}
-            </div>
-        </div>
-    </section>
+    <!-- BODY -->
+    <div class="body-grid">
+      <!-- LEFT -->
+      <div class="left">
+${leftHtml}
+      </div>
+      <!-- /left -->
 
-    <!-- About / Value Proposition -->
-    <section class="about">
-        <div class="container">
-            <h2 class="section-title">Why I'm Different</h2>
-            <div class="about-content">
-                ${data.about.map((para) => `<p>${para}</p>`).join("\n                ")}
-            </div>
-        </div>
-    </section>
+      <!-- RIGHT -->
+      <div class="right" id="section-experience">
+        <div class="section-label" style="padding-left: 17px">${labels.experience}</div>
 
-    <!-- Diving Qualifications -->
-    <section class="qualifications">
-        <div class="container">
-            <h2 class="section-title">Diving Qualifications</h2>
+${experienceHtml}
+      </div>
+      <!-- /right -->
+    </div>
+    <!-- /body-grid -->
 
-            <div class="main-cert">
-                <h3>${data.mainCert.title}</h3>
-                <p class="cert-meta">Member #${data.mainCert.memberId} • Certified ${data.mainCert.certified} • Teaching Language: ${data.mainCert.language}</p>
-                <p>500+ logged dives since ${data.mainCert.divesSince} • Experience: ${data.mainCert.experience}</p>
-            </div>
-
-            <div class="specialty-grid">
-                ${data.specialties
-                  .map(
-                    (spec) => `
-                <div class="specialty-card">
-                    <div class="specialty-title">${spec.title}</div>
-                </div>
-                `,
-                  )
-                  .join("")}
-            </div>
-
-            <div style="background: white; padding: 1.5rem; border-radius: 12px; border-left: 4px solid var(--color-primary);">
-                <strong>Additional:</strong> ${data.additionalCerts}
-            </div>
-        </div>
-    </section>
-
-    <!-- Experience Timeline -->
-    <section class="timeline">
-        <div class="container">
-            <h2 class="section-title">Experience</h2>
-            <div>
-                ${data.experience
-                  .map(
-                    (exp) => `
-                <div class="timeline-item">
-                    <div class="timeline-title">${exp.title}</div>
-                    <div class="timeline-meta">${exp.organization} • ${exp.period}</div>
-                    <div class="timeline-subheading">${exp.subtitle}</div>
-                    <ul>
-                        ${exp.points.map((point) => `<li>${point}</li>`).join("\n                        ")}
-                    </ul>
-                    ${
-                      exp.tags
-                        ? `
-                    <div class="tech-tags">
-                        ${exp.tags.map((tag) => `<span class="tag">${tag}</span>`).join("\n                        ")}
-                    </div>
-                    `
-                        : ""
-                    }
-                    ${
-                      exp.callout
-                        ? `
-                    <div class="callout">
-                        <strong>Conservation Relevance:</strong> ${exp.callout}
-                    </div>
-                    `
-                        : ""
-                    }
-                </div>
-                `,
-                  )
-                  .join("")}
-            </div>
-        </div>
-    </section>
-
-    <!-- Skills Matrix -->
-    <section class="skills">
-        <div class="container">
-            <h2 class="section-title">Skills Matrix</h2>
-            <div class="skills-grid">
-                ${data.skills
-                  .map(
-                    (skill) => `
-                <div class="skill-card">
-                    <div class="skill-icon">${skill.icon}</div>
-                    <h3>${skill.title}</h3>
-                    <ul>
-                        ${skill.items.map((item) => `<li>${item}</li>`).join("\n                        ")}
-                    </ul>
-                </div>
-                `,
-                  )
-                  .join("")}
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact / CTA Section -->
-    <section class="contact" id="contact">
-        <div class="container">
-            <h2 class="section-title">Let's Work Together</h2>
-
-            <div class="commitment-text">
-                <p>${data.commitment.text}</p>
-            </div>
-            <div class="commitment-grid">
-              <div class="commitment-item">
-                  <div class="commitment-icon">${data.commitment.timeline.icon}</div>
-                  <h3>${data.commitment.timeline.title}</h3>
-                  ${data.commitment.timeline.lines.map((line) => `<p>${line}</p>`).join("\n                    ")}
-              </div>
-              <div class="commitment-item">
-                  <div class="commitment-icon">${data.commitment.location.icon}</div>
-                  <h3>${data.commitment.location.title}</h3>
-                  ${data.commitment.location.lines.map((line) => `<p>${line}</p>`).join("\n                    ")}
-              </div>
-              <div class="commitment-item">
-                  <div class="commitment-icon">${data.commitment.motivation.icon}</div>
-                  <h3>${data.commitment.motivation.title}</h3>
-                  ${data.commitment.motivation.lines.map((line) => `<p>${line}</p>`).join("\n                    ")}
-              </div>
-            </div>
-        </div>
-    </section>
+    <div class="cv-footer">
+      ${data.footer || ""}
+    </div>
+  </div>
 </body>
 </html>`;
 }
