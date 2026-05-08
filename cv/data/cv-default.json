@@ -1,189 +1,139 @@
 {
-  "password": "change-me",
-  "colors": {
-    "primary": "#FF6B35",
-    "secondary": "#1A1A2E",
-    "accent": "#FFEB3B",
-    "text": "#1A1A2E",
-    "textLight": "#6B7280",
-    "background": "#FFFFFF",
-    "backgroundAlt": "#F9FAFB"
-  },
+  "password": "default",
   "name": "James Burgess",
-  "subtitle": "Senior Software Engineer",
-  "title": "Full-Stack Engineer & Technical Leader",
-  "valueProp": "I build scalable systems, lead engineering teams, and architect solutions that drive business impact. Specialized in distributed systems, data engineering, and conservation technology.",
-  "profileImage": "https://via.placeholder.com/400x400",
+  "title": "Tech Lead · Principal Software Engineer",
+  "sectionLabels": {
+    "profile": "Profile",
+    "leadership": "Leadership Highlights",
+    "projects": "Selected Projects",
+    "education": "Education",
+    "links": "Links",
+    "experience": "Experience"
+  },
   "contact": {
-    "email": "hello@jimmyb.co.za",
-    "phone": "+27652442069",
-    "phoneDisplay": "+27 (0)65 244 2069",
-    "portfolio": "https://jimmyb.co.za"
+    "location": "Cape Town, South Africa",
+    "email": "work@jimmyb.co.za",
+    "phone": "+27 65 244 2069",
+    "availability": "Available April 2026"
   },
-  "stats": [
-    { "number": "10+", "label": "Years Experience" },
-    { "number": "FAANG", "label": "Experience" },
-    { "number": "CTO", "label": "Leadership" },
-    { "number": "Open Source", "label": "Contributor" }
+  "profile": [
+    "14 years building and leading digital products in regulated financial environments. Hands-on across the full stack with equal comfort owning technical strategy at C-suite level.",
+    "Track record of taking platforms from discovery through to stable, profitable production.",
+    "Experienced with CMS architecture, design-system rollouts, and legacy system migration."
   ],
-  "about": [
-    "I'm a senior software engineer with over a decade of experience building systems at scale. From processing petabytes of data at FAANG to founding and scaling startups, I've worn every technical hat—from individual contributor to CTO.",
-    "My expertise spans full-stack development, data engineering, cloud architecture, and team leadership. I've built data lakes processing terabytes daily, architected multi-database systems, and led engineering teams through complex technical challenges.",
-    "I'm passionate about conservation technology and contribute to Wildbook, an open-source platform tracking endangered species globally. I believe technology should solve meaningful problems and create lasting impact.",
-    "Whether I'm writing code, architecting systems, or leading teams—I focus on building solutions that scale, perform, and deliver real business value."
+  "leadership": [
+    "Built & managed cross-functional teams of 6–8 (engineers, designers, QA)",
+    "Ran structured 2-week discovery sprints → validated MVPs → production",
+    "Primary liaison to C-suite & external auditors on technical strategy",
+    "Introduced TDD & pair programming; coached engineers into senior roles",
+    "Negotiated trade-offs between security, ergonomics & delivery speed",
+    "Former A-Level CS teacher — natural mentor & communicator"
   ],
-  "mainCert": {
-    "title": "Senior Software Engineer",
-    "memberId": "GitHub: @james-burgess",
-    "certified": "2013 - Present",
-    "language": "Multiple Languages",
-    "divesSince": "2013",
-    "experience": "Full-Stack, Data Engineering, Cloud Architecture, Team Leadership"
-  },
-  "specialties": [
-    { "title": "⚛️ React & Modern Frontend", "category": "technical" },
-    { "title": "🐍 Python & Backend Systems", "category": "technical" },
-    { "title": "☁️ AWS & Cloud Architecture", "category": "technical" },
-    { "title": "🗄️ Database Design & Optimization", "category": "technical" },
-    { "title": "📊 Data Engineering & ETL", "category": "technical" },
-    { "title": "🔧 DevOps & CI/CD", "category": "skills" },
-    { "title": "👥 Technical Leadership", "category": "skills" },
-    { "title": "🎨 System Architecture", "category": "skills" },
-    { "title": "📱 Mobile Development", "category": "skills" },
-    { "title": "🌐 API Design & Integration", "category": "skills" },
-    { "title": "🔒 Security Best Practices", "category": "skills" }
+  "projects": [
+    {
+      "name": "Claim Appeal Automation",
+      "description": "LLM-powered platform (LLama.cpp + Django) in regulated workflows"
+    },
+    {
+      "name": "Mountain.js",
+      "description": "authored minimal JS UI framework; deep frontend architecture"
+    },
+    {
+      "name": "openZFD",
+      "description": "secure IoT access control (mobile + hardware)"
+    }
   ],
-  "additionalCerts": "AWS Certified • Scrum Master • Open Source Contributor",
+  "education": [
+    { "title": "A Levels", "sub": "British International Distance College" },
+    { "title": "Emergency First Response Instructor" },
+    { "title": "Open Water Scuba Instructor" }
+  ],
+  "links": [
+    { "label": "GitHub", "url": "https://github.com/james-burgess", "text": "james-burgess" },
+    { "label": "LinkedIn", "url": "https://linkedin.com/in/james-burgess-cloud/", "text": "/in/james-burgess-cloud" }
+  ],
   "experience": [
     {
-      "title": "Senior Software Engineer",
-      "organization": "FAANG Company",
-      "period": "2018–2022",
-      "subtitle": "Large-Scale Distributed Systems",
+      "theme": "red",
+      "role": "Head of Engineering (Contract)",
+      "date": "2020 – Present",
+      "company": "Crossroads Health",
+      "companyUrl": "https://crossroadshealth.com",
+      "companyContext": "Medical Finance",
+      "via": "Cloud Intelligence",
+      "viaUrl": "https://cloudintelligence.co.za",
+      "badge": "yellow-circle",
+      "stack": "Django · Vue.js · MSSQL · PostgreSQL · Terraform · Azure · Metabase",
       "points": [
-        "Built and maintained services processing petabytes of data daily at global scale",
-        "Led migration of legacy systems to modern microservices architecture",
-        "Improved system performance by 300% through optimization and caching strategies",
-        "Mentored junior engineers and conducted technical design reviews",
-        "Designed and implemented real-time data pipelines with 99.9% uptime"
-      ],
-      "tags": [
-        "Python",
-        "Java",
-        "AWS",
-        "Kubernetes",
-        "PostgreSQL",
-        "Redis",
-        "Kafka",
-        "Docker"
-      ],
-      "callout": null
-    },
-    {
-      "title": "CTO & Co-Founder",
-      "organization": "CloudIntelligence.africa",
-      "period": "2015–2018",
-      "subtitle": "Technical Leadership & Product Development",
-      "points": [
-        "Founded and scaled data analytics startup from 0 to serving enterprise clients",
-        "Built entire technical stack from scratch—web, mobile, data pipelines, infrastructure",
-        "Led engineering team of 8 through rapid growth phase",
-        "Architected multi-database data lake warehouse processing TB+ daily",
-        "Scaled company 6000% through data-driven solutions and automation"
-      ],
-      "tags": [
-        "Python",
-        "React",
-        "Node.js",
-        "MongoDB",
-        "AWS",
-        "Team Leadership",
-        "Product Strategy"
-      ],
-      "callout": null
-    },
-    {
-      "title": "Full-Stack Engineer",
-      "organization": "Various Startups & Agencies",
-      "period": "2013–2015",
-      "subtitle": "Web & Mobile Development",
-      "points": [
-        "Built responsive web applications with React, Vue, and Angular",
-        "Developed mobile apps for iOS and Android using React Native",
-        "Created RESTful APIs and GraphQL endpoints for client applications",
-        "Implemented CI/CD pipelines and infrastructure automation",
-        "Collaborated with designers and product managers on user experience"
-      ],
-      "tags": [
-        "JavaScript",
-        "React",
-        "React Native",
-        "Node.js",
-        "GraphQL",
-        "MongoDB"
-      ],
-      "callout": null
-    }
-  ],
-  "skills": [
-    {
-      "icon": "💻",
-      "title": "Backend & Data",
-      "items": [
-        "Python, Java, Node.js",
-        "PostgreSQL, MongoDB, Redis",
-        "Data pipelines & ETL",
-        "Microservices architecture",
-        "API design & development",
-        "Performance optimization",
-        "System design"
+        "Led engineering for regulated medical finance technology, reporting directly to C-suite. Built and managed a cross-functional team of 6 (engineers, designers, QA).",
+        "Architected 4 greenfield platforms end-to-end — from discovery through to stable, profitable production systems.",
+        "Primary technical liaison for executives and external auditors; translated commercial objectives into technical strategy and negotiated security vs. delivery trade-offs.",
+        "Implemented HIPAA-compliant systems with full audit trails, encryption, and zero-downtime CI/CD pipelines with automated security scanning.",
+        "Introduced TDD, pair programming, and lean development practices; coached all levels of engineers from interns to seniors."
       ]
     },
     {
-      "icon": "⚛️",
-      "title": "Frontend & Mobile",
-      "items": [
-        "React, Next.js, TypeScript",
-        "React Native for mobile",
-        "Modern CSS & Tailwind",
-        "State management (Redux, Zustand)",
-        "Responsive design",
-        "Performance & SEO",
-        "User experience"
+      "theme": "yellow",
+      "role": "Software Engineer",
+      "date": "2019 – 2020",
+      "company": "Prodigy Finance",
+      "companyUrl": "https://prodigyfinance.com",
+      "companyContext": "International Student Lending (FinTech)",
+      "stack": "Ruby on Rails · React.js · Vanilla JS · Jenkins · AWS",
+      "points": [
+        "Built verification platform handling sensitive financial data in a PCI-conscious environment.",
+        "Unified multiple credit-check providers into a single Rails/React architecture — consistent API layer for financial verification workflows.",
+        "Implemented PCI-conscious security patterns and audit logging for financial compliance."
       ]
     },
     {
-      "icon": "☁️",
-      "title": "DevOps & Cloud",
-      "items": [
-        "AWS (EC2, S3, Lambda, RDS)",
-        "Docker & Kubernetes",
-        "CI/CD (GitHub Actions, Jenkins)",
-        "Infrastructure as Code",
-        "Monitoring & logging",
-        "Security best practices",
-        "Scalability & reliability"
+      "theme": "blue",
+      "role": "Software Engineer",
+      "date": "2018 – 2019",
+      "company": "Analytix Engine",
+      "companyUrl": "https://analytixengine.com",
+      "companyContext": "Actuarial / Financial Services",
+      "stack": "Go · Python · Vanilla JS",
+      "points": [
+        "Built IFRS9 Decision Engine using event-driven architecture and CQRS patterns for financial risk modelling alongside actuarial scientists.",
+        "Architected real-time sentiment analysis platform processing high-velocity market data streams."
+      ]
+    },
+    {
+      "theme": "black",
+      "role": "Software Engineer",
+      "date": "2017 – 2018",
+      "company": "S.A. Taxi",
+      "companyUrl": "https://sataxi.co.za",
+      "companyContext": "Asset Financing",
+      "stack": "Go · Python",
+      "points": [
+        "Designed Go-based MQTT ingestion service handling 30,000 concurrent data streams at 20 events/sec.",
+        "Executed 1PB+ migration of legacy financial records to cloud-native architecture."
+      ]
+    },
+    {
+      "theme": "black",
+      "role": "Software Engineer",
+      "date": "2017",
+      "company": "DotModus",
+      "companyUrl": "https://dotmodus.com",
+      "companyContext": "Cloud Consulting",
+      "stack": "Python · JavaScript · Terraform · Airflow",
+      "points": [
+        "Migrated Skimlinks 3PB/day data pipeline from AWS to GCP using Airflow, Terraform, and IaC principles — delivered under discovery-to-production deadline pressure."
+      ]
+    },
+    {
+      "theme": "black",
+      "role": "Head of Computer Science & Physics",
+      "date": "2014 – 2016",
+      "company": "Hout Bay Academy",
+      "points": [
+        "Taught A-Level Computer Science; developed curriculum around TDD, clean code, and software craftsmanship.",
+        "Mentored students now holding PhDs and senior engineering positions globally."
       ]
     }
   ],
-  "commitment": {
-    "title": "Let's Build Something",
-    "subtitle": "Available for full-time roles or consulting",
-    "timeline": {
-      "icon": "📅",
-      "title": "Availability",
-      "lines": ["Immediate start", "Full-time or contract"]
-    },
-    "location": {
-      "icon": "🌍",
-      "title": "Location",
-      "lines": ["Remote-first", "Open to relocation"]
-    },
-    "motivation": {
-      "icon": "💡",
-      "title": "Focus",
-      "lines": ["Scalable systems", "Team leadership"]
-    },
-    "text": "I'm looking for opportunities where I can leverage my experience building large-scale systems, leading engineering teams, and solving complex technical challenges. Whether it's architecting new systems, scaling existing infrastructure, or mentoring engineers—I'm passionate about creating software that makes a real impact."
-  }
+  "footer": "James Burgess · work@jimmyb.co.za · +27 65 244 2069 · Cape Town, South Africa"
 }
