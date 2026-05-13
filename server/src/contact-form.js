@@ -1,10 +1,11 @@
-export function renderContactForm(sent = false, error = false) {
+export function renderContactForm(sent = false, error = false, turnstileSiteKey = "") {
   return `<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact — JimmyB</title>
+    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
     <style>
         @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&display=swap");
 
@@ -195,7 +196,8 @@ export function renderContactForm(sent = false, error = false) {
         <h1>Contact</h1>
         <p class="subtitle">Drop a message. It goes straight to my phone via ntfy.</p>
         ${sent ? '<div class="success">message sent. i\'ll get back to you.</div>' : ""}
-        ${error ? '<div class="error">failed to send. try again later.</div>' : ""}
+        ${error === "captcha" ? '<div class="error">captcha verification failed. try again.</div>' : ""}
+        ${error === "send" ? '<div class="error">failed to send. try again later.</div>' : ""}
         <form method="POST" action="/contact">
             <div class="form-group">
                 <label for="name">name<span class="cursor"></span></label>
@@ -209,6 +211,7 @@ export function renderContactForm(sent = false, error = false) {
                 <label for="message">message<span class="cursor"></span></label>
                 <textarea id="message" name="message" placeholder="what's on your mind?" required></textarea>
             </div>
+            <div class="cf-turnstile" data-sitekey="${turnstileSiteKey}" data-theme="dark"></div>
             <button type="submit">send message</button>
         </form>
         <a class="back-link" href="/">&larr; back to jimmyb.co.za</a>

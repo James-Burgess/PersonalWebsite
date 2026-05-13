@@ -58,10 +58,53 @@ export default {
 
     if (url.pathname === "/contact") {
       if (request.method === "GET") {
-        return new Response(renderContactForm(false, false), {
+        return new Response(renderContactForm(false, false, env.TURNSTILE_SITE_KEY), {
           headers: { "Content-Type": "text/html" },
         });
       }
+
+      if (request.method === "POST") {
+        try {
+          const formData = await request.formData();
+          const turnstileToken = formData.get("cf-turnstile-response") || "";
+
+          const verifyRes = await fetch("https://challenges.cloudflare.com/turnstile/v0/siteverify", {
+            method: "POST",
+            headers: { "Content-Type": "application/x-www-form-urlencoded" },
+            body: `secret=${encodeURIComponent(env.TURNSTILE_SECRET_KEY)}&response=${encodeURIComponent(turnstileToken)}`,
+          });
+          const verifyData = await verifyRes.json();
+
+          if (!verifyData.success) {
+            return new Response(renderContactForm(false, "captcha", env.TURNSTILE_SITE_KEY), {
+              headers: { "Content-Type": "text/html" },
+            });
+          }
+
+          const name = formData.get("name") || "";
+          const email = formData.get("email") || "";
+          const message = formData.get("message") || "";
+
+          const ntfyBody = `From: ${name} <${email}>\n\n${message}`;
+
+          const ntfyResponse = await fetch("https://ntfy.sh/jimmybcoza", {
+            method: "POST",
+            body: ntfyBody,
+            headers: { "Title": "jimmyb.co.za contact" },
+          });
+
+          if (!ntfyResponse.ok) throw new Error("ntfy failed");
+
+          return new Response(renderContactForm(true, false, env.TURNSTILE_SITE_KEY), {
+            headers: { "Content-Type": "text/html" },
+          });
+        } catch (err) {
+          return new Response(renderContactForm(false, "send", env.TURNSTILE_SITE_KEY), {
+            headers: { "Content-Type": "text/html" },
+          });
+        }
+      }
+    }
 
       if (request.method === "POST") {
         try {
