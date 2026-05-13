@@ -106,34 +106,6 @@ export default {
       }
     }
 
-      if (request.method === "POST") {
-        try {
-          const formData = await request.formData();
-          const name = formData.get("name") || "";
-          const email = formData.get("email") || "";
-          const message = formData.get("message") || "";
-
-          const ntfyBody = `From: ${name} <${email}>\n\n${message}`;
-
-          const ntfyResponse = await fetch("https://ntfy.sh/jimmybcoza", {
-            method: "POST",
-            body: ntfyBody,
-            headers: { "Title": "jimmyb.co.za contact" },
-          });
-
-          if (!ntfyResponse.ok) throw new Error("ntfy failed");
-
-          return new Response(renderContactForm(true, false), {
-            headers: { "Content-Type": "text/html" },
-          });
-        } catch (err) {
-          return new Response(renderContactForm(false, true), {
-            headers: { "Content-Type": "text/html" },
-          });
-        }
-      }
-    }
-
     if (env.ASSETS) {
       return env.ASSETS.fetch(request);
     }
