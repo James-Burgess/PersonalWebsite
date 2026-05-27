@@ -1,0 +1,122 @@
+{
+	"password": "wildlifeact",
+	"name": "James Burgess",
+	"title": "Field Ranger",
+	"sectionLabels": {
+		"profile": "Profile",
+		"leadership": "Field & Technical Skills",
+		"links": "Links",
+		"experience": "Experience"
+	},
+	"contact": {
+		"location": "South Africa (full-time traveller, open to relocation to Zululand)",
+		"email": "hello@jimmyb.co.za",
+		"phone": "+27 65 244 2069",
+		"availability": "Available for conservation field roles in Zululand and beyond"
+	},
+	"profile": [
+		"I teach people to breathe underwater and climb rocks. I stay calm when things get unpredictable and keep nervous people comfortable.",
+		"I build software too. Field Log, an offline-first research logger. Infrastructure for Wildbook's wildlife photo-ID pipeline.",
+    "I am technology focused and am seeking first-hand field experience to build the right tools. I learn by doing, not by reading specs.",
+		"Quick learner. Jack of all trades, master of many. Can fix anything from a camera to a 4x4."
+	],
+	"leadership": [
+		"Field monitoring & data recording — behavioural observations, camera trapping, GPS logging, ecological data collection",
+		"Guiding & hosting — dive groups, climbing tourists, volunteers; calm, clinical, patient teaching style",
+		"Safety & first aid — EFR Instructor; risk management instinct from engineering leadership and guiding backgrounds",
+		"Computer literacy — data management, report writing, social media content creation, basic financial management",
+		"Camp & vehicle maintenance — extremely handy; can fix basically anything",
+		"Conservation technology — offline-first field tools, ecological data infrastructure, open-source contributor to Wildbook"
+	],
+	"links": [
+		{
+			"label": "Conservation Work",
+			"url": "https://thefieldco.com",
+			"text": "The Field Co"
+		},
+		{
+			"label": "Website",
+			"url": "https://jimmyb.co.za",
+			"text": "jimmyb.co.za"
+		},
+		{
+			"label": "LinkedIn",
+			"url": "https://linkedin.com/in/james-burgess-cloud/",
+			"text": "/in/james-burgess-cloud"
+		}
+	],
+	"experience": [
+		{
+			"theme": "red",
+			"role": "Founder",
+			"date": "December 2025 – Present",
+			"company": "The Field Company",
+			"companyUrl": "https://thefieldco.com",
+			"companyContext": "Conservation Technology Platform",
+			"badge": "yellow-circle",
+			"stack": "Django · IndexedDB · Offline-First Architecture · PWA · GPS",
+			"points": [
+				"Built Field Log: offline-first research logger for conservation fieldwork — works without network for weeks, syncs on reconnection",
+				"Developing vision for multi-modal mesh network (LoRa/WiFi/SAT/RF) for field communications in remote environments",
+				"Designing ecological data infrastructure — a shared, open database of real-world measurements accessible to researchers globally"
+			]
+		},
+		{
+			"theme": "black",
+			"role": "Scuba Instructor",
+			"date": "2024",
+			"company": "Ocean Tribe Kenya",
+      "companyUrl": "https://oceantribe.co/",
+			"companyContext": "Dive centre: Diani, Kenya",
+			"stack": "PADI OWSI · EFRI · 10 Specialty Instructor Ratings · 1,000+ logged dives",
+			"points": [
+				"Completed IE and instructor training at Ocean Tribe Kenya — supported local Kenyan instructors in developing teaching skills",
+				"6 months guiding and instructing in Diani: hosting tourists, managing diver safety, running boat operations",
+				"10 PADI specialty instructor ratings across technical, conservation, and adaptive diving disciplines"
+			]
+		},
+		{
+			"theme": "blue",
+			"role": "Open Source Contributor",
+			"date": "2024 – Present",
+			"company": "Wildbook",
+			"companyUrl": "https://github.com/WildbookOrg/Wildbook",
+			"companyContext": "Open-Source Wildlife Photo-ID Platform",
+			"stack": "Docker · Kubernetes · CI/CD · ML Pipeline Support",
+			"points": [
+				"Contributing infrastructure automation and data pipeline support to the Wildbook ecosystem",
+				"Supporting wildbook-ia (WBIA) — ML pipeline for wildlife conservation, GPU-accelerated matching, scalable inference"
+			]
+		},
+		{
+			"theme": "yellow",
+			"role": "Head of Engineering",
+			"date": "2020 – Present",
+			"company": "Crossroads Health",
+			"companyUrl": "https://crossroadshealth.com",
+			"companyContext": "Medical Finance",
+			"via": "Cloud Intelligence",
+			"viaUrl": "https://cloudintelligence.co.za",
+			"stack": "Django · Vue.js · PostgreSQL · Terraform · Azure",
+			"points": [
+				"Led cross-functional team of 6 through four greenfield platforms from discovery to production",
+				"Built HIPAA-compliant systems with full audit trails, encryption, zero-downtime CI/CD — strong data management and report-writing discipline",
+				"Responsible for financial oversight, project budgets, and operational reporting across platforms"
+			]
+		},
+		{
+			"theme": "black",
+			"role": "Rock Climbing Guide",
+			"date": "2013 – 2014",
+			"company": "Mountain Escorts",
+			"companyContext": "Tourist guiding & outdoor adventure",
+			"stack": "Sport climbing · Belay safety · Toprope setup · Group management",
+			"points": [
+				"Guided tourists on sport climbing routes — belay for experienced climbers, setup topropes for beginners",
+				"Managed group safety, risk assessment, and client comfort in dynamic outdoor environments",
+				"Developed calm, patient communication style that makes nervous participants feel genuinely safe"
+			]
+		}
+	],
+	"footer": "James Burgess · hello@jimmyb.co.za · +27 65 244 2069 · South Africa"
+}
