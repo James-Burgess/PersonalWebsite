@@ -1,5 +1,5 @@
 {
-  "password": "default",
+  "password": "conservationxlabs",
   "name": "James Burgess",
   "title": "Tech Lead · Principal Software Engineer",
   "sectionLabels": {
@@ -49,8 +49,16 @@
     { "title": "Open Water Scuba Instructor" }
   ],
   "links": [
-    { "label": "GitHub", "url": "https://github.com/james-burgess", "text": "james-burgess" },
-    { "label": "LinkedIn", "url": "https://linkedin.com/in/james-burgess-cloud/", "text": "/in/james-burgess-cloud" }
+    {
+      "label": "GitHub",
+      "url": "https://github.com/james-burgess",
+      "text": "james-burgess"
+    },
+    {
+      "label": "LinkedIn",
+      "url": "https://linkedin.com/in/james-burgess-cloud/",
+      "text": "/in/james-burgess-cloud"
+    }
   ],
   "experience": [
     {

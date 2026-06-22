@@ -1,0 +1,145 @@
+{
+  "password": "conservationxlabs",
+  "name": "James Burgess",
+  "title": "Full Stack Developer",
+  "sectionLabels": {
+    "profile": "Profile",
+    "leadership": "Leadership Highlights",
+    "projects": "Selected Projects",
+    "education": "Education",
+    "links": "Links",
+    "experience": "Experience"
+  },
+  "contact": {
+    "location": "Remote (Cape Town, South Africa)",
+    "email": "work@jimmyb.co.za",
+    "phone": "+27 65 244 2069",
+    "availability": "Available June 2026"
+  },
+  "profile": [
+    "Full-stack developer. 14 years building web, cloud, embedded, and ML systems. Activley contributing to Wildbook",
+    "Python, JavaScript, Go, C, Ruby, Bash. Cloud agnostic data engineer.",
+    "Scuba instructor. I love tinkering with Raspberry Pi, ESP32, Arduino, LoRaWAN radios, and 3D printers."
+  ],
+  "leadership": [
+    "Built and managed cross-functional teams of 6\u20138 engineers, designers, and QA",
+    "Ran structured discovery sprints: 2-week cycles from concept to production",
+    "Primary technical liaison to C-suite and external auditors. Translated commercial objectives into technical roadmaps",
+    "Introduced TDD, pair programming, and lean practices. Coached engineers from intern to senior",
+    "Communicated complex systems across disciplines: actuaries, domain experts, engineers, and executives",
+    "Former A-Level Computer Science teacher. Makes complex concepts accessible"
+  ],
+  "projects": [
+    {
+      "name": "Wildbook Contributions",
+      "description": "Activley working on the devex of the entire wildbook stack. MiewID onnx export, Extracted hotspotter into wbia-core (12 GB to 2 GB, bitwise parity). Built monorepo with Docker Compose, BDD tests, and CI/CD. Documented full stack with API specs and modernization roadmap."
+    },
+    {
+      "name": "Claim Appeal Automation",
+      "description": "LLM-powered platform for regulated document workflows. LLaMA.cpp and Django. On-premise AI inference in production."
+    },
+    {
+      "name": "openZFD",
+      "description": "Secure IoT access control. Mobile app communicates with embedded hardware over real-time channels. Phone-unlocked door with cryptographic authentication."
+    }
+  ],
+  "links": [
+    {
+      "label": "GitHub",
+      "url": "https://github.com/james-burgess",
+      "text": "james-burgess"
+    },
+    {
+      "label": "Hugging Face",
+      "url": "https://huggingface.co/james-burgess",
+      "text": "james-burgess"
+    },
+    {
+      "label": "LinkedIn",
+      "url": "https://linkedin.com/in/james-burgess-cloud/",
+      "text": "/in/james-burgess-cloud"
+    }
+  ],
+  "experience": [
+    {
+      "theme": "red",
+      "role": "Head of Engineering (Contract)",
+      "date": "2020 \u2013 Present",
+      "company": "Crossroads Health",
+      "companyUrl": "https://crossroadshealth.com",
+      "companyContext": "Medical Finance",
+      "via": "Cloud Intelligence",
+      "viaUrl": "https://cloudintelligence.co.za",
+      "badge": "yellow-circle",
+      "stack": "Django \u00b7 Vue.js \u00b7 MSSQL \u00b7 PostgreSQL \u00b7 Terraform \u00b7 Azure \u00b7 Metabase",
+      "points": [
+        "Led full-stack engineering for regulated medical platform: Django REST APIs, Vue.js SPA, MSSQL and PostgreSQL, Azure cloud infrastructure. Managed team of 6 engineers, designers, and QA.",
+        "Architected 4 greenfield platforms end to end. Discovery to stable production. Zero-downtime CI/CD with automated security scanning.",
+        "Implemented HIPAA-compliant systems with end-to-end encryption, cryptographic audit trails, and role-based access control.",
+        "Introduced TDD, pair programming, and lean practices. Coached engineers from intern to senior."
+      ]
+    },
+    {
+      "theme": "yellow",
+      "role": "Software Engineer",
+      "date": "2019 \u2013 2020",
+      "company": "Prodigy Finance",
+      "companyUrl": "https://prodigyfinance.com",
+      "companyContext": "International Student Lending (FinTech)",
+      "stack": "Ruby on Rails \u00b7 React.js \u00b7 Vanilla JS \u00b7 Jenkins \u00b7 AWS",
+      "points": [
+        "Built full-stack verification platform: Rails API and React SPA. Processed sensitive financial data across international jurisdictions.",
+        "Unified multiple credit-check provider APIs into a consistent API layer with provider failover and comprehensive test coverage."
+      ]
+    },
+    {
+      "theme": "blue",
+      "role": "Software Engineer",
+      "date": "2018 \u2013 2019",
+      "company": "Analytix Engine",
+      "companyUrl": "https://analytixengine.com",
+      "companyContext": "Actuarial / Financial Services",
+      "stack": "Go \u00b7 Python \u00b7 Vanilla JS",
+      "points": [
+        "Built IFRS9 Decision Engine with event-driven architecture and CQRS. Go microservices. Worked alongside actuarial scientists.",
+        "Architected real-time sentiment analysis platform. Processed high-velocity market data with sub-second latency."
+      ]
+    },
+    {
+      "theme": "black",
+      "role": "Software Engineer",
+      "date": "2017 \u2013 2018",
+      "company": "S.A. Taxi",
+      "companyUrl": "https://sataxi.co.za",
+      "companyContext": "Asset Financing",
+      "stack": "Go \u00b7 Python",
+      "points": [
+        "Designed Go-based MQTT ingestion service. 30,000 concurrent IoT data streams at 20 events/sec. Edge-to-cloud telemetry for fleet tracking.",
+        "Executed 1PB+ migration of legacy financial records to cloud-native architecture. Zero data loss."
+      ]
+    },
+    {
+      "theme": "black",
+      "role": "Software Engineer",
+      "date": "2016 \u2013 2017",
+      "company": "DotModus",
+      "companyUrl": "https://dotmodus.com",
+      "companyContext": "Cloud Consulting",
+      "stack": "Python \u00b7 JavaScript \u00b7 Terraform \u00b7 Airflow",
+      "points": [
+        "Migrated Skimlinks 3PB/day data pipeline from AWS to GCP. Apache Airflow, Terraform, infrastructure-as-code. Delivered under deadline."
+      ]
+    },
+    {
+      "theme": "black",
+      "role": "Head of Computer Science & Physics",
+      "date": "2014 \u2013 2016",
+      "company": "Hout Bay Academy",
+      "points": [
+        "Taught A-Level Computer Science. Built curriculum around TDD, clean code, and software craftsmanship.",
+        "Mentored students now holding PhDs and senior engineering positions."
+      ]
+    }
+  ],
+  "footer": "James Burgess \u00b7 work@jimmyb.co.za \u00b7 +27 65 244 2069 \u00b7 Remote (Cape Town, South Africa)"
+}

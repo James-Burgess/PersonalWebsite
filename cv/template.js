@@ -233,19 +233,15 @@ export function renderCV(data) {
         </div>`);
   }
 
-  if (links.length) {
-    const html = links.map(l =>
-      `<li><strong>${l.label}:</strong> <a href="${l.url}" style="color: var(--ink); text-decoration: underline">${l.text}</a></li>`
-    ).join("\n              ");
-    leftSections.push(`<div class="theme-block theme-blue" id="section-links">
-          <div class="section-label">${labels.links}</div>
-          <ul class="highlight-list">
-            ${html}
-          </ul>
-        </div>`);
-  }
-
   const leftHtml = leftSections.join("\n\n");
+
+  let footerLinks = "";
+  if (links.length) {
+    const items = links.map(l =>
+      `<a href="${l.url}">${l.label}</a>`
+    ).join(" · ");
+    footerLinks = `<span class="footer-links">${items}</span>`;
+  }
 
   const experienceHtml = experience.map(exp => {
     const companyLink = exp.companyUrl
@@ -535,6 +531,19 @@ export function renderCV(data) {
       color: #b0b6c8;
     }
 
+    .footer-links {
+      font-size: 7pt;
+    }
+
+    .footer-links a {
+      color: #b0b6c8;
+      text-decoration: none;
+    }
+
+    .footer-links a:hover {
+      text-decoration: underline;
+    }
+
     .download-btn {
       position: fixed;
       top: 6mm;
@@ -614,6 +623,7 @@ ${experienceHtml}
 
     <div class="cv-footer">
       ${data.footer || ""}
+      ${footerLinks ? `<br>${footerLinks}` : ""}
     </div>
   </div>
 </body>
