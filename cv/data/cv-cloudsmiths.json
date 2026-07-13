@@ -1,0 +1,170 @@
+{
+  "password": "mlops",
+  "name": "James Burgess",
+  "title": "ML Ops Engineer",
+  "sectionLabels": {
+    "profile": "Profile",
+    "leadership": "ML Platform Engineering",
+    "projects": "Selected Projects",
+    "links": "Links",
+    "experience": "Experience"
+  },
+  "contact": {
+    "location": "Remote (Cape Town, South Africa)",
+    "email": "work@jimmyb.co.za",
+    "phone": "+27 65 244 2069",
+    "availability": "Available July 2026"
+  },
+  "profile": [
+    "ML Ops engineer with 14 years' experience across cloud, data, and full-stack engineering. Active open-source contributor to the Wildbook wildlife photo-ID platform.",
+    "Python, Docker, Kubernetes, Terraform, CI/CD, Kedro, Airflow. ML model serving, ONNX export, vector search, benchmark testing.",
+    "Deep experience containerising legacy Java monoliths and migrating ML pipelines to reproducible, scalable infrastructure."
+  ],
+  "leadership": [
+    "Built monorepo (Wildbook-infra) unifying 6+ services with Docker Compose, git submodules, BDD tests, and CI/CD — single-command reproducible dev environments",
+    "Extracted Hotspotter (12 GB ML service) into wbia-core (2 GB) with near-bitwise parity — full benchmark suite validating model accuracy across versions",
+    "Exported MiewID to ONNX; published 3 HuggingFace Spaces (PyTorch, ONNX, compare) for model comparison and interactive demos",
+    "Built Kedro/Airflow ML pipelines for pre-10.10, current, and full extraction workflows; ran YOLO, segmentation, and FAISS classification experiments",
+    "Led strangler-fig migration of Java/Tomcat monolith to React frontend with Caddy routing; documented remaining pages as good-first-issues for community",
+    "Moved Wildbook docs from Sphinx to Docusaurus with full API spec; wrote blogposts and technical deep-dives for the conservation ML community"
+  ],
+  "projects": [
+    {
+      "name": "Wildbook-infra",
+      "description": "Monorepo consolidating Wildbook, WBIA, ML services, pipeline, and docs. Docker Compose, git submodules, BDD tests, CI/CD pipelines. Reproducible dev environments in a single command."
+    },
+    {
+      "name": "wbia-core",
+      "description": "Extracted Hotspotter ML service from monolithic wildbook-ia into standalone Docker service (12 GB → 2 GB). Full benchmark suite confirming near-bitwise output parity."
+    },
+    {
+      "name": "MiewID ONNX Export",
+      "description": "Converted MiewID PyTorch model to ONNX for portable inference. Published model card, 3 HF Spaces for side-by-side comparison. Awaiting OpenCV 5 Python package for full speedup."
+    },
+    {
+      "name": "Wildlife ML Pipeline",
+      "description": "Kedro/Airflow orchestration for detection (YOLO), classification, embedding search (FAISS), and PostgreSQL vector store. Pipelines for pre-10.10, current, and full extraction."
+    },
+    {
+      "name": "Wildbook UI Decouple",
+      "description": "Strangler-fig migration: Docker dev environment, React SPA hosted separately from Tomcat, Caddy reverse proxy. Extracted homepage and individual page; documented remaining pages."
+    }
+  ],
+  "links": [
+    {
+      "label": "GitHub",
+      "url": "https://github.com/james-burgess",
+      "text": "james-burgess"
+    },
+    {
+      "label": "Wildbook-infra",
+      "url": "https://github.com/James-Burgess/Wildbook-infra",
+      "text": "Wildbook-infra"
+    },
+    {
+      "label": "Wildbook Docs",
+      "url": "https://james-burgess.github.io/wildbook-docs/",
+      "text": "wildbook-docs"
+    },
+    {
+      "label": "Hugging Face",
+      "url": "https://huggingface.co/james-burgess",
+      "text": "james-burgess"
+    },
+    {
+      "label": "LinkedIn",
+      "url": "https://linkedin.com/in/james-burgess-cloud/",
+      "text": "/in/james-burgess-cloud"
+    }
+  ],
+  "experience": [
+    {
+      "theme": "red",
+      "role": "ML Ops Engineer (Open Source)",
+      "date": "2024 – Present",
+      "company": "Wildbook",
+      "companyUrl": "https://github.com/WildMeOrg/Wildbook",
+      "companyContext": "Wildlife Photo-ID Platform (Wild Me)",
+      "badge": "yellow-circle",
+      "stack": "Python · Docker · Kubernetes · ONNX · Kedro · Airflow · PyTorch · YOLO · FAISS · PostgreSQL · Caddy · React · Docusaurus",
+      "points": [
+        "Built monorepo (Wildbook-infra) unifying 6+ Wildbook services with Docker Compose, git submodules, BDD tests, and CI/CD — reproducible dev environments in a single command.",
+        "Extracted Hotspotter from monolithic wildbook-ia into standalone wbia-core Docker service (12 GB → 2 GB, near-bitwise parity). Full benchmark suite with automated accuracy validation.",
+        "Exported MiewID to ONNX; published 3 HuggingFace Spaces for PyTorch/ONNX comparison and interactive model demos.",
+        "Built Kedro/Airflow ML pipelines for detection, classification, and embedding search across multiple extraction workflows. PostgreSQL vector store for FAISS-based matching.",
+        "Led strangler-fig migration of Java/Tomcat monolith: Docker dev environment, Caddy routing, React SPA extracted from servlet pages. Documented remaining pages as community good-first-issues.",
+        "Migrated documentation from Sphinx to Docusaurus; authored full API specs, development guides, and blogposts on wildlife conservation technology."
+      ]
+    },
+    {
+      "theme": "yellow",
+      "role": "Head of Engineering (Contract)",
+      "date": "2020 – Present",
+      "company": "Crossroads Health",
+      "companyUrl": "https://crossroadshealth.com",
+      "companyContext": "Medical Finance",
+      "via": "Cloud Intelligence",
+      "viaUrl": "https://cloudintelligence.co.za",
+      "badge": "yellow-circle",
+      "stack": "Django · Vue.js · MSSQL · PostgreSQL · Terraform · Azure · Metabase",
+      "points": [
+        "Led full-stack engineering for regulated medical platform: Django REST APIs, Vue.js SPA, MSSQL and PostgreSQL, Azure cloud. Managed team of 6 engineers.",
+        "Architected 4 greenfield platforms end to end — discovery to stable production. Zero-downtime CI/CD with automated security scanning.",
+        "Implemented HIPAA-compliant systems with end-to-end encryption, cryptographic audit trails, and role-based access control.",
+        "Introduced TDD, pair programming, and lean practices. Coached engineers from intern to senior."
+      ]
+    },
+    {
+      "theme": "blue",
+      "role": "Software Engineer",
+      "date": "2019 – 2020",
+      "company": "Prodigy Finance",
+      "companyUrl": "https://prodigyfinance.com",
+      "companyContext": "International Student Lending (FinTech)",
+      "stack": "Ruby on Rails · React.js · Vanilla JS · Jenkins · AWS",
+      "points": [
+        "Built full-stack verification platform: Rails API and React SPA. Processed sensitive financial data across international jurisdictions.",
+        "Unified multiple credit-check provider APIs into a consistent API layer with provider failover and comprehensive test coverage."
+      ]
+    },
+    {
+      "theme": "black",
+      "role": "Software Engineer",
+      "date": "2018 – 2019",
+      "company": "Analytix Engine",
+      "companyUrl": "https://analytixengine.com",
+      "companyContext": "Actuarial / Financial Services",
+      "stack": "Go · Python · Vanilla JS",
+      "points": [
+        "Built IFRS9 Decision Engine with event-driven architecture and CQRS. Go microservices. Worked alongside actuarial scientists.",
+        "Architected real-time sentiment analysis platform. Processed high-velocity market data with sub-second latency."
+      ]
+    },
+    {
+      "theme": "black",
+      "role": "Software Engineer",
+      "date": "2017 – 2018",
+      "company": "S.A. Taxi",
+      "companyUrl": "https://sataxi.co.za",
+      "companyContext": "Asset Financing",
+      "stack": "Go · Python",
+      "points": [
+        "Designed Go-based MQTT ingestion service. 30,000 concurrent IoT data streams at 20 events/sec. Edge-to-cloud telemetry for fleet tracking.",
+        "Executed 1PB+ migration of legacy financial records to cloud-native architecture. Zero data loss."
+      ]
+    },
+    {
+      "theme": "black",
+      "role": "Software Engineer",
+      "date": "2016 – 2017",
+      "company": "DotModus",
+      "companyUrl": "https://dotmodus.com",
+      "companyContext": "Cloud Consulting",
+      "stack": "Python · JavaScript · Terraform · Airflow",
+      "points": [
+        "Migrated Skimlinks 3PB/day data pipeline from AWS to GCP. Apache Airflow, Terraform, infrastructure-as-code. Delivered under deadline."
+      ]
+    }
+  ],
+  "footer": "James Burgess · work@jimmyb.co.za · +27 65 244 2069 · Remote (Cape Town, South Africa)"
+}
